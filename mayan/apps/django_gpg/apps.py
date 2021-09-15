@@ -1,0 +1,90 @@
+from __future__ import absolute_import, unicode_literals
+
+from django.utils.translation import ugettext_lazy as _
+
+from mayan.apps.acls import ModelPermission
+from mayan.apps.acls.links import link_acl_list
+from mayan.apps.acls.permissions import permission_acl_edit, permission_acl_view
+from mayan.apps.common import (
+    MayanAppConfig, menu_facet, menu_object, menu_setup, menu_secondary
+)
+from mayan.apps.navigation import SourceColumn
+
+from .classes import KeyStub
+from .links import (
+    link_key_delete, link_key_detail, link_key_download, link_key_query,
+    link_key_receive, link_key_setup, link_key_upload, link_private_keys,
+    link_public_keys
+)
+from .licenses import *  # NOQA
+from .permissions import (
+    permission_key_delete, permission_key_download, permission_key_sign,
+    permission_key_view
+)
+
+
+class DjangoGPGApp(MayanAppConfig):
+    app_namespace = 'django_gpg'
+    app_url = 'keys'
+    has_rest_api = True
+    has_tests = True
+    name = 'mayan.apps.django_gpg'
+    verbose_name = _('Django GPG')
+
+    def ready(self):
+        super(DjangoGPGApp, self).ready()
+
+        Key = self.get_model('Key')
+
+        ModelPermission.register(
+            model=Key, permissions=(
+                permission_acl_edit, permission_acl_view,
+                permission_key_delete, permission_key_download,
+                permission_key_sign, permission_key_view
+            )
+        )
+
+        SourceColumn(attribute='key_id', is_identifier=True, source=Key)
+        SourceColumn(attribute='user_id', source=Key)
+
+        SourceColumn(
+            attribute='key_id.fget', is_identifier=True, source=KeyStub
+        )
+        SourceColumn(attribute='key_type', label=_('Type'), source=KeyStub)
+        SourceColumn(
+            attribute='date', label=_('Creation date'), source=KeyStub
+        )
+        SourceColumn(
+            attribute='expires', empty_value=_('No expiration'),
+            label=_('Expiration date'), source=KeyStub
+        )
+        SourceColumn(attribute='length', label=_('Length'), source=KeyStub)
+        SourceColumn(
+            func=lambda context: ', '.join(context['object'].user_id),
+            label=_('User ID'), source=KeyStub
+        )
+
+        menu_object.bind_links(links=(link_key_detail,), sources=(Key,))
+        menu_object.bind_links(links=(link_key_receive,), sources=(KeyStub,))
+
+        menu_object.bind_links(
+            links=(link_acl_list, link_key_delete, link_key_download,),
+            sources=(Key,)
+        )
+        menu_setup.bind_links(links=(link_key_setup,))
+        menu_facet.bind_links(
+            links=(link_private_keys, link_public_keys),
+            sources=(
+                'django_gpg:key_public_list', 'django_gpg:key_private_list',
+                'django_gpg:key_query', 'django_gpg:key_query_results',
+                'django_gpg:key_upload', Key, KeyStub
+            )
+        )
+        menu_secondary.bind_links(
+            links=(link_key_query, link_key_upload),
+            sources=(
+                'django_gpg:key_public_list', 'django_gpg:key_private_list',
+                'django_gpg:key_query', 'django_gpg:key_query_results',
+                'django_gpg:key_upload', Key, KeyStub
+            )
+        )

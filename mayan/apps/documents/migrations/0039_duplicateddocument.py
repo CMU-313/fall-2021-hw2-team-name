@@ -1,0 +1,46 @@
+from __future__ import unicode_literals
+
+import django.db.models.deletion
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('documents', '0038_auto_20170705_2008'),
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            fields=[
+                (
+                    'id', models.AutoField(
+                        auto_created=True, primary_key=True, serialize=False,
+                        verbose_name='ID'
+                    )
+                ),
+                (
+                    'datetime_added', models.DateTimeField(
+                        auto_now_add=True, db_index=True,
+                        verbose_name='Added'
+                    )
+                ),
+                (
+                    'document', models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name='duplicates', to='documents.Document',
+                        verbose_name='Document'
+                    )
+                ),
+                (
+                    'documents', models.ManyToManyField(
+                        to='documents.Document',
+                        verbose_name='Duplicated documents'
+                    )
+                ),
+            ], name='DuplicatedDocument', options={
+                'verbose_name': 'Duplicated document',
+                'verbose_name_plural': 'Duplicated documents',
+            },
+        ),
+    ]

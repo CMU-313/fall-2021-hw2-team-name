@@ -1,0 +1,11 @@
+{% load appearance_tags %}
+
+{% get_icon 'mayan.apps.document_indexing.icons.icon_index_level_up' as icon_index_level_up %}
+
+{% for level in index_template_node_level %}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{% endfor %}
+{% if not index_template_node.is_root_node %}
+    {{ icon_index_level_up }}
+{% endif %}
+{{ index_template_node }}

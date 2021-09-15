@@ -1,0 +1,13 @@
+{% load appearance_tags %}
+
+{% get_icon 'mayan.apps.document_indexing.icons.icon_index_instance_node_with_documents' as icon_index_instance_node_with_documents %}
+{% get_icon 'mayan.apps.document_indexing.icons.icon_index_level_up' as icon_index_level_up %}
+
+<a href="{{ index_instance_node.get_absolute_url }}">
+    {% if index_instance_node.index_template_node.link_documents %}
+        {{ icon_index_instance_node_with_documents }}
+    {% else %}
+        {{ icon_index_level_up }}
+    {% endif %}
+    {{ index_instance_node }}
+</a>
