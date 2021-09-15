@@ -1,0 +1,463 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Lyudmil Antonov <lantonov.here@gmail.com>, 2019
+# Pavlin Koldamov <pkoldamov@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-01 01:41-0400\n"
+"PO-Revision-Date: 2019-12-16 20:59+0000\n"
+"Last-Translator: Lyudmil Antonov <lantonov.here@gmail.com>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/rosarior/mayan-edms/language/bg/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:42
+msgid "Mailer"
+msgstr "Пощенска програма"
+
+#: apps.py:63 apps.py:84
+msgid "Date and time"
+msgstr "Дата и час"
+
+#: apps.py:66 apps.py:88 models.py:30 models.py:229
+msgid "Message"
+msgstr "Съобщение"
+
+#: classes.py:81
+msgid "Null backend"
+msgstr "Нулев бекенд"
+
+#: events.py:7 permissions.py:7 queues.py:8 settings.py:12
+msgid "Mailing"
+msgstr "Изпращане"
+
+#: events.py:10
+msgid "Email sent"
+msgstr "Имейлът е изпратен"
+
+#: forms.py:60 forms.py:124
+msgid ""
+"Email address of the recipient. Can be multiple addresses separated by comma"
+" or semicolon."
+msgstr "Имейл адрес на получателя. Могат да бъдат множество адреси, разделени със запетая или точка и запетая."
+
+#: forms.py:62 forms.py:126
+msgid "Email address"
+msgstr "Ел. поща адрес"
+
+#: forms.py:64 workflow_actions.py:40
+msgid "Subject"
+msgstr "Относно"
+
+#: forms.py:66 workflow_actions.py:49
+msgid "Body"
+msgstr "Съдържание"
+
+#: forms.py:70
+msgid "The email profile that will be used to send this email."
+msgstr "Профилът на имейла, който ще се използва за изпращане на този имейл."
+
+#: forms.py:71 models.py:71 views.py:239 workflow_actions.py:22
+msgid "Mailing profile"
+msgstr "Профил за изпращане на имейл"
+
+#: forms.py:77
+msgid "The driver to use when sending emails."
+msgstr "Драйверът, който се използва при изпращане на имейл."
+
+#: forms.py:78
+msgid "Backend"
+msgstr "Бекенд"
+
+#: links.py:18 links.py:28
+msgid "Email document"
+msgstr "Пощ. документ"
+
+#: links.py:24 links.py:32
+msgid "Email link"
+msgstr "Пощ. връзка"
+
+#: links.py:37
+msgid "System mailer error log"
+msgstr "Дневник на грешки в пощенската програма на системата"
+
+#: links.py:42
+msgid "Create mailing profile "
+msgstr "Създайте пощенски профил"
+
+#: links.py:48
+msgid "Delete"
+msgstr "Изтрийте"
+
+#: links.py:54
+msgid "Edit"
+msgstr "Редактиране"
+
+#: links.py:58
+msgid "Log"
+msgstr "Дневник"
+
+#: links.py:63
+msgid "Mailing profiles list"
+msgstr "Списък с пощенски профили"
+
+#: links.py:68 models.py:72
+msgid "Mailing profiles"
+msgstr "Пощенски профили"
+
+#: links.py:74 views.py:261
+msgid "Test"
+msgstr "Тест"
+
+#: literals.py:7
+#, python-format
+msgid ""
+"Attached to this email is the document: {{ document }}\n"
+"\n"
+" --------\n"
+" This email has been sent from %(project_title)s (%(project_website)s)"
+msgstr "Към този имейл е прикачен документ: {{ document }}\n\n --------\n Този имейл е изпратен от %(project_title)s (%(project_website)s)"
+
+#: literals.py:11
+msgid "Document: {{ document }}"
+msgstr "Документ: {{ document }}"
+
+#: literals.py:13
+#, python-format
+msgid ""
+"To access this document click on the following link: {{ link }}\n"
+"\n"
+"--------\n"
+" This email has been sent from %(project_title)s (%(project_website)s)"
+msgstr "За достъп до този документ щракнете върху следната връзка: {{ link }}\n\n--------\n Този имейл е изпратен от %(project_title)s (%(project_website)s)"
+
+#: literals.py:17
+msgid "Link for document: {{ document }}"
+msgstr "Връзка към документ: {{ document }}"
+
+#: mailers.py:23 mailers.py:112
+msgid "From"
+msgstr "От"
+
+#: mailers.py:26 mailers.py:115
+msgid ""
+"The sender's address. Some system will refuse to send messages if this value"
+" is not set."
+msgstr "Адресът на подателя. Някои системи ще откажат да изпращат съобщения, ако тази стойност не е зададена."
+
+#: mailers.py:32
+msgid "Host"
+msgstr "Хост"
+
+#: mailers.py:34
+msgid "The host to use for sending email."
+msgstr "Хостът, който се използва за изпращане на имейл."
+
+#: mailers.py:39
+msgid "Port"
+msgstr "Порт"
+
+#: mailers.py:41
+msgid "Port to use for the SMTP server."
+msgstr "Използван порт за SMTP сървъра."
+
+#: mailers.py:44
+msgid "Use TLS"
+msgstr "Използвайте TLS"
+
+#: mailers.py:47
+msgid ""
+"Whether to use a TLS (secure) connection when talking to the SMTP server. "
+"This is used for explicit TLS connections, generally on port 587."
+msgstr "Дали да се използва TLS (сигурна) връзка, когато се говори със SMTP сървъра. Това се използва за изрични TLS връзки, обикновено на порт 587."
+
+#: mailers.py:52
+msgid "Use SSL"
+msgstr "Използване на SSL"
+
+#: mailers.py:55
+msgid ""
+"Whether to use an implicit TLS (secure) connection when talking to the SMTP "
+"server. In most email documentation this type of TLS connection is referred "
+"to as SSL. It is generally used on port 465. If you are experiencing "
+"problems, see the explicit TLS setting \"Use TLS\". Note that \"Use TLS\" "
+"and \"Use SSL\" are mutually exclusive, so only set one of those settings to"
+" True."
+msgstr "Дали да се използва неявна TLS (сигурна) връзка, когато се говори със SMTP сървъра. В повечето имейл документации този тип TLS връзка се нарича SSL. Обикновено се използва на порт 465. Ако имате проблеми, вижте изричната настройка на TLS „Използване на TLS“. Обърнете внимание, че „Използване TLS“ и „Използване SSL“ са взаимно изключващи се, така че задайте само една от тези настройки като True."
+
+#: mailers.py:64
+msgid "Username"
+msgstr "Име на потребител"
+
+#: mailers.py:67
+msgid ""
+"Username to use for the SMTP server. If empty, authentication won't "
+"attempted."
+msgstr "Потребителско име, което се използва за SMTP сървъра. Ако е празно, удостоверяване няма да се опита."
+
+#: mailers.py:73
+msgid "Password"
+msgstr "Парола"
+
+#: mailers.py:76
+msgid ""
+"Password to use for the SMTP server. This setting is used in conjunction "
+"with the username when authenticating to the SMTP server. If either of these"
+" settings is empty, authentication won't be attempted."
+msgstr "Парола за SMTP сървър. Тази настройка се използва заедно с потребителското име при удостоверяване в SMTP сървъра. Ако някоя от тези настройки е празна, удостоверяване няма да се опита."
+
+#: mailers.py:85
+msgid "Django SMTP backend"
+msgstr "SMTP бекенд на Джанго"
+
+#: mailers.py:107
+msgid "File path"
+msgstr "Файлов път"
+
+#: mailers.py:122
+msgid "Django file based backend"
+msgstr "Файл базиран на Джанго бекенд"
+
+#: models.py:27 models.py:226
+msgid "Date time"
+msgstr "Дата час"
+
+#: models.py:36
+msgid "Log entry"
+msgstr "Запис в дневника"
+
+#: models.py:37
+msgid "Log entries"
+msgstr "Записи в дневника"
+
+#: models.py:48
+msgid "A short text describing the mailing profile."
+msgstr "Кратък текст, описващ потребителския профил за изпращане."
+
+#: models.py:49
+msgid "Label"
+msgstr "Етикет"
+
+#: models.py:53
+msgid ""
+"If default, this mailing profile will be pre-selected on the document "
+"mailing form."
+msgstr "Ако е по подразбиране, този пощенски профил ще бъде предварително избран във формата за изпращане на документи."
+
+#: models.py:55
+msgid "Default"
+msgstr "По подразбиране"
+
+#: models.py:57
+msgid "Enabled"
+msgstr "Активиран"
+
+#: models.py:60
+msgid "The dotted Python path to the backend class."
+msgstr "Пунктирания Python път към бекенда."
+
+#: models.py:61
+msgid "Backend path"
+msgstr "Път към бекенда"
+
+#: models.py:64
+msgid "Backend data"
+msgstr "Данни за бекенда"
+
+#: models.py:85
+msgid "Backend label"
+msgstr "Етикет за бекенда"
+
+#: models.py:217
+msgid "Test email from Mayan EDMS"
+msgstr "Тестов имейл от Mayan EDMS"
+
+#: models.py:223
+msgid "User mailer"
+msgstr "Потребителска пощенска програма"
+
+#: models.py:235
+msgid "User mailer log entry"
+msgstr "Запис в дневника на потребителската пощенска програма"
+
+#: models.py:236
+msgid "User mailer log entries"
+msgstr "Записи в дневника на потребителската пощенска програма"
+
+#: permissions.py:10
+msgid "Send document link via email"
+msgstr "Изпрати връзка за документа по ел. поща"
+
+#: permissions.py:13
+msgid "Send document via email"
+msgstr "Изпрати документа по ел. поща"
+
+#: permissions.py:16
+msgid "View system mailing error log"
+msgstr "Преглед на дневника за грешки в пощенската програма"
+
+#: permissions.py:19
+msgid "Create a mailing profile"
+msgstr "Създайте пощенски профил"
+
+#: permissions.py:22
+msgid "Delete a mailing profile"
+msgstr "Изтриване на пощенски профил"
+
+#: permissions.py:25
+msgid "Edit a mailing profile"
+msgstr "Редактиране на пощенски профил"
+
+#: permissions.py:28
+msgid "View a mailing profile"
+msgstr "Преглед на пощенски профил"
+
+#: permissions.py:31
+msgid "Use a mailing profile"
+msgstr "Използване на пощенски профил"
+
+#: queues.py:10
+msgid "Send document"
+msgstr "Изпращане на документ"
+
+#: settings.py:16
+msgid "Template for the document email form subject line."
+msgstr "Шаблон за реда \"Относно\" на формуляр за документен имейл."
+
+#: settings.py:21
+msgid "Template for the document email form body text. Can include HTML."
+msgstr "Шаблон за основния текст на формуляра за документен имейл. Може да включва HTML."
+
+#: settings.py:26
+msgid "Template for the document link email form subject line."
+msgstr "Шаблон за реда \"Относно\" за формуляр на имейл от връзка в документ."
+
+#: settings.py:31
+msgid "Template for the document link email form body text. Can include HTML."
+msgstr "Шаблон за основния текст за формуляра на имейл от връзка в документа Може да включва HTML."
+
+#: validators.py:14
+#, python-format
+msgid "%(email)s is not a valid email address."
+msgstr "%(email)s не е валиден имейл адрес."
+
+#: views.py:38
+msgid "Document mailing error log"
+msgstr "Дневник на грешки при изпращане на документи"
+
+#: views.py:50
+#, python-format
+msgid "%(count)d document queued for email delivery"
+msgstr "%(count)d документ на опашка за доставка по имейл"
+
+#: views.py:52
+#, python-format
+msgid "%(count)d documents queued for email delivery"
+msgstr "%(count)d документи на опашка за доставка по имейл"
+
+#: views.py:63
+msgid "Send"
+msgstr "Изпрати"
+
+#: views.py:109
+#, python-format
+msgid "%(count)d document link queued for email delivery"
+msgstr "%(count)d връзка с документ на опашка за доставка по имейл"
+
+#: views.py:111
+#, python-format
+msgid "%(count)d document links queued for email delivery"
+msgstr "%(count)d връзки с документ на опашка за доставка по имейл"
+
+#: views.py:120
+msgid "New mailing profile backend selection"
+msgstr "Избор на бекенд за нов пощенски профил"
+
+#: views.py:152
+#, python-format
+msgid "Create a \"%s\" mailing profile"
+msgstr "Създаване на пощенски профил &quot;%s&quot;"
+
+#: views.py:178
+#, python-format
+msgid "Delete mailing profile: %s"
+msgstr "Изтриване на пощенски профил: %s"
+
+#: views.py:189
+#, python-format
+msgid "Edit mailing profile: %s"
+msgstr "Редактиране на пощенски профил: %s"
+
+#: views.py:212
+#, python-format
+msgid "Error log for: %s"
+msgstr "Дневник на грешки за: %s"
+
+#: views.py:234
+msgid ""
+"Mailing profiles are email configurations. Mailing profiles allow sending "
+"documents as attachments or as links via email."
+msgstr "Пощенските профили са конфигурации на имейл. Пощенските профили позволяват изпращане на документи като прикачени файлове или като връзки по имейл."
+
+#: views.py:238
+msgid "No mailing profiles available"
+msgstr "Няма налични пощенски профили"
+
+#: views.py:253
+msgid "Test email sent."
+msgstr "Изпратен тестов имейл."
+
+#: views.py:262
+#, python-format
+msgid "Test mailing profile: %s"
+msgstr "Тест на пощенския профил: %s"
+
+#: workflow_actions.py:24
+msgid "Mailing profile to use when sending the email."
+msgstr "Пощенски профил, който да се използва при изпращане на имейла."
+
+#: workflow_actions.py:29
+msgid "Recipient"
+msgstr "Получател"
+
+#: workflow_actions.py:32
+msgid ""
+"Email address of the recipient. Can be multiple addresses separated by comma"
+" or semicolon. A template can be used to reference properties of the "
+"document."
+msgstr "Имейл адрес на получателя. Могат да бъдат няколко адреса, разделени със запетая или точка и запетая. Шаблонът може да се използва за манипулиране свойствата на документа."
+
+#: workflow_actions.py:43
+msgid "Subject of the email. Can be a string or a template."
+msgstr "Тема на имейла. Може да бъде низ или шаблон."
+
+#: workflow_actions.py:52
+msgid "Body of the email to send. Can be a string or a template."
+msgstr "Тяло на имейла за изпращане. Може да бъде низ или шаблон."
+
+#: workflow_actions.py:59
+msgid "Send email"
+msgstr "Изпращане на имейл"
+
+#: workflow_actions.py:74
+#, python-format
+msgid "Recipient template error: %s"
+msgstr "Грешка в шаблона на получателя: %s"
+
+#: workflow_actions.py:85
+#, python-format
+msgid "Subject template error: %s"
+msgstr "Грешка в шаблона на темата: %s"
+
+#: workflow_actions.py:96
+#, python-format
+msgid "Body template error: %s"
+msgstr "Грешка в шаблона на тялото: %s"
