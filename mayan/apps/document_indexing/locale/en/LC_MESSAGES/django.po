@@ -1,0 +1,464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-27 14:11-0400\n"
+"PO-Revision-Date: 2012-12-12 06:05+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: English (http://www.transifex.com/projects/p/mayan-edms/"
+"language/en/)\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin.py:24
+msgid "None"
+msgstr ""
+
+#: admin.py:26 apps.py:134 links.py:48 models.py:41
+#, fuzzy
+msgid "Document types"
+msgstr "document types"
+
+#: apps.py:48
+#, fuzzy
+#| msgid "document indexes"
+msgid "Document indexing"
+msgstr "document indexes"
+
+#: apps.py:120 models.py:25
+msgid "Label"
+msgstr ""
+
+#: apps.py:121 models.py:30
+msgid "Slug"
+msgstr ""
+
+#: apps.py:123 apps.py:143 models.py:38 models.py:126
+#, fuzzy
+msgid "Enabled"
+msgstr "enabled"
+
+#: apps.py:128 apps.py:158 apps.py:171
+#, fuzzy
+msgid "Items"
+msgstr "items"
+
+#: apps.py:139
+#, fuzzy
+msgid "Level"
+msgstr "level"
+
+#: apps.py:147
+#, fuzzy
+msgid "Has document links?"
+msgstr "has document links?"
+
+#: apps.py:154 apps.py:165
+msgid "Node"
+msgstr ""
+
+#: links.py:18 links.py:22 links.py:25 links.py:28 models.py:83 views.py:75
+#: views.py:235
+msgid "Indexes"
+msgstr "Indexes"
+
+#: links.py:31 views.py:36
+#, fuzzy
+msgid "Create index"
+msgstr "create index"
+
+#: links.py:35 links.py:64
+msgid "Edit"
+msgstr ""
+
+#: links.py:40 links.py:68
+#, fuzzy
+msgid "Delete"
+msgstr "delete"
+
+#: links.py:44
+#, fuzzy
+msgid "Tree template"
+msgstr "tree template"
+
+#: links.py:54
+msgid "Deletes and creates from scratch all the document indexes."
+msgstr "Deletes and creates from scratch all the document indexes."
+
+#: links.py:57
+#, fuzzy
+msgid "Rebuild indexes"
+msgstr "rebuild indexes"
+
+#: links.py:60
+#, fuzzy
+msgid "New child node"
+msgstr "new child node"
+
+#: managers.py:56
+#, fuzzy, python-format
+msgid ""
+"Error indexing document: %(document)s; expression: %(expression)s; "
+"%(exception)s"
+msgstr ""
+"Error updating document index, expression: %(expression)s; %(exception)s"
+
+#: models.py:29
+#, fuzzy
+#| msgid "Internal name used to reference this index."
+msgid "This values will be used by other apps to reference this index."
+msgstr "Internal name used to reference this index."
+
+#: models.py:35
+msgid "Causes this index to be visible and updated when document data changes."
+msgstr ""
+"Causes this index to be visible and updated when document data changes."
+
+#: models.py:82 models.py:109
+#, fuzzy
+msgid "Index"
+msgstr "Indexes"
+
+#: models.py:101
+#, fuzzy
+msgid "Index instance"
+msgstr "index instance"
+
+#: models.py:102
+#, fuzzy
+msgid "Index instances"
+msgstr "index instance"
+
+#: models.py:114
+msgid ""
+"Enter a template to render. Use Django's default templating language "
+"(https://docs.djangoproject.com/en/1.7/ref/templates/builtins/)"
+msgstr ""
+
+#: models.py:118
+#, fuzzy
+msgid "Indexing expression"
+msgstr "indexing expression"
+
+#: models.py:123
+msgid "Causes this node to be visible and updated when document data changes."
+msgstr "Causes this node to be visible and updated when document data changes."
+
+#: models.py:131
+msgid ""
+"Check this option to have this node act as a container for documents and not "
+"as a parent for further nodes."
+msgstr ""
+"Check this option to have this node act as a container for documents and not "
+"as a parent for further nodes."
+
+#: models.py:134
+#, fuzzy
+msgid "Link documents"
+msgstr "link documents"
+
+#: models.py:139
+msgid "Root"
+msgstr ""
+
+#: models.py:144
+#, fuzzy
+msgid "Index node template"
+msgstr "index template node"
+
+#: models.py:145
+#, fuzzy
+msgid "Indexes node template"
+msgstr "indexes template nodes"
+
+#: models.py:153
+#, fuzzy
+msgid "Index template node"
+msgstr "index template node"
+
+#: models.py:156
+#, fuzzy
+msgid "Value"
+msgstr "value"
+
+#: models.py:159
+#, fuzzy
+msgid "Documents"
+msgstr "documents"
+
+#: models.py:204
+#, fuzzy
+msgid "Index node instance"
+msgstr "index instance"
+
+#: models.py:205
+#, fuzzy
+msgid "Indexes node instances"
+msgstr "index instance"
+
+#: models.py:213
+#, fuzzy
+msgid "Document index node instance"
+msgstr "index instance"
+
+#: models.py:214
+#, fuzzy
+msgid "Document indexes node instances"
+msgstr "index instance"
+
+#: permissions.py:7
+msgid "Indexing"
+msgstr "Indexing"
+
+#: permissions.py:10
+msgid "Create new document indexes"
+msgstr "Create new document indexes"
+
+#: permissions.py:13
+msgid "Edit document indexes"
+msgstr "Edit document indexes"
+
+#: permissions.py:16
+msgid "Delete document indexes"
+msgstr "Delete document indexes"
+
+#: permissions.py:19
+msgid "View document indexes"
+msgstr "View document indexes"
+
+#: permissions.py:22
+msgid "Rebuild document indexes"
+msgstr "Rebuild document indexes"
+
+#: views.py:51
+#, fuzzy, python-format
+#| msgid "Delete document indexes"
+msgid "Delete the index: %s?"
+msgstr "Delete document indexes"
+
+#: views.py:64
+#, fuzzy, python-format
+msgid "Edit index: %s"
+msgstr "edit index: %s"
+
+#: views.py:81
+#, fuzzy
+msgid "Available document types"
+msgstr "document types"
+
+#: views.py:83
+#, fuzzy
+msgid "Document types linked"
+msgstr "document types"
+
+#: views.py:106
+#, fuzzy, python-format
+msgid "Document types linked to index: %s"
+msgstr "document types for index: %s"
+
+#: views.py:145
+#, fuzzy, python-format
+msgid "Tree template nodes for index: %s"
+msgstr "tree template nodes for index: %s"
+
+#: views.py:172
+#, fuzzy, python-format
+msgid "Create child node of: %s"
+msgstr "create child node"
+
+#: views.py:196
+#, fuzzy, python-format
+msgid "Delete the index template node: %s?"
+msgstr "edit index template node: %s"
+
+#: views.py:218
+#, fuzzy, python-format
+msgid "Edit the index template node: %s?"
+msgstr "edit index template node: %s"
+
+#: views.py:286
+#, python-format
+msgid "Navigation: %s"
+msgstr ""
+
+#: views.py:291
+#, fuzzy, python-format
+msgid "Contents for index: %s"
+msgstr "contents for index: %s"
+
+#: views.py:331
+#, fuzzy, python-format
+msgid "Indexes nodes containing document: %s"
+msgstr "indexes containing: %s"
+
+#: views.py:341
+msgid "On large databases this operation may take some time to execute."
+msgstr "On large databases this operation may take some time to execute."
+
+#: views.py:342
+#, fuzzy
+msgid "Rebuild all indexes?"
+msgstr "rebuild indexes"
+
+#: views.py:351
+#, fuzzy
+msgid "Index rebuild queued successfully."
+msgstr "Index rebuild completed successfully."
+
+#, fuzzy
+#~ msgid "Index list"
+#~ msgstr "index list"
+
+#~ msgid "Configure document indexes"
+#~ msgstr "Configure document indexes"
+
+#~ msgid "Index template node created successfully."
+#~ msgstr "Index template node created successfully."
+
+#~ msgid "Index template node edited successfully"
+#~ msgstr "Index template node edited successfully"
+
+#~ msgid "Node: %s deleted successfully."
+#~ msgstr "Node: %s deleted successfully."
+
+#~ msgid "Node: %(node)s delete error: %(error)s"
+#~ msgstr "Node: %(node)s delete error: %(error)s"
+
+#~ msgid "Enter a python string expression to be evaluated."
+#~ msgstr "Enter a python string expression to be evaluated."
+
+#, fuzzy
+#~ msgid "Go up one level"
+#~ msgstr "go up one level"
+
+#, fuzzy
+#~ msgid "Title"
+#~ msgstr "title"
+
+#~ msgid "The name that will be visible to users."
+#~ msgstr "The name that will be visible to users."
+
+#~ msgid "Index created successfully."
+#~ msgstr "Index created successfully."
+
+#~ msgid "Index edited successfully"
+#~ msgstr "Index edited successfully"
+
+#~ msgid "Index: %s deleted successfully."
+#~ msgstr "Index: %s deleted successfully."
+
+#~ msgid "Index: %(index)s delete error: %(error)s"
+#~ msgstr "Index: %(index)s delete error: %(error)s"
+
+#~ msgid "Are you sure you with to delete the index: %s?"
+#~ msgstr "Are you sure you with to delete the index: %s?"
+
+#, fuzzy
+#~ msgid "Document types not in index: %s"
+#~ msgstr "document types not in index: %s"
+
+#~ msgid "Are you sure you with to delete the index template node: %s?"
+#~ msgstr "Are you sure you with to delete the index template node: %s?"
+
+#~ msgid "Are you sure you wish to rebuild all indexes?"
+#~ msgstr "Are you sure you wish to rebuild all indexes?"
+
+#, fuzzy
+#~ msgid "Nodes"
+#~ msgstr "nodes"
+
+#~ msgid "Maximum suffix (%s) count reached."
+#~ msgstr "Maximum suffix (%s) count reached."
+
+#~ msgid ""
+#~ "Error in document indexing update expression: %(expression)s; "
+#~ "%(exception)s"
+#~ msgstr ""
+#~ "Error in document indexing update expression: %(expression)s; "
+#~ "%(exception)s"
+
+#~ msgid "Unable to delete document indexing node; %s"
+#~ msgstr "Unable to delete document indexing node; %s"
+
+#~ msgid "Unable to create indexing directory; %s"
+#~ msgstr "Unable to create indexing directory; %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unable to create symbolic link, file exists and could not be deleted: "
+#~ "%(filepath)s; %(exception)s"
+#~ msgstr ""
+#~ "Unable to create symbolic link, file exists and could not be deleted: "
+#~ "%(filepath)s; %(exc)s"
+
+#, fuzzy
+#~ msgid "Unable to create symbolic link: %(filepath)s; %(exception)s"
+#~ msgstr "Unable to create symbolic link: %(filepath)s; %(exc)s"
+
+#~ msgid "Unable to delete document symbolic link; %s"
+#~ msgstr "Unable to delete document symbolic link; %s"
+
+#~ msgid "Unable to delete indexing directory; %s"
+#~ msgstr "Unable to delete indexing directory; %s"
+
+#~ msgid "Available functions: %s"
+#~ msgstr "Available functions: %s"
+
+#, fuzzy
+#~ msgid "Document"
+#~ msgstr "document"
+
+#, fuzzy
+#~ msgid "Document rename count"
+#~ msgstr "document rename count"
+
+#, fuzzy
+#~ msgid "Documents rename count"
+#~ msgstr "documents rename count"
+
+#~ msgid ""
+#~ "A dictionary that maps the index name and where on the filesystem that "
+#~ "index will be mirrored."
+#~ msgstr ""
+#~ "A dictionary that maps the index name and where on the filesystem that "
+#~ "index will be mirrored."
+
+#~ msgid "Index rebuild error: %s"
+#~ msgstr "Index rebuild error: %s"
+
+#, fuzzy
+#~ msgid "Index instance node"
+#~ msgstr "index instance node"
+
+#, fuzzy
+#~ msgid "Indexes instance nodes"
+#~ msgstr "indexes instance nodes"
+
+#~ msgid "indexes"
+#~ msgstr "indexes"
+
+#~ msgid "edit"
+#~ msgstr "edit"
+
+#~ msgid "name"
+#~ msgstr "name"
+
+#~ msgid "index"
+#~ msgstr "index"
+
+#~ msgid "node"
+#~ msgstr "node"
+
+#~ msgid "What are indexes?"
+#~ msgstr "What are indexes?"
+
+#~ msgid "Indexes group documents into a tree like hierarchical structure."
+#~ msgstr "Indexes group documents into a tree like hierarchical structure."
