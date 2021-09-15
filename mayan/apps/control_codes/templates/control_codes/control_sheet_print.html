@@ -1,0 +1,29 @@
+{% extends 'appearance/base_plain.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content_plain %}
+    <style>
+        .img-responsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .list-inline {
+            padding-left: 0;
+            list-style: none;
+            margin-left: -5px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .list-inline > li {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    </style>
+
+    <h1 class="text-center">{{ title }}</h1>
+    {% include 'control_codes/control_sheet_content.html' %}
+{% endblock %}
