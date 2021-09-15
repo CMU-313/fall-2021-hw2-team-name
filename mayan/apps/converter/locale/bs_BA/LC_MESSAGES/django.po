@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Ilvana Dollaroviq <ilvanadollaroviq@gmail.com>, 2018
+# www.ping.ba <jomer@ping.ba>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-24 23:07-0400\n"
+"PO-Revision-Date: 2019-05-03 05:20+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Bosnian (Bosnia and Herzegovina) (http://www.transifex.com/rosarior/mayan-edms/language/bs_BA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bs_BA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps.py:22 permissions.py:7 settings.py:12
+msgid "Converter"
+msgstr "Konverter"
+
+#: apps.py:31 models.py:57
+msgid "Transformation"
+msgstr "Transformacija"
+
+#: backends/python.py:175 backends/python.py:181
+#, python-format
+msgid "Exception determining PDF page count; %s"
+msgstr "Izuzetak određivanje broja stranice PDF-a;%s"
+
+#: backends/python.py:195
+#, python-format
+msgid "Exception determining page count using Pillow; %s"
+msgstr "Izuzetak određivanje broja stranice koristeć1 Pillow;%s"
+
+#: classes.py:118
+msgid "LibreOffice not installed or not found."
+msgstr "LibreOffice nije instaliran ili nije pronađen."
+
+#: classes.py:201
+msgid "Not an office file format."
+msgstr "Nije format kancelarijskog fajla."
+
+#: dependencies.py:16
+msgid "Utility from the poppler-utils package used to inspect PDF files."
+msgstr ""
+
+#: dependencies.py:21
+msgid ""
+"Utility from the popper-utils package used to extract pages from PDF files "
+"into PPM format images."
+msgstr ""
+
+#: forms.py:28
+#, python-format
+msgid "\"%s\" not a valid entry."
+msgstr ""
+
+#: links.py:36
+msgid "Create new transformation"
+msgstr "Kreirajte novu transformaciju"
+
+#: links.py:42
+msgid "Delete"
+msgstr "Obriši"
+
+#: links.py:48
+msgid "Edit"
+msgstr "Urediti"
+
+#: links.py:53 models.py:58
+msgid "Transformations"
+msgstr "Transformacije"
+
+#: models.py:37
+msgid ""
+"Order in which the transformations will be executed. If left unchanged, an "
+"automatic order value will be assigned."
+msgstr "Red u kojem će se transformacije izvršiti. Ako je ostalo nepromenjeno, biće dodeljena automatska vrijednost porudžbine."
+
+#: models.py:39
+msgid "Order"
+msgstr "Sortiraj"
+
+#: models.py:43
+msgid "Name"
+msgstr "Ime"
+
+#: models.py:47
+msgid ""
+"Enter the arguments for the transformation as a YAML dictionary. ie: "
+"{\"degrees\": 180}"
+msgstr "Unesite argumente za transformaciju kao IAML rečnik. npr .: {\"stepeni\": 180}"
+
+#: models.py:49
+msgid "Arguments"
+msgstr "Argumenti"
+
+#: permissions.py:10
+msgid "Create new transformations"
+msgstr "Kreiraj nove transformacije"
+
+#: permissions.py:13
+msgid "Delete transformations"
+msgstr "Izbriši transformacije"
+
+#: permissions.py:16
+msgid "Edit transformations"
+msgstr "Edituj transformacije"
+
+#: permissions.py:19
+msgid "View existing transformations"
+msgstr "Pogledajte postojeće transformacije"
+
+#: settings.py:16
+msgid "Graphics conversion backend to use."
+msgstr "Grafička pretvorba grafike za upotrebu."
+
+#: settings.py:35
+msgid "Configuration options for the graphics conversion backend."
+msgstr "Opcije konfiguracije za backend konverziju grafike."
+
+#: transformations.py:81
+msgid "Crop"
+msgstr "Crop"
+
+#: transformations.py:156
+msgid "Flip"
+msgstr "Flip"
+
+#: transformations.py:167
+msgid "Gaussian blur"
+msgstr "Gaussian blur"
+
+#: transformations.py:177
+msgid "Line art"
+msgstr "Line art"
+
+#: transformations.py:188
+msgid "Mirror"
+msgstr "Ogledalo"
+
+#: transformations.py:199
+msgid "Resize"
+msgstr "Promjeni veličinu"
+
+#: transformations.py:226
+msgid "Rotate"
+msgstr "Rotiraj"
+
+#: transformations.py:252
+msgid "Rotate 90 degrees"
+msgstr "Rotirati 90 stepeni"
+
+#: transformations.py:263
+msgid "Rotate 180 degrees"
+msgstr "Rotirati 180 stepeni"
+
+#: transformations.py:274
+msgid "Rotate 270 degrees"
+msgstr "Rotirati 270 stepeni"
+
+#: transformations.py:284
+msgid "Unsharp masking"
+msgstr "Neoštećeno maskiranje"
+
+#: transformations.py:300
+msgid "Zoom"
+msgstr "Uvećaj"
+
+#: validators.py:26
+msgid "Enter a valid YAML value."
+msgstr "Unesite važeći IAML"
+
+#: views.py:72
+#, python-format
+msgid "Create new transformation for: %s"
+msgstr "Kreiraj novu transformaciju za:%s"
+
+#: views.py:127
+#, python-format
+msgid "Delete transformation \"%(transformation)s\" for: %(content_object)s?"
+msgstr "Izbriši transformaciju \"%(transformation)s\" za:%(content_object)s?"
+
+#: views.py:171
+#, python-format
+msgid "Edit transformation \"%(transformation)s\" for: %(content_object)s"
+msgstr "Edituj transformaciju \"%(transformation)s\" za:%(content_object)s"
+
+#: views.py:227
+msgid ""
+"Transformations allow changing the visual appearance of documents without "
+"making permanent changes to the document file themselves."
+msgstr ""
+
+#: views.py:231
+msgid "No transformations"
+msgstr ""
+
+#: views.py:232
+#, python-format
+msgid "Transformations for: %s"
+msgstr "Transformacije za:%s"
