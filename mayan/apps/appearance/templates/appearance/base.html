@@ -1,0 +1,120 @@
+{% load i18n %}
+{% load static %}
+
+{% load common_tags %}
+{% load navigation_tags %}
+{% load smart_settings_tags %}
+
+<script>
+    if (typeof partialNavigation === 'undefined') {
+        /* Check if the template was not loaded via AJAX
+         * If not then reload the root path passing the
+         * current location's path as the new hash
+         */
+        document.write('<script type="text/undefined">')
+        var currentPath = window.location.pathname + window.location.search;
+        window.location = '/#' + currentPath;
+    }
+</script>
+
+{% block stylesheets %}{% endblock %}
+
+{% if appearance_type == 'plain' %}
+    {% block content_plain %}{% endblock %}
+{% else %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                {% check_sqlite as check_sqlite %}
+                {% if check_sqlite %}
+                    <div class="alert alert-dismissible alert-warning">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <p><strong>{% trans 'Warning' %}</strong> {{ check_sqlite }}</p>
+                    </div>
+                {% endif %}
+                {% block messages %}
+                {% endblock %}
+            </div>
+        </div>
+
+        {% get_menus_links names='object menu,sidebar menu,secondary menu' sort_results=True as links %}
+        {% get_menu_links 'object facet' sort_results=True as form_navigation_links %}
+
+        <div class="row">
+            {% if links or form_navigation_links %}
+                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+            {% else %}
+                <div class="col-xs-12">
+            {% endif %}
+                {% include 'appearance/calculate_form_title.html' %}
+                {% block content %}{% endblock %}
+                {% block footer %}{% endblock %}
+            </div>
+
+            {% if links or form_navigation_links %}
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            {% endif %}
+
+            {% if links %}
+                <div class="pull-right btn-group" style="margin-bottom: 10px;">
+                    <button aria-expanded="true" type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown">
+                        {% trans 'Actions' %}
+                        <span class="caret"></span>
+                        <span class="sr-only">{% trans 'Toggle Dropdown' %}</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for links_set in links %}
+                            {% for entry in links_set %}
+                                <li><a class="btn-sm" href="{{ entry.url }}">{{ entry.text }}</a></li>
+                            {% endfor %}
+
+                            {% if not forloop.last and links_set %}
+                                <li class="divider"></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                 <div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+            {% endif %}
+
+            {% if form_navigation_links %}
+                <div class="pull-right list-group">
+                    {% if form_navigation_links %}
+                        {% for object_navigation_links in form_navigation_links %}
+                            {% with 'true' as hide_active_anchor %}
+                            {% with 'active' as link_class_active %}
+                            {% with 'list-group-item btn-sm' as link_classes %}
+                                {% include 'navigation/generic_navigation.html' %}
+                            {% endwith %}
+                            {% endwith %}
+                            {% endwith %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endif %}
+
+            {% if links or form_navigation_links %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+<script>
+    var DjangoMessages = [
+        {% for message in messages %}
+            {
+                tags: '{{ message.tags }}',
+                message: '{{ message.message }}'
+            },
+        {% endfor %}
+    ];
+</script>
+{% block javascript %}{% endblock %}
+
+<script>
+    document.title = '{% filter escapejs %}{% spaceless %}{% block title %}{% endblock %} :: {% block project_name %}{% smart_setting "COMMON_PROJECT_TITLE" %}{% endblock %}{% endspaceless %}{% endfilter %}';
+    // Strip HTML entities from the title
+    document.title = document.title.replace(/&(?:[a-z\d]+|#\d+|#x[a-f\d]+);/ig, '');
+    afterBaseLoad();
+</script>
