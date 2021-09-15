@@ -1,0 +1,62 @@
+{% load i18n %}
+{% load static %}
+
+{% include 'appearance/generic_multiform_subtemplate.html' %}
+
+<script type="text/javascript" src="{% url 'common:javascript_catalog' 'sources' %}"></script>
+
+<script type="text/x-template" id="previewTemplate">
+    <div class="dz-preview dz-file-preview">
+        <i class="far fa-file fa-10x"></i>
+        <div class="dz-details">
+            <div class="dz-filename"><span data-dz-name></span></div>
+            <div class="dz-size" data-dz-size></div>
+            <img data-dz-thumbnail />
+        </div>
+
+        <div class="dz-progress">
+            <span class="dz-upload" data-dz-uploadprogress>
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 100%">
+                </div>
+            </span>
+        </div>
+
+        <div class="dz-success-mark">
+            <span>
+                <i class="text-success fa fa-4x fa-check-circle"></i>
+            </span>
+        </div>
+        <div class="dz-error-mark">
+            <span>
+                <i class="text-danger fa fa-4x fa-times-circle"></i>
+            </span>
+        </div>
+        <div class="dz-error-message">
+            <span data-dz-errormessage>
+            </span>
+        </div>
+    </div>
+</script>
+
+<script>
+    jQuery(document).ready(function() {
+        var previewTemplate = document.querySelector('#previewTemplate').innerHTML;
+
+        {% verbatim %}
+            $('.dropzone').dropzone({
+                addRemoveLinks: true,
+                createImageThumbnails: false,
+                dictCancelUpload: gettext('Cancel upload'),
+                dictCancelUploadConfirmation: gettext('Are you sure you want to cancel this upload?'),
+                dictDefaultMessage: '<i class="fa fa-cloud-upload-alt"></i> ' + gettext('Drop files or click here to upload files'),
+                dictFallbackMessage: gettext('Your browser does not support drag\'n\'drop file uploads.'),
+                dictFallbackText: gettext('Please use the fallback form below to upload your files like in the olden days.'),
+                dictRemoveFile: gettext('Clear'),
+                dictResponseError: gettext('Server responded with {{statusCode}} code.'),
+                paramName: 'source-file',
+                previewTemplate: previewTemplate,
+            });
+        {% endverbatim %}
+    });
+</script>
+
