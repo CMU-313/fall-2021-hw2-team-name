@@ -1,0 +1,183 @@
+========
+REST API
+========
+
+Mayan EDMS provides an HTTP REST Application Program Interface (or API). This
+API allows integration with 3rd party software using simple HTTP requests.
+
+Several API authentication methods are provides: **Session**, **Token**,
+and **HTTP Basic**.
+
+The URL for the API can be found via the :menuselection:`Tools --> REST API`
+menu. The API is also self-documenting. The live API documentation can be
+found in the :menuselection:`Tools --> API Documentation (Swagger)` menu for
+the Swagger version and in the
+:menuselection:`Tools --> API Documentation (ReDoc)` menu for the ReDoc version.
+
+There are a few ways to structure REST APIs. In the case of Mayan EDMS, API
+endpoints are structured by resource type. Examples:
+
+* /cabinets - To view or create new cabinets
+* /cabinets/<id> - To view the details, edit, or delete an existing cabinet.
+* /cabinets/<id>/documents - To view, add, or remove documents from an existing
+  cabinet.
+* /cabinets/<id>/documents/<id> - To view, add, or remove one document from an
+  existing cabinet.
+
+The API is versioned with a top level entry. Since Mayan uses semantic
+versioning and API changes only occur on major versions, the API version will
+match the major version of the release. For every release of the series 4.x
+the API version will be "v4".
+
+The API supports the HTTP verbs: **GET**, **POST**, **PUT**, **PATCH**,
+and **DELETE**.
+
+The API also supports result sorting. Like the user interface, only
+indexed database fields support. The **OPTION** verb can be used to determine
+which fields are sortable.
+
+
+Example use
+===========
+
+Install the Python Requests library (http://docs.python-requests.org/en/master/):
+
+.. code-block:: console
+
+    pip install requests
+
+Get a list of document types:
+
+.. code-block:: python
+
+    import requests
+
+    requests.get(url='http://127.0.0.1:8000/api/v4/document_types/', auth=('username', 'password')).json()
+
+    {'count': 1,
+     'next': None,
+     'previous': None,
+     'results': [{'delete_time_period': 30,
+     'delete_time_unit': 'days',
+     'filename_generator_backend': 'uuid',
+     'filename_generator_backend_arguments': '',
+     'id': 1,
+     'label': 'Default',
+     'quick_label_list_url': 'http://127.0.0.1:8000/api/v4/document_types/1/quick_labels/',
+     'trash_time_period': None,
+     'trash_time_unit': None,
+     'url': 'http://127.0.0.1:8000/api/v4/document_types/1/'}]}
+
+
+Create a new document:
+
+.. code-block:: python
+
+    requests.post(url='http://127.0.0.1:8000/api/v4/documents/', auth=('username', 'password'), data={'document_type_id': 1, 'label': 'test document'}).json()
+
+    {'datetime_created': '2021-06-03T08:57:19.733359Z',
+     'description': '',
+     'document_change_type_url': 'http://127.0.0.1:8000/api/v4/documents/1/type/change/',
+     'document_type': {'delete_time_period': 30,
+      'delete_time_unit': 'days',
+      'filename_generator_backend': 'uuid',
+      'filename_generator_backend_arguments': '',
+      'id': 1,
+      'label': 'Default',
+      'quick_label_list_url': 'http://127.0.0.1:8000/api/v4/document_types/1/quick_labels/',
+      'trash_time_period': None,
+      'trash_time_unit': None,
+      'url': 'http://127.0.0.1:8000/api/v4/document_types/1/'},
+     'file_list_url': 'http://127.0.0.1:8000/api/v4/documents/1/files/',
+     'id': 1,
+     'label': 'test document',
+     'language': 'eng',
+     'file_latest': None,
+     'url': 'http://127.0.0.1:8000/api/v4/documents/1/',
+     'uuid': '5f350d5a-cae1-4236-beba-dab187f112e3',
+     'version_active': None,
+     'version_list_url': 'http://127.0.0.1:8000/api/v4/documents/1/versions/'}
+
+
+After creating a document, you need to upload a file to it. Use ``action`` code
+``1`` to also have a new document version created and its pages pointing to
+the pages of the new file uploaded:
+
+.. code-block:: python
+
+    with open(file='test_document.pdf', mode='rb') as file_object:
+        response = requests.post(url='http://127.0.0.1:8000/api/v4/documents/1/files/', auth=('username', 'password'), files={'file_new': file_object}, data={'action': 1})
+
+    response.status_code
+    202
+
+The API will return status code 202 meaning it has accepted the request and
+will perform the processing in the background.
+
+
+Use API tokens to avoid sending the username and password on every request. Obtain a token by making a POST request to ``/api/v4/auth/token/obtain/?format=json``:
+
+.. code-block:: python
+
+    requests.post(url='http://127.0.0.1:8000/api/v4/auth/token/obtain/?format=json', data={'username': 'username', 'password': 'password'}).json()
+
+    {'token': '4ccbc35b5eb327aa82dc3b7c9747b578900f02bb'}
+
+
+The API token may also be obtained using management commands:
+
+.. code-block:: console
+
+    ./manage.py drf_create_token admin
+
+    Generated token 4ccbc35b5eb327aa82dc3b7c9747b578900f02bb for user admin
+
+
+Add the API token to the request header:
+
+.. code-block:: python
+
+    headers = {'Authorization': 'Token 4ccbc35b5eb327aa82dc3b7c9747b578900f02bb'}
+
+    requests.get(url='http://127.0.0.1:8000/api/v4/document_types/', headers=headers).json()
+
+    {'count': 1,
+     'next': None,
+     'previous': None,
+     'results': [{'delete_time_period': 30,
+     'delete_time_unit': 'days',
+     'filename_generator_backend': 'uuid',
+     'filename_generator_backend_arguments': '',
+     'id': 1,
+     'label': 'Default',
+     'quick_label_list_url': 'http://127.0.0.1:8000/api/v4/document_types/1/quick_labels/',
+     'trash_time_period': None,
+     'trash_time_unit': None,
+     'url': 'http://127.0.0.1:8000/api/v4/document_types/1/'}]}
+
+
+Use sessions to avoid having to add the headers on each request:
+
+.. code-block:: python
+
+    session = requests.Session()
+
+    headers = {'Authorization': 'Token 4ccbc35b5eb327aa82dc3b7c9747b578900f02bb'}
+
+    session.headers.update(headers)
+
+    session.get(url='http://127.0.0.1:8000/api/v4/document_types/')
+
+    {'count': 1,
+     'next': None,
+     'previous': None,
+     'results': [{'delete_time_period': 30,
+     'delete_time_unit': 'days',
+     'filename_generator_backend': 'uuid',
+     'filename_generator_backend_arguments': '',
+     'id': 1,
+     'label': 'Default',
+     'quick_label_list_url': 'http://127.0.0.1:8000/api/v4/document_types/1/quick_labels/',
+     'trash_time_period': None,
+     'trash_time_unit': None,
+     'url': 'http://127.0.0.1:8000/api/v4/document_types/1/'}]}

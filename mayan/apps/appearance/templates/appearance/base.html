@@ -1,0 +1,119 @@
+{% load i18n %}
+{% load static %}
+
+{% load appearance_tags %}
+{% load common_tags %}
+{% load navigation_tags %}
+{% load smart_settings_tags %}
+{% load templating_tags %}
+
+{% spaceless %}
+
+<script>
+    if (typeof partialNavigation === 'undefined') {
+        /* Check if the template was not loaded via AJAX
+         * If not then reload the root path passing the
+         * current location's path as the new hash
+         */
+        document.write('<script type="text/undefined">')
+        var currentPath = window.location.pathname + window.location.search;
+        window.location = '/#' + currentPath;
+    }
+</script>
+
+{% block stylesheets %}{% endblock %}
+
+<style>
+    {% appearance_get_user_theme_stylesheet user=request.user %}
+</style>
+
+{% if appearance_type == 'plain' %}
+    {% block content_plain %}{% endblock %}
+{% else %}
+    <div class="">
+        {% navigation_resolve_menus names='facet,list facet,related,return,sources' sort_results=True as facet_menus_link_results %}
+        <div class="row zero-margin">
+            <div class="col-xs-12 {% if facet_menus_link_results %}has-sidebar{% endif %}" id="viewport">
+                <div class="row zero-margin">
+                    <div class="col-xs-12">
+                        {% block messages %}
+                        {% endblock %}
+
+                        {% appearance_app_templates template_name='viewport' %}
+                    </div>
+                </div>
+
+                {% include 'appearance/calculate_form_title.html' %}
+
+                {# action menu #}
+                {% navigation_resolve_menus names='object,secondary' sort_results=True as action_menus_link_results %}
+                {% if action_menus_link_results %}
+                    <div class="pull-right btn-group" id="menu-actions">
+                        {% include 'navigation/actions_dropdown.html' %}
+                    </div>
+                    <div class="clearfix"></div>
+                {% endif %}
+
+                {% block content %}{% endblock %}
+                {% block footer %}{% endblock %}
+            </div>
+
+            {% if facet_menus_link_results %}
+                <div id="sidebar">
+                    <div class="list-group">
+                        {% for menu_link_result in facet_menus_link_results %}
+                            {% if facet_menus_link_results|length > 1 %}
+                                {% if menu_link_result.menu.name not in 'facet,list facet'|split:"," %}
+                                    <li class="dropdown-header">{{ menu_link_result.menu.label }}</li>
+                                {% else %}
+                                    {% ifchanged menu_link_result.link_groups.0.object %}
+                                        {% common_get_object_verbose_name obj=menu_link_result.link_groups.0.object as link_group_object_verbose_name %}
+                                        <li class="dropdown-header">{% if link_group_object_verbose_name %}{{ link_group_object_verbose_name }}{% else %}{% trans 'Object' %}{% endif %}</li>
+                                    {% endifchanged %}
+                                {% endif %}
+                            {% else %}
+                                {% if menu_link_result.menu.name not in 'facet,list facet'|split:"," %}
+                                    <li class="dropdown-header">{{ menu_link_result.menu.label }}</li>
+                                {% endif %}
+                            {% endif %}
+                            {% for link_group in menu_link_result.link_groups %}
+                                {% with link_group.links as object_navigation_links %}
+                                {% with 'true' as hide_active_anchor %}
+                                {% with 'active' as link_class_active %}
+                                {% with 'list-group-item btn-sm' as link_classes %}
+                                    {% include 'navigation/generic_navigation.html' %}
+                                {% endwith %}
+                                {% endwith %}
+                                {% endwith %}
+                                {% endwith %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+<script>
+    var DjangoMessages = [
+        {% for message in messages %}
+            {
+                tags: '{{ message.tags }}',
+                message: '{{ message.message }}'
+            },
+        {% endfor %}
+    ];
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
+{% block javascript %}{% endblock %}
+
+<script>
+    document.title = '{% filter escapejs %}{% spaceless %}{% block title %}{% endblock %} :: {% block project_name %}{% smart_setting "COMMON_PROJECT_TITLE" %}{% endblock %}{% endspaceless %}{% endfilter %}';
+    // Strip HTML entities from the title
+    document.title = document.title.replace(/&(?:[a-z\d]+|#\d+|#x[a-f\d]+);/ig, '');
+    afterBaseLoad();
+</script>
+{% endspaceless %}

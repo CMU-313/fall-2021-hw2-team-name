@@ -1,0 +1,7 @@
+Sphinx==3.5.4
+sphinx-autobuild==2021.3.14
+sphinx-sitemap==2.2.0
+sphinx_rtd_theme==0.5.2
+sphinxcontrib-blockdiag==2.0.0
+sphinxcontrib-spelling==7.1.0
+tornado==6.1

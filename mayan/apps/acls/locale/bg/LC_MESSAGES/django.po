@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Translators:
+# Roberto Rosario, 2021
+# 295005be79b88987cac803400975dbae_87f6b64 <412e4e8df9c702a35ac89972be5f12ff_27148>, 2021
+# Pavlin Koldamov <pkoldamov@gmail.com>, 2021
+# Lyudmil Antonov <lantonov.here@gmail.com>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-05 07:22+0000\n"
+"PO-Revision-Date: 2021-04-11 06:12+0000\n"
+"Last-Translator: Lyudmil Antonov <lantonov.here@gmail.com>, 2021\n"
+"Language-Team: Bulgarian (https://www.transifex.com/rosarior/teams/13584/bg/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:24 classes.py:143 links.py:27
+msgid "ACLs"
+msgstr "ACL"
+
+#: apps.py:60
+msgid ""
+"Object for which the access is granted. When sorting objects, only the type "
+"is used and not the actual label of the object."
+msgstr ""
+"Обект, за който е предоставен достъп. При сортиране на обекти се използва "
+"само типът, а не действителният етикет на обекта."
+
+#: apps.py:63
+msgid "Object"
+msgstr "Обект"
+
+#: events.py:6 permissions.py:5
+msgid "Access control lists"
+msgstr "Контролни списъци за достъп"
+
+#: events.py:10
+msgid "ACL created"
+msgstr "Новосъздадени ACL"
+
+#: events.py:13
+msgid "ACL deleted"
+msgstr "Изтрити ACL"
+
+#: events.py:16
+msgid "ACL edited"
+msgstr "Редактирани ACL"
+
+#: forms.py:13 models.py:51 views.py:67
+msgid "Role"
+msgstr "Роля"
+
+#: links.py:16
+msgid "New ACL"
+msgstr "Нов ACL"
+
+#: links.py:21
+msgid "Delete"
+msgstr "Изтрийте"
+
+#: links.py:32 models.py:45 workflow_actions.py:46 workflow_actions.py:161
+msgid "Permissions"
+msgstr "Разрешения"
+
+#: links.py:35
+msgid "Global ACLs"
+msgstr "Глобални ACL"
+
+#: managers.py:243
+#, python-format
+msgid "Object \"%s\" is not a model and cannot be checked for access."
+msgstr "Обект \"%s\" не е модел и не може да бъде проверен за достъп"
+
+#: managers.py:263
+#, python-format
+msgid "Insufficient access for: %s"
+msgstr "Недостатъчен достъп за: %s"
+
+#: models.py:49
+msgid "Role to which the access is granted for the specified object."
+msgstr "Роля, до която се предоставя достъп за посочения обект."
+
+#: models.py:59
+msgid "Access entry"
+msgstr "Запис на достъп"
+
+#: models.py:60
+msgid "Access entries"
+msgstr "Записи на достъп"
+
+#: models.py:64
+#, python-format
+msgid "Role \"%(role)s\" permission's for \"%(object)s\""
+msgstr "Роля \"%(role)s\" разрешение за \"%(object)s\""
+
+#: permissions.py:8
+msgid "Edit ACLs"
+msgstr "Редактиране на контролни списъци за достъп"
+
+#: permissions.py:11
+msgid "View ACLs"
+msgstr "Преглед на контролни списъци за достъп"
+
+#: serializers.py:125
+msgid "Primary key of the permission to add to the ACL."
+msgstr "Първичен ключ на разрешението за добавяне към ACL."
+
+#: serializers.py:132
+msgid "Primary key of the permission to remove from the ACL."
+msgstr "Първичен ключ на разрешението за премахване от ACL."
+
+#: views.py:40
+#, python-format
+msgid ""
+"An ACL for \"%(object)s\" using role \"%(role)s\" already exists. Edit that "
+"ACL entry instead."
+msgstr ""
+"ACL за „%(object)s“, използващ роля „%(role)s“, вече съществува. "
+"Редактирайте този ACL запис вместо това."
+
+#: views.py:53
+#, python-format
+msgid "New access control lists for: %s"
+msgstr "Нови контролни списъци на достъп за: %s"
+
+#: views.py:96
+#, python-format
+msgid "Delete ACL: %s"
+msgstr "Изтрийте ACL: %s"
+
+#: views.py:139
+msgid "There are no ACLs for this object"
+msgstr "Няма контролни списъци за достъп за този обект"
+
+#: views.py:142 views.py:259
+msgid ""
+"ACL stands for Access Control List and is a precise method to control user "
+"access to objects in the system. ACLs allow granting a permission to a role "
+"but only for a specific object or set of objects."
+msgstr ""
+"ACL означава Списък за контрол на достъпа и е точен метод за контрол на "
+"достъпа на потребителите до обекти в системата. ACL позволява предоставяне "
+"на разрешение за роля, но само за конкретен обект или набор от обекти."
+
+#: views.py:149
+#, python-format
+msgid "Access control lists for: %s"
+msgstr "Контролни списъци на достъп за: %s"
+
+#: views.py:163
+msgid "Granted permissions"
+msgstr "Дадени разрешения"
+
+#: views.py:164
+msgid "Available permissions"
+msgstr "Налични разрешения"
+
+#: views.py:208
+#, python-format
+msgid "Role \"%(role)s\" permission's for \"%(object)s\"."
+msgstr "Роля \"%(role)s\" разрешение за \"%(object)s\""
+
+#: views.py:217
+msgid ""
+"Disabled permissions are inherited from a parent object or directly granted "
+"to the role and can't be removed from this view. Inherited permissions need "
+"to be removed from the parent object's ACL or from them role via the Setup "
+"menu."
+msgstr ""
+"Отменени разрешения се наследяват от родителския обект или се дават направо "
+"на потребител с определена роля и не могат да бъдат премахнати от този "
+"изглед. Наследените разрешения трябва да бъдат премахнати от ACL на "
+"родителския обект или от определената роля чрез меню Настройки."
+
+#: views.py:256
+msgid "There are no ACLs"
+msgstr "Няма ACL"
+
+#: views.py:265
+msgid "Global access control lists"
+msgstr "Глобални списъци за контрол на достъпа"
+
+#: workflow_actions.py:23
+msgid "Object type"
+msgstr "Тип обект"
+
+#: workflow_actions.py:26
+msgid "Type of the object for which the access will be modified."
+msgstr "Тип на обекта, за който достъпа ще бъде променен"
+
+#: workflow_actions.py:32
+msgid "Object ID"
+msgstr "Идентификатор на обекта"
+
+#: workflow_actions.py:35
+msgid ""
+"Numeric identifier of the object for which the access will be modified."
+msgstr "Числов показател на обекта, достъпа на който ще бъде променен."
+
+#: workflow_actions.py:40 workflow_actions.py:155
+msgid "Roles"
+msgstr "Роли"
+
+#: workflow_actions.py:42 workflow_actions.py:157
+msgid "Roles whose access will be modified."
+msgstr "Роли, за които достъпа ще бъде променен."
+
+#: workflow_actions.py:49 workflow_actions.py:164
+msgid ""
+"Permissions to grant/revoke to/from the role for the object selected above."
+msgstr "Разрешение за даване/отнемане на/от ролята за обекта избран по-горе."
+
+#: workflow_actions.py:57
+msgid "Grant object access"
+msgstr "Дайте достъп до обекта"
+
+#: workflow_actions.py:140
+msgid "Revoke object access"
+msgstr "Отменете достъпа до обекта"
+
+#: workflow_actions.py:172
+msgid "Grant document access"
+msgstr "Даване достъп към документа"
+
+#: workflow_actions.py:211
+msgid "Revoke document access"
+msgstr "Отнемане достъп към документа"

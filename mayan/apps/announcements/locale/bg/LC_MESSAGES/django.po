@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Translators:
+# Roberto Rosario, 2021
+# Pavlin Koldamov <pkoldamov@gmail.com>, 2021
+# Lyudmil Antonov <lantonov.here@gmail.com>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-05 07:22+0000\n"
+"PO-Revision-Date: 2021-04-12 03:38+0000\n"
+"Last-Translator: Lyudmil Antonov <lantonov.here@gmail.com>, 2021\n"
+"Language-Team: Bulgarian (https://www.transifex.com/rosarior/teams/13584/bg/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:37 events.py:5 links.py:40 models.py:41 permissions.py:6
+#: templates/announcements/announcements.html:8 views.py:119
+msgid "Announcements"
+msgstr "Съобщения"
+
+#: apps.py:74 apps.py:78
+msgid "None"
+msgstr "Няма"
+
+#: events.py:8
+msgid "Announcement created"
+msgstr "Съобщението е създадено"
+
+#: events.py:11
+msgid "Announcement edited"
+msgstr "Съобщението е редактирано"
+
+#: links.py:17 views.py:30
+msgid "Create announcement"
+msgstr "Създайте съобщение"
+
+#: links.py:20 links.py:26
+msgid "Delete"
+msgstr "Изтрийте"
+
+#: links.py:31
+msgid "Edit"
+msgstr "Редактиране"
+
+#: models.py:18
+msgid "Short description of this announcement."
+msgstr "Кратко описание на това съобщение."
+
+#: models.py:19
+msgid "Label"
+msgstr "Етикет"
+
+#: models.py:22
+msgid "The actual text to be displayed."
+msgstr "Действителният текст за показване."
+
+#: models.py:23
+msgid "Text"
+msgstr "Текст"
+
+#: models.py:25
+msgid "Enabled"
+msgstr "Активиран"
+
+#: models.py:28
+msgid "Date and time after which this announcement will be displayed."
+msgstr "Дата и час, след които това съобщение ще се покаже."
+
+#: models.py:29
+msgid "Start date time"
+msgstr "Начални дата и час"
+
+#: models.py:33
+msgid "Date and time until when this announcement is to be displayed."
+msgstr "Дата и час, до които трябва да се покаже това съобщение."
+
+#: models.py:34
+msgid "End date time"
+msgstr "Крайни дата и час"
+
+#: models.py:40
+msgid "Announcement"
+msgstr "Съобщение"
+
+#: permissions.py:10
+msgid "Create announcements"
+msgstr "Създайте съобщения"
+
+#: permissions.py:13
+msgid "Delete announcements"
+msgstr "Изтриване на съобщения"
+
+#: permissions.py:16
+msgid "Edit announcements"
+msgstr "Редактиране на съобщения"
+
+#: permissions.py:19
+msgid "View announcements"
+msgstr "Преглед на съобщенията"
+
+#: views.py:41
+#, python-format
+msgid "Error deleting announcement \"%(instance)s\"; %(exception)s"
+msgstr "Грешка при изтриването на съобщение „%(instance)s“; %(exception)s"
+
+#: views.py:50
+#, python-format
+msgid "Announcement \"%(object)s\" deleted successfully."
+msgstr "Съобщението &quot;%(object)s&quot; беше изтрито успешно."
+
+#: views.py:53
+#, python-format
+msgid "%(count)d announcement deleted successfully."
+msgstr "%(count)d съобщение беше изтрито успешно."
+
+#: views.py:56
+#, python-format
+msgid "%(count)d announcements deleted successfully."
+msgstr "%(count)d съобщения бяха изтрити успешно."
+
+#: views.py:58
+#, python-format
+msgid "Delete announcement: %(object)s."
+msgstr "Изтриване на съобщение: %(object)s."
+
+#: views.py:59
+#, python-format
+msgid "Delete the %(count)d selected announcement."
+msgstr "Изтрийте избраното съобщение %(count)d."
+
+#: views.py:60
+#, python-format
+msgid "Delete the %(count)d selected announcements."
+msgstr "Изтрийте избраните съобщения %(count)d."
+
+#: views.py:92
+#, python-format
+msgid "Edit announcement: %s"
+msgstr "Редактиране на съобщение: %s"
+
+#: views.py:114
+msgid ""
+"Announcements are displayed in the login view. You can use announcements to "
+"convery information about your organzation, announcements or usage "
+"guidelines for your users."
+msgstr ""
+"Съобщенията се показват в изгледа за вход. Можете да използвате съобщения за"
+" събиране на информация за вашата организация, съобщения или насоки за "
+"използване за вашите потребители."
+
+#: views.py:118
+msgid "No announcements available"
+msgstr "Няма налични съобщения"
