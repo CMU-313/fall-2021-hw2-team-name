@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Atdhe Tabaku <Atdhe617@gmail.com>, 2018
+# Ilvana Dollaroviq <ilvanadollaroviq@gmail.com>, 2018
+# www.ping.ba <jomer@ping.ba>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 00:59-0400\n"
+"PO-Revision-Date: 2019-04-27 22:53+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Bosnian (Bosnia and Herzegovina) (http://www.transifex.com/rosarior/mayan-edms/language/bs_BA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bs_BA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps.py:47 permissions.py:8 settings.py:10
+msgid "Document signatures"
+msgstr "Potpisi dokumenta"
+
+#: apps.py:94
+msgid "Date"
+msgstr "Datum"
+
+#: apps.py:97 models.py:46
+msgid "Key ID"
+msgstr "ID ključa"
+
+#: apps.py:101 forms.py:64 models.py:50
+msgid "Signature ID"
+msgstr "ID potpisa"
+
+#: apps.py:102 forms.py:76
+msgid "None"
+msgstr "Nijedno"
+
+#: apps.py:105
+msgid "Type"
+msgstr "Tip"
+
+#: forms.py:19 forms.py:33
+msgid "Key"
+msgstr "Ključ"
+
+#: forms.py:24
+msgid ""
+"The passphrase to unlock the key and allow it to be used to sign the "
+"document version."
+msgstr ""
+
+#: forms.py:26
+msgid "Passphrase"
+msgstr "Passphrase"
+
+#: forms.py:35
+msgid "Private key that will be used to sign this document version."
+msgstr ""
+
+#: forms.py:46
+msgid "Signature is embedded?"
+msgstr "Potpis je ugrađen?"
+
+#: forms.py:48
+msgid "Signature date"
+msgstr "Datum potpisa"
+
+#: forms.py:51
+msgid "Signature key ID"
+msgstr "ID ključa za potpis"
+
+#: forms.py:53
+msgid "Signature key present?"
+msgstr "Potpisni ključ prisutan?"
+
+#: forms.py:66
+msgid "Key fingerprint"
+msgstr "Ključni otisak prsta"
+
+#: forms.py:70
+msgid "Key creation date"
+msgstr "Datum kreiranja ključa"
+
+#: forms.py:75
+msgid "Key expiration date"
+msgstr "Ključni datum isteka"
+
+#: forms.py:80
+msgid "Key length"
+msgstr "Ključna dužina"
+
+#: forms.py:84
+msgid "Key algorithm"
+msgstr "Ključni algoritam"
+
+#: forms.py:88
+msgid "Key user ID"
+msgstr "Ključni ID korisnika"
+
+#: forms.py:92
+msgid "Key type"
+msgstr "Ključni tip"
+
+#: links.py:32
+msgid "Verify all documents"
+msgstr "Provjerite sve dokumente"
+
+#: links.py:39 links.py:58 queues.py:9
+msgid "Signatures"
+msgstr "Potpisi"
+
+#: links.py:45
+msgid "Delete"
+msgstr "Obriši"
+
+#: links.py:52
+msgid "Details"
+msgstr "Detalji"
+
+#: links.py:63
+msgid "Download"
+msgstr "Download"
+
+#: links.py:69
+msgid "Upload signature"
+msgstr "Otpremi potpis"
+
+#: links.py:76
+msgid "Sign detached"
+msgstr "Znak odvojen"
+
+#: links.py:83
+msgid "Sign embedded"
+msgstr "Znak ugradjen"
+
+#: models.py:40
+msgid "Document version"
+msgstr "Verzija dokumenta"
+
+#: models.py:44
+msgid "Date signed"
+msgstr "Datum prijave"
+
+#: models.py:54
+msgid "Public key fingerprint"
+msgstr "Otisak prsta javnog ključa"
+
+#: models.py:60
+msgid "Document version signature"
+msgstr "Potpis verzija dokumenta"
+
+#: models.py:61
+msgid "Document version signatures"
+msgstr "Potpisi verzija dokumenta"
+
+#: models.py:80
+msgid "Detached"
+msgstr "Odvojen"
+
+#: models.py:82
+msgid "Embedded"
+msgstr "Ugradjen"
+
+#: models.py:97
+msgid "Document version embedded signature"
+msgstr "Verzija dokumenta sa ugrađenim potpisom"
+
+#: models.py:98
+msgid "Document version embedded signatures"
+msgstr "Verzija dokumenta sa ugrađenim potpisima"
+
+#: models.py:131
+msgid "Signature file"
+msgstr "Datoteka potpisa"
+
+#: models.py:138
+msgid "Document version detached signature"
+msgstr "Verzija dokumenta odvojen potpis"
+
+#: models.py:139
+msgid "Document version detached signatures"
+msgstr "Verzija dokumenta odvojen potpisima"
+
+#: models.py:142
+msgid "signature"
+msgstr "potpis"
+
+#: permissions.py:12
+msgid "Sign documents with detached signatures"
+msgstr "Potpišite dokumente sa odvojenim potpisom"
+
+#: permissions.py:16
+msgid "Sign documents with embedded signatures"
+msgstr "Potpišite dokumente sa odvojenim potpisima"
+
+#: permissions.py:20
+msgid "Delete detached signatures"
+msgstr "Izbrišite odvojene potpise"
+
+#: permissions.py:24
+msgid "Download detached document signatures"
+msgstr "Preuzmite pojedinačne potpise dokumenta"
+
+#: permissions.py:28
+msgid "Upload detached document signatures"
+msgstr "Otpremanje odvojenih potpisa dokumenta"
+
+#: permissions.py:32
+msgid "Verify document signatures"
+msgstr "Provjeriti potpise dokumenta"
+
+#: permissions.py:36
+msgid "View details of document signatures"
+msgstr "Pogledajte detalje o potpisima dokumenta"
+
+#: queues.py:12
+msgid "Verify key signatures"
+msgstr "Potvrdite ključne potpise"
+
+#: queues.py:16
+msgid "Unverify key signatures"
+msgstr "Ne verifikujte ključne potpise"
+
+#: queues.py:20
+msgid "Verify document version"
+msgstr "Proverite verziju dokumenta"
+
+#: queues.py:25
+msgid "Verify missing embedded signature"
+msgstr "Proverite nedostajući ugrađeni potpis"
+
+#: settings.py:15
+msgid "Path to the Storage subclass to use when storing detached signatures."
+msgstr ""
+
+#: settings.py:24
+msgid "Arguments to pass to the SIGNATURE_STORAGE_BACKEND. "
+msgstr ""
+
+#: views.py:68 views.py:159
+msgid "Passphrase is needed to unlock this key."
+msgstr "Potrebna je lozinka za otključavanje ovog ključa."
+
+#: views.py:79 views.py:170
+msgid "Passphrase is incorrect."
+msgstr "Govorna fraza je netačna."
+
+#: views.py:101 views.py:191
+msgid "Document version signed successfully."
+msgstr "Verzija dokumenta uspešno je potpisana."
+
+#: views.py:127
+#, python-format
+msgid "Sign document version \"%s\" with a detached signature"
+msgstr "Potpisati verziju dokumenta \"%s\" sa odvojenim potpisom"
+
+#: views.py:224
+#, python-format
+msgid "Sign document version \"%s\" with a embedded signature"
+msgstr "Potpisati verziju dokumenta \"%s\" sa ugrađenim potpisom"
+
+#: views.py:240
+#, python-format
+msgid "Delete detached signature: %s"
+msgstr "Obriši detektovani potpis:%s"
+
+#: views.py:260
+#, python-format
+msgid "Details for signature: %s"
+msgstr "Detalji za potpis: %s"
+
+#: views.py:300
+msgid ""
+"Signatures help provide authorship evidence and tamper detection. They are "
+"very secure and hard to forge. A signature can be embedded as part of the "
+"document itself or uploaded as a separate file."
+msgstr ""
+
+#: views.py:328
+msgid "There are no signatures for this document."
+msgstr ""
+
+#: views.py:331
+#, python-format
+msgid "Signatures for document version: %s"
+msgstr "Potpisi za verziju dokumenta: %s"
+
+#: views.py:361
+#, python-format
+msgid "Upload detached signature for document version: %s"
+msgstr "Otpremanje odvojenog potpisa za verziju dokumenta: %s"
+
+#: views.py:378
+msgid "On large databases this operation may take some time to execute."
+msgstr "Na velikim bazama podataka ove operacije mogu potrajati neko vrijeme."
+
+#: views.py:379
+msgid "Verify all document for signatures?"
+msgstr "Proverite sve dokumente za potpis?"
+
+#: views.py:389
+msgid "Signature verification queued successfully."
+msgstr "Provera potpisa je u redu."

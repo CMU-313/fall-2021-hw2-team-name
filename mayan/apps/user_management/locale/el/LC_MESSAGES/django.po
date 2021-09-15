@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 01:02-0400\n"
+"PO-Revision-Date: 2019-05-17 05:51+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Greek (http://www.transifex.com/rosarior/mayan-edms/language/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:78 events.py:8 permissions.py:8
+msgid "User management"
+msgstr "Διαχείριση χρηστών"
+
+#: apps.py:96
+msgid "Group"
+msgstr ""
+
+#: apps.py:97 links.py:41 links.py:52 links.py:75 search.py:25 views.py:120
+msgid "Groups"
+msgstr "Ομάδες"
+
+#: apps.py:98 search.py:41
+msgid "Name"
+msgstr "Όνομα"
+
+#: apps.py:104 models.py:18
+msgid "User"
+msgstr "Χρήστης"
+
+#: apps.py:105 apps.py:170 links.py:47 links.py:80 links.py:96 views.py:302
+msgid "Users"
+msgstr "Χρήστες"
+
+#: apps.py:108
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+#: apps.py:109 search.py:19
+msgid "First name"
+msgstr "Όνομα"
+
+#: apps.py:110 search.py:28
+msgid "Last name"
+msgstr "Επώνυμο"
+
+#: apps.py:111 search.py:22
+msgid "Email"
+msgstr "Λογαριασμός email"
+
+#: apps.py:112
+msgid "Is active?"
+msgstr ""
+
+#: apps.py:115 apps.py:119
+msgid "Has usable password?"
+msgstr "Έχει κωδικό ενεργοποίησης;"
+
+#: apps.py:134
+msgid "All the groups."
+msgstr "Όλες οι ομάδες."
+
+#: apps.py:138
+msgid "All the users."
+msgstr "Όλοι οι χρήστες."
+
+#: events.py:12
+msgid "Group created"
+msgstr ""
+
+#: events.py:15
+msgid "Group edited"
+msgstr ""
+
+#: events.py:19
+msgid "User created"
+msgstr ""
+
+#: events.py:22
+msgid "User edited"
+msgstr ""
+
+#: events.py:25
+msgid "User logged in"
+msgstr ""
+
+#: events.py:28
+msgid "User logged out"
+msgstr ""
+
+#: links.py:16
+msgid "User details"
+msgstr "Πληροφορίες χρήστη"
+
+#: links.py:20
+msgid "Edit details"
+msgstr "Τροποποίηση πληροφοριών"
+
+#: links.py:24 views.py:56
+msgid "Create new group"
+msgstr "Δημιουργία νέας ομάδας."
+
+#: links.py:31 links.py:64 links.py:85
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: links.py:36 links.py:69
+msgid "Edit"
+msgstr "Τροποποίηση"
+
+#: links.py:57 views.py:152
+msgid "Create new user"
+msgstr "Δημιουργία νέου χρήστη"
+
+#: links.py:92
+msgid "User options"
+msgstr ""
+
+#: models.py:22
+msgid "Forbid this user from changing their password."
+msgstr ""
+
+#: models.py:28
+msgid "User settings"
+msgstr ""
+
+#: models.py:29
+msgid "Users settings"
+msgstr ""
+
+#: permissions.py:12
+msgid "Create new groups"
+msgstr "Δημιουργία νέας ομάδας"
+
+#: permissions.py:15
+msgid "Delete existing groups"
+msgstr "Διαγραφή υπαρχόντων ομάδων"
+
+#: permissions.py:18
+msgid "Edit existing groups"
+msgstr "Τροποποιηση υπαρχόντων ομάδων"
+
+#: permissions.py:21
+msgid "View existing groups"
+msgstr "Εμφάνιση υπαρχόντων ομαδων"
+
+#: permissions.py:24
+msgid "Create new users"
+msgstr "Δημιουργία νέων χρηστών"
+
+#: permissions.py:27
+msgid "Delete existing users"
+msgstr "Διαγρφή υπαρχόντων χρηστν"
+
+#: permissions.py:30
+msgid "Edit existing users"
+msgstr "Τροποποίηση υπαρχόντων χρηστών"
+
+#: permissions.py:33
+msgid "View existing users"
+msgstr "Εμφάνιση υπαρχόντων χρηστών"
+
+#: search.py:31
+msgid "username"
+msgstr "Όνομα χρήστη"
+
+#: serializers.py:34
+msgid "Comma separated list of group primary keys to assign this user to."
+msgstr "Λίστα (με κόμμα) πρωτευόντων κλειδιών ομάδων που θα ανήκει ο χρήστης."
+
+#: serializers.py:64
+msgid "List of group primary keys to which to add the user."
+msgstr "Λίστα πρωτευόντων κλειδιών ομάδων που θα ανήκει ο χρήστης."
+
+#: utils.py:8
+msgid "Anonymous"
+msgstr "Ανόνυμο"
+
+#: views.py:37
+msgid "Current user details"
+msgstr "Λεπτομέρειες τρέχοντος χρήστη"
+
+#: views.py:45
+msgid "Edit current user details"
+msgstr "Τροποποίηση λεπτομερειών τρέχοντος χρήστη."
+
+#: views.py:78
+#, python-format
+msgid "Delete the group: %s?"
+msgstr "Διαγραφή της ομάδας: %s"
+
+#: views.py:93
+#, python-format
+msgid "Edit group: %s"
+msgstr "Τροποποίηση ομάδας: %s"
+
+#: views.py:113
+msgid ""
+"User groups are organizational units. They should mirror the organizational "
+"units of your organization. Groups can't be used for access control. Use "
+"roles for permissions and access control, add groups to them."
+msgstr ""
+
+#: views.py:119
+msgid "There are no user groups"
+msgstr ""
+
+#: views.py:132
+msgid "Available users"
+msgstr "Διαθέσιμοι χρήστες"
+
+#: views.py:133
+msgid "Group users"
+msgstr ""
+
+#: views.py:141
+#, python-format
+msgid "Users of group: %s"
+msgstr ""
+
+#: views.py:173
+#, python-format
+msgid "User delete request performed on %(count)d user"
+msgstr "Αίτημα διαγραφής πραγματοποιήθηκε για %(count)d χρήστη"
+
+#: views.py:175
+#, python-format
+msgid "User delete request performed on %(count)d users"
+msgstr "Αίτημα διαγραφής πραγματοποιήθηκε για %(count)d χρήστες"
+
+#: views.py:183
+msgid "Delete user"
+msgid_plural "Delete users"
+msgstr[0] "Διαγραφή χρήστη"
+msgstr[1] "Διαγραφή χρηστών"
+
+#: views.py:193
+#, python-format
+msgid "Delete user: %s"
+msgstr "Διαγραφή χρήστη: %s"
+
+#: views.py:204
+msgid ""
+"Super user and staff user deleting is not allowed, use the admin interface "
+"for these cases."
+msgstr "Η διαγραφή υπερχρήστη και προσωπικού δενεπιτρέπεται. Χρησιμοποιήστε το περιβάλλον διαχείρησης γι' αυτές τις περιπτώσεις."
+
+#: views.py:212
+#, python-format
+msgid "User \"%s\" deleted successfully."
+msgstr "Ο χρήστης \"%s\" διαγράφηκε επιτυχώς."
+
+#: views.py:218
+#, python-format
+msgid "Error deleting user \"%(user)s\": %(error)s"
+msgstr "Σφάλμα κατά την διαγραφή του χρήστη \"%(user)s\": %(error)s"
+
+#: views.py:236
+#, python-format
+msgid "Details of user: %s"
+msgstr ""
+
+#: views.py:251
+#, python-format
+msgid "Edit user: %s"
+msgstr "Τροποποίηση χρήστη: %s"
+
+#: views.py:266
+msgid "Available groups"
+msgstr "Διαθέσιμες ομάδες"
+
+#. Translators: "User groups" here refer to the group list of a specific
+#. user.
+#: views.py:269
+msgid "User groups"
+msgstr ""
+
+#: views.py:277
+#, python-format
+msgid "Groups of user: %s"
+msgstr "Ομάδες που ανήκει ο χρήστης: %s"
+
+#: views.py:298
+msgid ""
+"User accounts can be create from this view. After creating an user account "
+"you will prompted to set a password for it. "
+msgstr ""
+
+#: views.py:301
+msgid "There are no user accounts"
+msgstr ""
+
+#: views.py:316
+#, python-format
+msgid "Edit options for user: %s"
+msgstr ""
