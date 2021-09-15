@@ -1,0 +1,14 @@
+{% extends 'appearance/base.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans 'Server error' %}{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h3 class="title">{% trans 'Server error' %}</h3>
+        <div class="inner">
+            <p>{% trans "There's been an error. It's been reported to the site administrators via e-mail and should be fixed shortly. Thanks for your patience." %}</p>
+        </div>
+    </div>
+{% endblock %}

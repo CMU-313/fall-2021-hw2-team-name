@@ -1,0 +1,46 @@
+{% extends 'appearance/base_plain.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% load autoadmin_tags %}
+{% load common_tags %}
+{% load motd_tags %}
+{% load smart_settings_tags %}
+
+{% block base_title %}{% trans 'Login' %}{% endblock %}
+
+{% block project_name %}{% endblock %}
+
+{% block content_plain %}
+    {% autoadmin_partial %}
+    {% motd %}
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <h2>{% trans 'Sign in' %}</h2>
+                    <hr>
+                    <div class="content login">
+                        <form action="." method="post" class="form login">{% csrf_token %}
+                            <div class="group wat-cf">
+                                {% include 'appearance/generic_form_instance.html' %}
+                                <input type="hidden" name="next" value="{{ next|escape }}" />
+                            <div class="form-group">
+                                <button class="btn btn-primary" name="{% if form.prefix %}{{ form.prefix }}-submit{% else %}submit{% endif %}" type="submit"><i class="fa fa-sign-in-alt"></i> {% trans 'Sign in' %}</button>
+                            </div>
+                        </form>
+                        <hr>
+                        <div>
+                            <a class="pull-right" href="{% url 'authentication:password_reset_view' %}">{% trans 'Forgot your password?' %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
