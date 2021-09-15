@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# molnars <szabolcs.molnar@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-18 00:31-0400\n"
+"PO-Revision-Date: 2019-05-17 05:51+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Hungarian (http://www.transifex.com/rosarior/mayan-edms/language/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:51 apps.py:106 apps.py:113 apps.py:135 apps.py:137 events.py:7
+#: forms.py:17 links.py:25 menus.py:16 models.py:42 permissions.py:7
+#: views.py:222 workflow_actions.py:20 workflow_actions.py:68
+msgid "Tags"
+msgstr "Címkék"
+
+#: apps.py:128 models.py:36
+msgid "Documents"
+msgstr "Dokumentumok"
+
+#: events.py:10
+msgid "Tag attached to document"
+msgstr ""
+
+#: events.py:13
+msgid "Tag created"
+msgstr ""
+
+#: events.py:16
+msgid "Tag edited"
+msgstr ""
+
+#: events.py:19
+msgid "Tag removed from document"
+msgstr ""
+
+#: links.py:16 workflow_actions.py:75
+msgid "Remove tag"
+msgstr "Címke levétele"
+
+#: links.py:20 links.py:37
+msgid "Attach tags"
+msgstr "Címke hozzárendelése"
+
+#: links.py:31
+msgid "Remove tags"
+msgstr "Címkék levétele"
+
+#: links.py:44
+msgid "Create new tag"
+msgstr "Új címke készítése"
+
+#: links.py:50 links.py:67 views.py:156
+msgid "Delete"
+msgstr "Törlés"
+
+#: links.py:55
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: links.py:63
+msgid "All"
+msgstr "Mind"
+
+#: methods.py:20
+msgid "Return a the tags attached to the document."
+msgstr ""
+
+#: methods.py:22
+msgid "get_tags()"
+msgstr ""
+
+#: models.py:28
+msgid "A short text used as the tag name."
+msgstr ""
+
+#: models.py:29 search.py:16
+msgid "Label"
+msgstr "Cimke"
+
+#: models.py:32
+msgid "The RGB color values for the tag."
+msgstr ""
+
+#: models.py:33 search.py:20
+msgid "Color"
+msgstr "Szín"
+
+#: models.py:41
+msgid "Tag"
+msgstr "Címke"
+
+#: models.py:84
+msgid "Preview"
+msgstr "Előnézet"
+
+#: models.py:113
+msgid "Document tag"
+msgstr "Dokumentum címke"
+
+#: models.py:114
+msgid "Document tags"
+msgstr "Dokumentum címkék"
+
+#: permissions.py:10
+msgid "Create new tags"
+msgstr "Új címkék készítése"
+
+#: permissions.py:13
+msgid "Delete tags"
+msgstr "Címkék tölrése"
+
+#: permissions.py:16
+msgid "View tags"
+msgstr "Címkék megtekintése"
+
+#: permissions.py:19
+msgid "Edit tags"
+msgstr "Címkék szerkesztése"
+
+#: permissions.py:22
+msgid "Attach tags to documents"
+msgstr "Címkék dokumentumokhoz rendelése"
+
+#: permissions.py:25
+msgid "Remove tags from documents"
+msgstr "Címkék levétele a dokumentumokról"
+
+#: serializers.py:39
+msgid ""
+"Comma separated list of document primary keys to which this tag will be "
+"attached."
+msgstr "Vesszővel elválasztott lista az elsődleges dokumentum kulcsokkal amihez ez a címke hozzá lesz rendelve."
+
+#: serializers.py:86
+msgid ""
+"API URL pointing to a tag in relation to the document attached to it. This "
+"URL is different than the canonical tag URL."
+msgstr "A dokumentumhoz kapcsolt címke API URL hivatkozása. Ez az URL más a kanonikus címke URL-től. "
+
+#: serializers.py:106
+msgid "Primary key of the tag to be added."
+msgstr "A hozzáadandó címke elsődleges kulcsa."
+
+#: views.py:38
+#, python-format
+msgid "Tag attach request performed on %(count)d document"
+msgstr "Címke hozzárendelés elvégezve %(count)d dokumentumra"
+
+#: views.py:40
+#, python-format
+msgid "Tag attach request performed on %(count)d documents"
+msgstr "Címke hozzárendelés elvégezve %(count)d dokumentumokon"
+
+#: views.py:47
+msgid "Attach"
+msgstr "Hozzárendel"
+
+#: views.py:49
+#, python-format
+msgid "Attach tags to %(count)d document"
+msgid_plural "Attach tags to %(count)d documents"
+msgstr[0] "Cimkék hozzárendelése %(count)d dokumentumhoz"
+msgstr[1] "Cimkék hozzárendelése %(count)d dokumentumhoz"
+
+#: views.py:61
+#, python-format
+msgid "Attach tags to document: %s"
+msgstr "Cimkék hozzárendelése dokumentumhoz: %s"
+
+#: views.py:70 wizard_steps.py:29
+msgid "Tags to be attached."
+msgstr "Hozzárendelendő címkék."
+
+#: views.py:112
+#, python-format
+msgid "Document \"%(document)s\" is already tagged as \"%(tag)s\""
+msgstr "A \"%(document)s\" dokumentum már meg van címkézve mint \"%(tag)s\""
+
+#: views.py:122
+#, python-format
+msgid "Tag \"%(tag)s\" attached successfully to document \"%(document)s\"."
+msgstr "A \"%(tag)s\" címke sikeresen hozzárendelve a \"%(document)s\" dokumentumhoz."
+
+#: views.py:131
+msgid "Create tag"
+msgstr "Címke készítése"
+
+#: views.py:145
+#, python-format
+msgid "Tag delete request performed on %(count)d tag"
+msgstr "Címke tölrési kérés végrehajtva %(count)d címkén"
+
+#: views.py:147
+#, python-format
+msgid "Tag delete request performed on %(count)d tags"
+msgstr "Címke tölrési kérés végrehajtva %(count)d címkén"
+
+#: views.py:154
+msgid "Will be removed from all documents."
+msgstr "Minden dokumentumról el lesz távolítva."
+
+#: views.py:158
+msgid "Delete the selected tag?"
+msgid_plural "Delete the selected tags?"
+msgstr[0] "Törli a kiválasztott címkét?"
+msgstr[1] "Törli a kiválasztott címkét?"
+
+#: views.py:168
+#, python-format
+msgid "Delete tag: %s"
+msgstr "Címke tölrése? %s"
+
+#: views.py:179
+#, python-format
+msgid "Tag \"%s\" deleted successfully."
+msgstr "\"%s\" címke sikeres törlése."
+
+#: views.py:184
+#, python-format
+msgid "Error deleting tag \"%(tag)s\": %(error)s"
+msgstr "Hiba a \"%(tag)s\" címke törlése közben: %(error)s"
+
+#: views.py:199
+#, python-format
+msgid "Edit tag: %s"
+msgstr "Címke szerkesztése: %s"
+
+#: views.py:218
+msgid ""
+"Tags are color coded properties that can be attached or removed from "
+"documents."
+msgstr ""
+
+#: views.py:221
+msgid "No tags available"
+msgstr ""
+
+#: views.py:245
+#, python-format
+msgid "Documents with the tag: %s"
+msgstr "Dokumentumok a címkével: %s"
+
+#: views.py:269
+msgid "Document has no tags attached"
+msgstr ""
+
+#: views.py:272
+#, python-format
+msgid "Tags for document: %s"
+msgstr "Címkék a dokumentumon: %s"
+
+#: views.py:288
+#, python-format
+msgid "Tag remove request performed on %(count)d document"
+msgstr "Címke levételi kérés végrehajtva %(count)d dokumentumon"
+
+#: views.py:290
+#, python-format
+msgid "Tag remove request performed on %(count)d documents"
+msgstr "Címke levételi kérés végrehajtva %(count)d dokumentumon"
+
+#: views.py:298
+msgid "Remove"
+msgstr "Levétel"
+
+#: views.py:300
+#, python-format
+msgid "Remove tags to %(count)d document"
+msgid_plural "Remove tags to %(count)d documents"
+msgstr[0] "Címkék levétele %(count)d dokumentumról"
+msgstr[1] "Címkék levétele %(count)d dokumentumról"
+
+#: views.py:312
+#, python-format
+msgid "Remove tags from document: %s"
+msgstr "Címkék levétele %s dokumentumról"
+
+#: views.py:321
+msgid "Tags to be removed."
+msgstr "Leszedendő címkék."
+
+#: views.py:361
+#, python-format
+msgid "Document \"%(document)s\" wasn't tagged as \"%(tag)s"
+msgstr "A \"%(document)s\" dokumentum nem lett \"%(tag)s\"-el megcímkézve"
+
+#: views.py:370
+#, python-format
+msgid "Tag \"%(tag)s\" removed successfully from document \"%(document)s\"."
+msgstr "A \"%(tag)s\" címke sikeresen leszedésre került a \"%(document)s\" dokumentumról."
+
+#: wizard_steps.py:17
+msgid "Select tags"
+msgstr ""
+
+#: workflow_actions.py:22
+msgid "Tags to attach to the document"
+msgstr ""
+
+#: workflow_actions.py:27
+msgid "Attach tag"
+msgstr ""
+
+#: workflow_actions.py:70
+msgid "Tags to remove from the document"
+msgstr ""
