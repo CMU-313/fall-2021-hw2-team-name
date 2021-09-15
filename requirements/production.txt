@@ -1,0 +1,83 @@
+# Base
+
+Django==1.4.1
+django-pagination==1.0.7
+
+# Tags
+
+django-taggit==0.9.3
+
+# Indexes
+
+django-mptt==0.5.4
+
+# Mimetypes
+
+python-magic==0.4.3
+
+# PDF
+
+slate==0.3
+pdfminer==20110227
+
+# Scheduler
+
+APScheduler==2.0.3
+
+# Python converter backend
+
+Pillow==1.7.7
+ghostscript==0.4.1
+
+# Asset compression
+
+cssmin==0.1.4
+django-compressor==1.1.1
+
+# Sendfile
+
+-e git://github.com/rosarior/django-sendfile.git#egg=django-sendfile
+
+# API
+
+djangorestframework==0.3.3
+
+# Migrations
+
+South==0.7.6
+
+# Keys and signing
+
+https://github.com/rosarior/python-gnupg/zipball/0.2.8
+python-hkp==0.1.3
+
+# Feedback
+
+requests==0.14.1
+
+# Search
+
+-e git+https://github.com/toastdriven/django-haystack.git@c6fd81d4163eb816476a853d416b68757e0c7ca4#egg=django_haystack-dev
+Whoosh==2.3.2
+Unidecode==0.04.9
+
+# Navigation
+
+pbs==0.105
+
+# Installation
+
+psutil==0.5.1
+GitPython==0.3.2.RC1
+
+# Sources
+
+-e git+https://github.com/rosarior/imagescanner.git#egg=imagescanner
+
+# Misc
+
+elementtree==1.2.7-20070827-preview
+Pygments==1.5
+diff-match-patch==20120106
+PyYAML==3.10
+unicode-slugify==0.1

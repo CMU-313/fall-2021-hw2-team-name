@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load project_tags %}
+{% load version_tags %}
+{% block title %} :: {% trans "About this program" %}{% endblock %}
+{% block content %}
+
+    <div class="content tc">
+        <h3>{% project_name %} ({% trans "Version" %} {% app_version "main" %})</h3>
+    </div>
+    {% include "project_description.html" %}
+
+{% endblock %}
+{% block footer %}
+    <div id="footer">
+        <div class="block">
+            <p>Copyright &copy; 2011, 2012 Roberto Rosario.</p>
+        </div>
+    </div>
+{% endblock %}

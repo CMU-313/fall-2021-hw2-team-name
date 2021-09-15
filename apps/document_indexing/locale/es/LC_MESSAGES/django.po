@@ -1,0 +1,382 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Roberto Rosario <roberto.rosario.gonzalez@gmail.com>, 2011-2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: http://github.com/rosarior/mayan/issues\n"
+"POT-Creation-Date: 2012-12-12 01:48-0400\n"
+"PO-Revision-Date: 2012-12-12 06:14+0000\n"
+"Last-Translator: Roberto Rosario <roberto.rosario.gonzalez@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/mayan-edms/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:31 __init__.py:46 __init__.py:48 models.py:64 views.py:39
+#: views.py:310
+msgid "indexes"
+msgstr "índices"
+
+#: __init__.py:32 __init__.py:43
+msgid "index list"
+msgstr "lista de indices"
+
+#: __init__.py:33 views.py:78
+msgid "create index"
+msgstr "crear índice"
+
+#: __init__.py:34 __init__.py:40
+msgid "edit"
+msgstr "editar"
+
+#: __init__.py:35 __init__.py:41
+msgid "delete"
+msgstr "borrar"
+
+#: __init__.py:36
+msgid "tree template"
+msgstr "plantilla de árbol "
+
+#: __init__.py:37 models.py:21 views.py:314
+msgid "document types"
+msgstr "tipos de documentos"
+
+#: __init__.py:39
+msgid "new child node"
+msgstr "nuevo nodo secundario"
+
+#: __init__.py:45
+msgid "go up one level"
+msgstr "subir un nivel"
+
+#: __init__.py:50
+msgid "rebuild indexes"
+msgstr "generar índices"
+
+#: __init__.py:50
+msgid "Deletes and creates from scratch all the document indexes."
+msgstr "Borra y crea de la nada todos los índices de documentos."
+
+#: __init__.py:52
+msgid "Indexes"
+msgstr "Índices"
+
+#: api.py:71
+#, python-format
+msgid "Maximum suffix (%s) count reached."
+msgstr "Cuenta máxima de sufijo (%s) alcanzada."
+
+#: api.py:85
+#, python-format
+msgid ""
+"Error in document indexing update expression: %(expression)s; %(exception)s"
+msgstr "Error en la expresión de actualización de indexación: %(expression)s; %(exception)s "
+
+#: api.py:94 api.py:109
+#, python-format
+msgid ""
+"Error updating document index, expression: %(expression)s; %(exception)s"
+msgstr "Error actualizando el indice de documento, expresión: %(expression)s; %(exception)s "
+
+#: api.py:151
+#, python-format
+msgid "Unable to delete document indexing node; %s"
+msgstr "No se puede eliminar el nodo de indexación de documento; %s"
+
+#: filesystem.py:51
+#, python-format
+msgid "Unable to create indexing directory; %s"
+msgstr "No se puede crear el directorio de indexación; %s"
+
+#: filesystem.py:69
+#, python-format
+msgid ""
+"Unable to create symbolic link, file exists and could not be deleted: "
+"%(filepath)s; %(exc)s"
+msgstr "No se puede crear un enlace simbólico, el archivo existe y no puede eliminarse: %(filepath)s; %(exc)s "
+
+#: filesystem.py:71
+#, python-format
+msgid "Unable to create symbolic link: %(filepath)s; %(exc)s"
+msgstr "No se puede crear enlace simbólico: %(filepath)s; %(exc)s "
+
+#: filesystem.py:84
+#, python-format
+msgid "Unable to delete document symbolic link; %s"
+msgstr "No se puede eliminar vínculo simbólico de documento; %s"
+
+#: filesystem.py:96
+#, python-format
+msgid "Unable to delete indexing directory; %s"
+msgstr "No se puede eliminar el directorio de indexación; %s"
+
+#: models.py:14
+#, python-format
+msgid "Available functions: %s"
+msgstr "Funciones disponibles: %s"
+
+#: models.py:18 views.py:43
+msgid "name"
+msgstr "nombre"
+
+#: models.py:18
+msgid "Internal name used to reference this index."
+msgstr "Nombre interno que se utiliza para hacer referencia a este índice."
+
+#: models.py:19 views.py:44
+msgid "title"
+msgstr "título"
+
+#: models.py:19
+msgid "The name that will be visible to users."
+msgstr "El nombre que será visible para los usuarios."
+
+#: models.py:20 models.py:72 views.py:45 views.py:169
+msgid "enabled"
+msgstr "habilitado"
+
+#: models.py:20
+msgid ""
+"Causes this index to be visible and updated when document data changes."
+msgstr "Hace que este índice sea visible y actualizado cuando los datos de documentos cambien."
+
+#: models.py:63 models.py:69 views.py:105 views.py:136 views.py:162
+#: views.py:198 views.py:225 views.py:255 views.py:295
+msgid "index"
+msgstr "índice"
+
+#: models.py:70
+msgid "indexing expression"
+msgstr "expresión de indexación"
+
+#: models.py:70
+msgid "Enter a python string expression to be evaluated."
+msgstr "Introduzca una expresión de python para ser evaluada."
+
+#: models.py:72
+msgid "Causes this node to be visible and updated when document data changes."
+msgstr "Causa que este nodo sea visible y actualizado cuando los datos de los documentos son cambiados."
+
+#: models.py:73
+msgid "link documents"
+msgstr "enlace de documentos"
+
+#: models.py:73
+msgid ""
+"Check this option to have this node act as a container for documents and not"
+" as a parent for further nodes."
+msgstr "Marque esta opción para que el nodo actue como un contenedor de documentos y no como un padre para mas nodos secundarios."
+
+#: models.py:83 models.py:89
+msgid "index template node"
+msgstr "nodo de plantilla de indice"
+
+#: models.py:84
+msgid "indexes template nodes"
+msgstr "nodos de plantillas de indices"
+
+#: models.py:90
+msgid "value"
+msgstr "valor"
+
+#: models.py:91
+msgid "documents"
+msgstr "documentos"
+
+#: models.py:101
+msgid "index instance node"
+msgstr "nodo de instancia de indice"
+
+#: models.py:102
+msgid "indexes instance nodes"
+msgstr "nodos de instancias de indices"
+
+#: models.py:106
+msgid "index instance"
+msgstr "instancia de indice"
+
+#: models.py:107
+msgid "document"
+msgstr "documento"
+
+#: models.py:114
+msgid "document rename count"
+msgstr "conteo de cambio de nombre de documento"
+
+#: models.py:115
+msgid "documents rename count"
+msgstr "conteos de cambio de nombre de documentos"
+
+#: permissions.py:7
+msgid "Indexing"
+msgstr "Indexación"
+
+#: permissions.py:9
+msgid "Configure document indexes"
+msgstr "Configurar índices de documento"
+
+#: permissions.py:10
+msgid "Create new document indexes"
+msgstr "Crear nuevos índices de documentos"
+
+#: permissions.py:11
+msgid "Edit document indexes"
+msgstr "Editar los índices de documentos"
+
+#: permissions.py:12
+msgid "Delete document indexes"
+msgstr "Eliminar los índices de documentos"
+
+#: permissions.py:14
+msgid "View document indexes"
+msgstr "Ver los índices de documentos"
+
+#: permissions.py:15
+msgid "Rebuild document indexes"
+msgstr "Generar índices de documentos"
+
+#: utils.py:19
+msgid "document indexes"
+msgstr "índices de documentos"
+
+#: views.py:72
+msgid "Index created successfully."
+msgstr "Índice creado con exitosamente."
+
+#: views.py:96
+msgid "Index edited successfully"
+msgstr "Índice editado con exitosamente."
+
+#: views.py:102
+#, python-format
+msgid "edit index: %s"
+msgstr "editar Índice: %s"
+
+#: views.py:127
+#, python-format
+msgid "Index: %s deleted successfully."
+msgstr "Índice: %s eliminado exitosamente."
+
+#: views.py:129
+#, python-format
+msgid "Index: %(index)s delete error: %(error)s"
+msgstr "Error al borrar índice: %(index)s, error: %(error)s "
+
+#: views.py:141
+#, python-format
+msgid "Are you sure you with to delete the index: %s?"
+msgstr "¿Seguro que desea eliminar el índice: %s?"
+
+#: views.py:165
+#, python-format
+msgid "tree template nodes for index: %s"
+msgstr "nodos de la plantilla del árbol del índice: %s"
+
+#: views.py:168
+msgid "level"
+msgstr "nivel"
+
+#: views.py:170
+msgid "has document links?"
+msgstr "¿tiene vínculos de documentos?"
+
+#: views.py:192
+#, python-format
+msgid "document types not in index: %s"
+msgstr "tipos de documentos no en el índice: %s"
+
+#: views.py:193
+#, python-format
+msgid "document types for index: %s"
+msgstr "tipos de documentos para el índice: %s"
+
+#: views.py:216
+msgid "Index template node created successfully."
+msgstr "Nodo de plantilla de índice creado exitosamente."
+
+#: views.py:222
+msgid "create child node"
+msgstr "crear nodo hijo"
+
+#: views.py:243
+msgid "Index template node edited successfully"
+msgstr "Nodo de la plantilla de índice editado exitosamente"
+
+#: views.py:249
+#, python-format
+msgid "edit index template node: %s"
+msgstr "editar nodo de la plantilla de índice: %s"
+
+#: views.py:256 views.py:296 views.py:365
+msgid "node"
+msgstr "nodo"
+
+#: views.py:278
+#, python-format
+msgid "Node: %s deleted successfully."
+msgstr "Nodo: %s eliminado exitosamente."
+
+#: views.py:280
+#, python-format
+msgid "Node: %(node)s delete error: %(error)s"
+msgstr "Error de eliminación para nodo: %(node)s, %(error)s "
+
+#: views.py:289
+#, python-format
+msgid "Are you sure you with to delete the index template node: %s?"
+msgstr "¿Seguro que desea eliminar el nodo de plantilla de indice: %s?"
+
+#: views.py:313
+msgid "nodes"
+msgstr "nodos"
+
+#: views.py:347
+#, python-format
+msgid "contents for index: %s"
+msgstr "contenido del indice: %s"
+
+#: views.py:369
+msgid "items"
+msgstr "artículos"
+
+#: views.py:394
+msgid "Are you sure you wish to rebuild all indexes?"
+msgstr "¿Está seguro que desea reconstruir todos los índices?"
+
+#: views.py:395
+msgid "On large databases this operation may take some time to execute."
+msgstr "En bases de datos de gran tamaño esta operación puede tardar algún tiempo en ejecutarse."
+
+#: views.py:401
+msgid "Index rebuild completed successfully."
+msgstr "Reconstrucción de Índices completada exitosamente."
+
+#: views.py:408
+#, python-format
+msgid "Index rebuild error: %s"
+msgstr "Error de reconstrucción de índices: %s"
+
+#: views.py:431
+#, python-format
+msgid "indexes containing: %s"
+msgstr "índices que contienen: %s"
+
+#: conf/settings.py:22
+msgid ""
+"A dictionary that maps the index name and where on the filesystem that index"
+" will be mirrored."
+msgstr "Un diccionario que asigna el nombre del índice y en qué parte del sistema de archivos dicho índice se va a reflejar."
+
+#: templates/indexing_help.html:3
+msgid "What are indexes?"
+msgstr "¿Que son los índices?"
+
+#: templates/indexing_help.html:4
+msgid "Indexes group documents into a tree like hierarchical structure."
+msgstr "Los índices agrupan documentos en una estructura jerárquica tipo árbol. "

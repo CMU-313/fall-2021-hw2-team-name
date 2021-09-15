@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load project_tags %}
+{% load i18n %}
+{% block content %}
+    <div class="content tc">
+        <h1>{% project_name %}</h1>
+        <img src="{{ STATIC_URL }}images/1068504_92921456.jpg" />
+        <h2>{% trans 'Django based open source document management system' %}</h2><hr>
+    </div>
+{% endblock %}
+{% block footer %}
+    <div id="footer">
+        <div class="block">
+            <p>Copyright &copy; 2011, 2012 Roberto Rosario.</p>
+        </div>
+    </div>
+{% endblock %}

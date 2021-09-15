@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load icon_tags %}
+
+<link rel="stylesheet" href="{{ STATIC_URL }}css/override.css" type="text/css" media="screen" />
+    
+<p class="tc">
+    {% trans 'Free Open Source, Django based electronic document management system' %}
+</p>
+<p class="tc">
+    {% icon_small 'world_go' %}<a href="http://www.mayan-edms.com">http://www.mayan-edms.com</a>
+</p>
+<p class="tc">
+    {% icon_small 'book_open' %}<a href="http://readthedocs.org/docs/mayan/en/latest/">http://mayan.readthedocs.org/</a>
+</p>
+<p class="tc">
+    {% icon_small 'wrench' %}<a href="http://www.github.com/rosarior/mayan/">http://www.github.com/rosarior/mayan/</a>
+</p>
+<p class="tc">
+    <span class="famfam active famfam-bug"></span><a href="https://github.com/rosarior/mayan/issues">https://github.com/rosarior/mayan/issues</a>
+</p>
+<p class="tc">
+    {% trans "Released under the GPL V3 License" %}
+</p>
+<div class="tc">
+    <img src="{{ STATIC_URL }}images/mayan_logo_landscape_rough.png"/>
+</div>
+<div class="tc">
+    <img src="{{ STATIC_URL }}images/gplv3-127x51.png"/>
+    <img src="{{ STATIC_URL }}images/djangopowered126x54.gif"/>
+</div>

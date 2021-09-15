@@ -1,0 +1,351 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+#   <pkoldamov@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-14 04:18-0400\n"
+"PO-Revision-Date: 2012-12-12 06:05+0000\n"
+"Last-Translator: Roberto Rosario <roberto.rosario.gonzalez@gmail.com>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/mayan-edms/"
+"language/bg/)\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: forms.py:97
+msgid "Selection"
+msgstr ""
+
+#: forms.py:129
+msgid "Email"
+msgstr "Електронна поща"
+
+#: forms.py:140
+msgid ""
+"Please enter a correct email and password. Note that the password fields is "
+"case-sensitive."
+msgstr ""
+
+#: forms.py:142
+msgid "This account is inactive."
+msgstr ""
+
+#: links.py:16
+msgid "change password"
+msgstr "смяна на парола"
+
+#: links.py:17
+msgid "user details"
+msgstr "потребителски данни"
+
+#: links.py:18
+msgid "edit details"
+msgstr "промяна на данни"
+
+#: links.py:19
+msgid "about"
+msgstr "относно"
+
+#: links.py:20
+msgid "license"
+msgstr "лиценз"
+
+#: links.py:21
+msgid "admin site"
+msgstr ""
+
+#: literals.py:24
+msgid "A5"
+msgstr "A5"
+
+#: literals.py:25
+msgid "A4"
+msgstr "A4"
+
+#: literals.py:26
+msgid "A3"
+msgstr "A3"
+
+#: literals.py:27
+msgid "B5"
+msgstr "B5"
+
+#: literals.py:28
+msgid "B4"
+msgstr "B4"
+
+#: literals.py:29
+msgid "Letter"
+msgstr "Letter"
+
+#: literals.py:30
+msgid "Legal"
+msgstr "Legal"
+
+#: literals.py:31
+msgid "Ledger"
+msgstr ""
+
+#: literals.py:38
+msgid "Portrait"
+msgstr ""
+
+#: literals.py:39
+msgid "Landscape"
+msgstr ""
+
+#: models.py:17
+msgid "lock field"
+msgstr ""
+
+#: models.py:49
+msgid "Anonymous user"
+msgstr "Анонимен потребител"
+
+#: models.py:52 models.py:53
+msgid "anonymous user"
+msgstr "анонимен потребител"
+
+#: registry.py:12
+msgid "Common"
+msgstr ""
+
+#: registry.py:13
+msgid "Contains many commonly used models, views and utilities."
+msgstr ""
+
+#: registry.py:21
+msgid ""
+"Temporary directory used site wide to store thumbnails, previews and "
+"temporary files.  If none is specified, one will be created using tempfile."
+"mkdtemp()."
+msgstr ""
+
+#: registry.py:33
+msgid "Password of the superuser admin that will be created."
+msgstr ""
+
+#: registry.py:39
+msgid ""
+"Controls the mechanism used to authenticated user.  Options are: username, "
+"email."
+msgstr ""
+
+#: registry.py:45
+msgid "Allow non authenticated users, access to all views."
+msgstr ""
+
+#: utils.py:299
+msgid "function found"
+msgstr ""
+
+#: views.py:37
+msgid "No action selected."
+msgstr ""
+
+#: views.py:41
+msgid "Must select at least one item."
+msgstr ""
+
+#: views.py:89
+#, python-format
+msgid "%(selection)s added successfully added to %(right_list_title)s."
+msgstr ""
+
+#: views.py:95 views.py:122
+#, python-format
+msgid "Unable to add %(selection)s to %(right_list_title)s."
+msgstr ""
+
+#: views.py:116
+#, python-format
+msgid "%(selection)s added successfully removed from %(right_list_title)s."
+msgstr ""
+
+#: views.py:137
+msgid "Add"
+msgstr "Добави"
+
+#: views.py:148
+msgid "Remove"
+msgstr "Премахнете"
+
+#: views.py:171
+msgid "current user details"
+msgstr "актуални данни на потребителя"
+
+#: views.py:188
+msgid "E-mail conflict, another user has that same email."
+msgstr ""
+
+#: views.py:191
+msgid "Current user's details updated."
+msgstr ""
+
+#: views.py:200
+msgid "edit current user details"
+msgstr "редактиране на актуалните данни на потребителя"
+
+#: views.py:231
+msgid "License"
+msgstr "Лиценз"
+
+#: views.py:240
+msgid "Current user password change"
+msgstr "Промяна паролата на текущия потребител"
+
+#: views.py:255 templates/password_change_done.html:5
+msgid "Your password has been successfully changed."
+msgstr "Вашата парола е сменена успешно."
+
+#: widgets.py:62
+msgid "None"
+msgstr "Няма"
+
+#: templates/403.html:3 templates/403.html.py:7
+msgid "Insufficient permissions"
+msgstr ""
+
+#: templates/403.html:9
+msgid "You don't have enough permissions for this operation."
+msgstr ""
+
+#: templates/404.html:3 templates/404.html.py:7
+msgid "Page not found"
+msgstr "Страницата не е намерена"
+
+#: templates/404.html:9
+msgid "Sorry, but the requested page could not be found."
+msgstr ""
+
+#: templates/calculate_form_title.html:11
+#, python-format
+msgid "Details for %(object_name)s: %(object)s"
+msgstr ""
+
+#: templates/calculate_form_title.html:13
+#, python-format
+msgid "Details for: %(object)s"
+msgstr ""
+
+#: templates/calculate_form_title.html:18
+#, python-format
+msgid "Edit %(object_name)s:"
+msgstr ""
+
+#: templates/calculate_form_title.html:20
+msgid "Edit"
+msgstr "Редактиране"
+
+#: templates/calculate_form_title.html:24
+#, python-format
+msgid "Create new %(object_name)s"
+msgstr ""
+
+#: templates/calculate_form_title.html:26
+msgid "Create"
+msgstr "Създаване"
+
+#: templates/generic_assign_remove.html:3
+#, python-format
+msgid "Assign %(title)s %(object)s"
+msgstr ""
+
+#: templates/generic_confirm.html:3 templates/generic_confirm.html.py:18
+msgid "Confirm"
+msgstr "Потвърждаване"
+
+#: templates/generic_confirm.html:16
+msgid "Confirm delete"
+msgstr "Потвърдете изтриване"
+
+#: templates/generic_confirm.html:41
+#, python-format
+msgid "Are you sure you wish to delete %(object_name)s: %(object)s?"
+msgstr ""
+
+#: templates/generic_confirm.html:43
+#, python-format
+msgid "Are you sure you wish to delete: %(object)s?"
+msgstr ""
+
+#: templates/generic_confirm.html:51
+msgid "Yes"
+msgstr "Да"
+
+#: templates/generic_confirm.html:55
+msgid "No"
+msgstr "Не"
+
+#: templates/generic_form_instance.html:38
+#: templates/generic_form_subtemplate.html:58
+msgid "required"
+msgstr ""
+
+#: templates/generic_form_subtemplate.html:85
+#: templates/generic_list_horizontal_subtemplate.html:48
+#: templates/generic_list_horizontal_subtemplate.html:91
+#: templates/generic_list_subtemplate.html:55
+#: templates/generic_list_subtemplate.html:189
+msgid "Save"
+msgstr "Запазване"
+
+#: templates/generic_form_subtemplate.html:85
+#: templates/generic_list_horizontal_subtemplate.html:48
+#: templates/generic_list_horizontal_subtemplate.html:91
+#: templates/generic_list_subtemplate.html:55
+#: templates/generic_list_subtemplate.html:189
+msgid "Submit"
+msgstr "Подаване"
+
+#: templates/generic_form_subtemplate.html:96
+msgid "Cancel"
+msgstr "Отказ"
+
+#: templates/generic_list.html:6 templates/generic_list_horizontal.html:6
+#, python-format
+msgid "List of %(stripped_title)s"
+msgstr ""
+
+#: templates/generic_list_horizontal_subtemplate.html:20
+#: templates/generic_list_subtemplate.html:25
+#, python-format
+msgid ""
+"List of %(title)s (%(start)s - %(end)s out of %(total)s) (Page "
+"%(page_number)s of %(total_pages)s)"
+msgstr ""
+
+#: templates/generic_list_horizontal_subtemplate.html:22
+#: templates/generic_list_subtemplate.html:27
+#, python-format
+msgid "List of %(title)s (%(total)s)"
+msgstr ""
+
+#: templates/generic_list_horizontal_subtemplate.html:66
+#: templates/generic_list_subtemplate.html:161
+#, python-format
+msgid "There are no %(stripped_title)s"
+msgstr ""
+
+#: templates/generic_list_subtemplate.html:75
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#: templates/login.html:5
+msgid "Login"
+msgstr "Влез"
+
+#: templates/password_change_done.html:3 templates/password_change_form.html:3
+#: templates/password_change_form.html:5
+msgid "Password change"
+msgstr "Промяна на паролата"
+
+#~ msgid "password"
+#~ msgstr "парола"

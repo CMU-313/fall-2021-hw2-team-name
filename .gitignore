@@ -1,0 +1,17 @@
+*.orig
+*.pyc
+*.pyo
+*.sql
+*.sqlite
+/settings_local.py
+/celerybeat-schedule
+/document_storage/
+/misc/mayan.geany
+/image_cache/
+build/
+_build/
+/gpg_home/
+/static/
+/whoosh_index/
+/fabfile_install
+/server_config.yaml

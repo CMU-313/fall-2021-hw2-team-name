@@ -1,0 +1,121 @@
+==============================
+Mayan EDMS v0.13 release notes
+==============================
+
+August 2012
+
+Welcome to Mayan EDMS v0.13!
+
+Overview
+========
+
+* IMAP and POP3 email document source
+* Send document or document links via E-mail
+* Document previews and page previews navigation improvements
+* Ability to delete detached signatures
+* Specialized search via Haystack
+
+#TODO: add Djano 1.4
+#TODO: add maintenance, diagnostics and statistics app
+#TODO: add bootstrap app and database nuking
+#TODO: add translation and PT translation split
+#TODO: removal of unoconv
+#TODO: tesseract > 3.0
+#TODO: preview navigation (fancybox)
+#TODO: document indexing document type filtering
+#TODO: all remaining apps migrated to South
+#TODO: add scheduling
+#TODO: add clustering
+#TODO: add local jobs & distributed job processing
+#TODO: removal of DISABLE_HOME_VIEW
+#TODO: removal of OCR_DEFAULT_NODE_CONCURRENT_EXECUTION, OCR_QUEUE_PROCESSING_INTERVAL
+
+What's new in Mayan EDMS v0.13
+==============================
+
+
+E-mail document source
+~~~~~~~~~~~~~~~~~~~~~~
+POP3 and IMAP
+
+
+Send document or document links via E-mail
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Haystack
+~~~~~~~~
+Haystack is setup to use Whoosh by default but user can choose to use
+any of the other search backends supported by Haystack.  The interval
+between search index updates is controlled with the new :setting:`SEARCH_INDEX_UPDATE_INTERVAL` 
+configuration option.  This addition closes issues #20 and #12.
+
+
+Upgrading from a previous version
+=================================
+
+If you installed **Mayan EDMS** by cloning the git repository issue::
+
+  $ git reset --hard HEAD
+  $ git pull
+
+otherwise download the compressed archived and uncompress it overriding the existing installation.
+
+After updating the installtion files, start off by adding the new requirements::
+#TODO: libfreetype6-dev,  ttf-bitstream-vera
+
+
+
+  $ pip install -r requirements/production.txt
+
+Then create the new database structures with::
+
+    $ ./manage.py syncdb
+
+Afterwards migrate existing database schema with::
+
+    $ ./manage.py migrate sources 0001 --fake
+    $ ./manage.py migrate sources
+    $ ./manage.py migrate dynamic_search 0001 --fake
+    $ ./manage.py migrate dynamic_search
+    $ ./manage.py migrate metadata 0001 --fake
+    $ ./manage.py migrate acls 0001 --fake
+    $ ./manage.py migrate ocr 0001 --fake
+    $ ./manage.py migrate ocr
+    $ ./manage.py migrate history 0001 --fake
+    $ ./manage.py migrate tags 0001 --fake
+    $ ./manage.py migrate linking 0001 --fake
+    $ ./manage.py migrate lock_manager 0001 --fake
+    $ ./manage.py migrate job_processor
+    $ ./manage.py migrate clustering
+    $ ./manage.py migrate trash
+    $ ./manage.py migrate sources
+    $ ./manage.py migrate app_registry
+    $ ./manage.py migrate backups
+    $ ./manage.py migrate smart_settings
+
+Issue the following command to index existing documents in the new full text search database::
+
+    $ ./manage.py rebuild_index --noinput
+    
+Depending on the existing size of you current document base this make take from a few minutes up to an hour.
+Once the full text initial indexing ends, the upgrade procedure is complete.
+
+
+Backward incompatible changes
+=============================
+None
+
+
+Bugs fixed
+==========
+* Metadata unicode fixes while creating new documents.
+* Fixed document index link filename when renaming document the source document.
+* Issues #20 and #12 with the addition of a dedicated search solution and
+  not rely on SQL based searches.
+
+
+Stuff removed
+=============
+Removal of the internal SEARCH_SHOW_OBJECT_TYPE option
+Removal of the SEARCH_LIMIT configuration option

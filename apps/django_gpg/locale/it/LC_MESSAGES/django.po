@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+#   <pierpaolo.baldan@gmail.com>, 2011.
+# Pierpaolo Baldan <pierpaolo.baldan@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: http://github.com/rosarior/mayan/issues\n"
+"POT-Creation-Date: 2012-12-12 01:48-0400\n"
+"PO-Revision-Date: 2012-12-12 06:05+0000\n"
+"Last-Translator: Roberto Rosario <roberto.rosario.gonzalez@gmail.com>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/mayan-edms/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:14 views.py:66
+msgid "private keys"
+msgstr "Chiave privata"
+
+#: __init__.py:15 views.py:69
+msgid "public keys"
+msgstr "Chiave pubblica"
+
+#: __init__.py:16
+msgid "delete"
+msgstr "cancella"
+
+#: __init__.py:17
+msgid "query keyservers"
+msgstr "Interroga il server delle chiavi"
+
+#: __init__.py:18
+msgid "import"
+msgstr "import"
+
+#: __init__.py:19
+msgid "key management"
+msgstr "gestione della firma"
+
+#: api.py:24
+msgid "Public"
+msgstr "Pubblica"
+
+#: api.py:25
+msgid "Secret"
+msgstr "Segreta"
+
+#: api.py:33 api.py:38
+msgid "RSA"
+msgstr "RSA"
+
+#: api.py:34
+msgid "DSA"
+msgstr "DSA"
+
+#: api.py:39
+msgid "Elgamal"
+msgstr "Elgamal"
+
+#: api.py:53
+msgid "Bad signature."
+msgstr "Firma cattiva."
+
+#: api.py:57
+msgid "Document not signed or invalid signature."
+msgstr "Documento non firmato o firma invalida."
+
+#: api.py:61
+msgid "Signature error."
+msgstr "Errore di firma"
+
+#: api.py:65
+msgid "Document is signed but no public key is available for verification."
+msgstr "Il documento è stato firmato, ma la chiave pubblica non è disponibile per la verifica"
+
+#: api.py:69
+msgid "Document is signed, and signature is good."
+msgstr "Documento firmato e firma è buona."
+
+#: api.py:73
+msgid "Document is signed with a valid signature."
+msgstr "Il documento è firmato con una firma valida."
+
+#: api.py:146
+msgid "unknown"
+msgstr "sconosciuto"
+
+#: forms.py:7
+msgid "Term"
+msgstr "Scadenza"
+
+#: forms.py:8
+msgid "Name, e-mail, key ID or key fingerprint to look for."
+msgstr "Nome, e-mail,key ID , impronte digitali per cercare"
+
+#: permissions.py:7
+msgid "Key management"
+msgstr "Gestione delle chiavi"
+
+#: permissions.py:9
+msgid "View keys"
+msgstr "Vista delle chiavi"
+
+#: permissions.py:10
+msgid "Delete keys"
+msgstr "Cancella chiavi"
+
+#: permissions.py:11
+msgid "Query keyservers"
+msgstr "Interroga l'autorità per le chiavi"
+
+#: permissions.py:12
+msgid "Import keys from keyservers"
+msgstr "Importa le chiavi dal server di chiavi"
+
+#: views.py:37
+#, python-format
+msgid "Key: %s, imported successfully."
+msgstr "Chiave: %s, importata con successo."
+
+#: views.py:42
+#, python-format
+msgid "Unable to import key id: %(key_id)s; %(error)s"
+msgstr "Impossibile importare chiave id: %(key_id)s ; %(error)s "
+
+#: views.py:51
+msgid "Import key"
+msgstr "Importa chiave"
+
+#: views.py:52
+#, python-format
+msgid "Are you sure you wish to import key id: %s?"
+msgstr "Sei sicuro di voler importare la chiave id: %s?"
+
+#: views.py:77
+msgid "Key ID"
+msgstr "chiave ID"
+
+#: views.py:81
+msgid "Owner"
+msgstr "Proprietario"
+
+#: views.py:101
+#, python-format
+msgid "Key: %s, deleted successfully."
+msgstr "chiave: %s, cancellata con successo."
+
+#: views.py:108
+msgid "Delete key"
+msgstr "Cancella chiave"
+
+#: views.py:110
+#, python-format
+msgid ""
+"Are you sure you wish to delete key: %s?  If you try to delete a public key "
+"that is part of a public/private pair the private key will be deleted as "
+"well."
+msgstr "Sei sicuro di voler cancellare la chiave: %s?  Se provi a cancellare una chiave pubblica che è parte di una coppia publica/privata anche la chiave privata sarà cancellata"
+
+#: views.py:128
+msgid "Query key server"
+msgstr "Interroga il server delle chiavi"
+
+#: views.py:141
+msgid "results"
+msgstr "risultati"
+
+#: views.py:146
+msgid "ID"
+msgstr "ID"
+
+#: views.py:150
+msgid "type"
+msgstr "tipo"
+
+#: views.py:154
+msgid "creation date"
+msgstr "data di crezione"
+
+#: views.py:158
+msgid "disabled"
+msgstr "disabilitata"
+
+#: views.py:162
+msgid "expiration date"
+msgstr "data scadenza"
+
+#: views.py:166
+msgid "expired"
+msgstr "scaduta"
+
+#: views.py:170
+msgid "length"
+msgstr "lunghezza"
+
+#: views.py:174
+msgid "revoked"
+msgstr "revocata"
+
+#: views.py:179
+msgid "Identifies"
+msgstr "Identifica"
+
+#: conf/settings.py:15
+msgid "List of keyservers to be queried for unknown keys."
+msgstr "Lista di server per chiavi che si possono interrogare."
+
+#: conf/settings.py:16
+msgid "Home directory used to store keys as well as configuration files."
+msgstr "Home directory utilizzata per memorizzare le chiavi così come i file di configurazione."

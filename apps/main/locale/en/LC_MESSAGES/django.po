@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
+"POT-Creation-Date: 2012-07-27 00:45-0400\n"
+=======
+"POT-Creation-Date: 2012-12-12 03:19-0400\n"
+>>>>>>> hotfix/v0.12.3
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: __init__.py:29
+msgid "home"
+msgstr ""
+
+#: __init__.py:31
+msgid "search"
+msgstr ""
+
+#: links.py:11
+msgid "maintenance"
+msgstr ""
+
+#: links.py:12
+msgid "statistics"
+msgstr ""
+
+#: links.py:13
+msgid "diagnostics"
+msgstr ""
+
+#: links.py:14
+msgid "sentry"
+msgstr ""
+
+#: links.py:15
+msgid "admin site"
+msgstr ""
+
+#: views.py:43
+msgid "maintenance menu"
+msgstr ""
+
+#: views.py:56
+msgid "Statistics"
+msgstr ""
+
+#: views.py:66
+msgid "Diagnostics"
+msgstr ""
+
+#: conf/settings.py:6
+msgid "Main"
+msgstr ""
+
+#: conf/settings.py:13
+msgid ""
+"Controls whether the search functionality is provided by a sidebar widget or "
+"by a menu entry."
+msgstr ""
+
+#: templates/about.html:5
+msgid "About this program"
+msgstr ""
+
+#: templates/about.html:9 templates/verbose_login.html:4
+msgid "Version"
+msgstr ""
+
+#: templates/base.html:28
+msgid "(DEBUG)"
+msgstr ""
+
+#: templates/base.html:202
+msgid "User"
+msgstr ""
+
+#: templates/base.html:204
+msgid "Anonymous"
+msgstr ""
+
+#: templates/base.html:206
+msgid "User details"
+msgstr ""
+
+#: templates/base.html:223
+msgid "Login"
+msgstr ""
+
+#: templates/base.html:223
+msgid "Logout"
+msgstr ""
+
+#: templates/base.html:283
+msgid "Secondary menu"
+msgstr ""
+
+#: templates/base.html:302
+#, python-format
+msgid "Actions for %(name)s: %(object_reference)s"
+msgstr ""
+
+<<<<<<< HEAD
+#: templates/base.html:304
+=======
+#: templates/base.html:313 templates/base.html.py:345
+>>>>>>> hotfix/v0.12.3
+#, python-format
+msgid "Actions for: %(object_reference)s"
+msgstr ""
+
+#: templates/base.html:307
+msgid "Available actions"
+msgstr ""
+
+<<<<<<< HEAD
+#: templates/base.html:323
+=======
+#: templates/base.html:328 templates/base.html.py:360
+msgid "Related actions"
+msgstr ""
+
+#: templates/base.html:343
+#, python-format
+msgid "Actions for %(object_name)s: %(navigation_object)s"
+msgstr ""
+
+#: templates/base.html:348
+msgid "Actions"
+msgstr ""
+
+#: templates/base.html:373
+>>>>>>> hotfix/v0.12.3
+msgid "Other available actions"
+msgstr ""
+
+#: templates/home.html:8
+msgid "Django based open source document management system"
+msgstr ""
+
+#: templates/project_description.html:6
+msgid ""
+"Open source, Django based electronic document manager with custom metadata, "
+"indexing, tagging, file serving integration, digital signature support and "
+"OCR capabilities"
+msgstr ""
+
+#: templates/project_description.html:21
+msgid "Released under the GPL V3 License"
+msgstr ""
