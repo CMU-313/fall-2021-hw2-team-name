@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Translators:
+# Roberto Rosario, 2021
+# tetjarediske <tetja.rediske@googlemail.com>, 2021
+# Mathias Behrle <mathiasb@m9s.biz>, 2021
+# Marvin Haschker <marvin@haschker.me>, 2021
+# Paul Patolla <appdev.blackrose@gmail.com>, 2021
+# Dennis M. Pöpperl <free-software@dm-poepperl.de>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-05 07:22+0000\n"
+"PO-Revision-Date: 2021-04-11 06:12+0000\n"
+"Last-Translator: Dennis M. Pöpperl <free-software@dm-poepperl.de>, 2021\n"
+"Language-Team: German (Germany) (https://www.transifex.com/rosarior/teams/13584/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:24 classes.py:143 links.py:27
+msgid "ACLs"
+msgstr "Zugriffsberechtigungen"
+
+#: apps.py:60
+msgid ""
+"Object for which the access is granted. When sorting objects, only the type "
+"is used and not the actual label of the object."
+msgstr ""
+
+#: apps.py:63
+msgid "Object"
+msgstr "Objekt"
+
+#: events.py:6 permissions.py:5
+msgid "Access control lists"
+msgstr "Zugriffsberechtigungen"
+
+#: events.py:10
+msgid "ACL created"
+msgstr "Zugriffsberechtigung erstellt"
+
+#: events.py:13
+msgid "ACL deleted"
+msgstr "Zugriffsberechtigung gelöscht"
+
+#: events.py:16
+msgid "ACL edited"
+msgstr "Zugriffsberechtigung bearbeitet"
+
+#: forms.py:13 models.py:51 views.py:67
+msgid "Role"
+msgstr "Rolle"
+
+#: links.py:16
+msgid "New ACL"
+msgstr "Neue Berechtigung"
+
+#: links.py:21
+msgid "Delete"
+msgstr "Löschen"
+
+#: links.py:32 models.py:45 workflow_actions.py:46 workflow_actions.py:161
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: links.py:35
+msgid "Global ACLs"
+msgstr "Globale Zugriffsberechtigungen"
+
+#: managers.py:243
+#, python-format
+msgid "Object \"%s\" is not a model and cannot be checked for access."
+msgstr ""
+"Objekt \"%s\" ist kein Modell und kann nicht auf Zugriffsberechtigungen "
+"überprüft werden."
+
+#: managers.py:263
+#, python-format
+msgid "Insufficient access for: %s"
+msgstr "Unzureichende Berechtigung für: %s"
+
+#: models.py:49
+msgid "Role to which the access is granted for the specified object."
+msgstr ""
+
+#: models.py:59
+msgid "Access entry"
+msgstr "Berechtigungseintrag"
+
+#: models.py:60
+msgid "Access entries"
+msgstr "Berechtigungseinträge"
+
+#: models.py:64
+#, python-format
+msgid "Role \"%(role)s\" permission's for \"%(object)s\""
+msgstr "Berechtigungen von Rolle \"%(role)s\" für \"%(object)s\""
+
+#: permissions.py:8
+msgid "Edit ACLs"
+msgstr "Zugriffsberechtigungen bearbeiten"
+
+#: permissions.py:11
+msgid "View ACLs"
+msgstr "Zugriffsberechtigungen anzeigen"
+
+#: serializers.py:125
+msgid "Primary key of the permission to add to the ACL."
+msgstr ""
+
+#: serializers.py:132
+msgid "Primary key of the permission to remove from the ACL."
+msgstr ""
+
+#: views.py:40
+#, python-format
+msgid ""
+"An ACL for \"%(object)s\" using role \"%(role)s\" already exists. Edit that "
+"ACL entry instead."
+msgstr ""
+"Eine Zugriffsberechtigung für \"%(object)s\" über die Rolle \"%(role)s\" "
+"existiert bereits. Bearbeiten Sie bitte den bestehenden Eintrag."
+
+#: views.py:53
+#, python-format
+msgid "New access control lists for: %s"
+msgstr "Neue Zugriffsberechtigunglisten für %s"
+
+#: views.py:96
+#, python-format
+msgid "Delete ACL: %s"
+msgstr "Zugriffsberechtigung \"%s\" löschen"
+
+#: views.py:139
+msgid "There are no ACLs for this object"
+msgstr "Keine Zugriffsberechtigungen für dieses Objekt verfügbar"
+
+#: views.py:142 views.py:259
+msgid ""
+"ACL stands for Access Control List and is a precise method to control user "
+"access to objects in the system. ACLs allow granting a permission to a role "
+"but only for a specific object or set of objects."
+msgstr ""
+"Über Zugriffsberechtigungen wird der Zugriff von Benutzern zu Systemobjekten"
+" kontrolliert. Dadurch können einzelne Berechtigungen einer bestimmten Rolle"
+" zugewiesen werden, jedoch nur für ein bestimmtes Objekt oder einer Menge "
+"von Objekten. "
+
+#: views.py:149
+#, python-format
+msgid "Access control lists for: %s"
+msgstr "Zugriffsberechtigungen für %s"
+
+#: views.py:163
+msgid "Granted permissions"
+msgstr "Erteilte Berechtigungen"
+
+#: views.py:164
+msgid "Available permissions"
+msgstr "Verfügbare Berechtigungen"
+
+#: views.py:208
+#, python-format
+msgid "Role \"%(role)s\" permission's for \"%(object)s\"."
+msgstr "Berechtigungen von Rolle \"%(role)s\" für \"%(object)s\"."
+
+#: views.py:217
+msgid ""
+"Disabled permissions are inherited from a parent object or directly granted "
+"to the role and can't be removed from this view. Inherited permissions need "
+"to be removed from the parent object's ACL or from them role via the Setup "
+"menu."
+msgstr ""
+"Unzureichende Berechtigungen werden durch ein übergeordnetes Objekt vererbt "
+"oder direkt an die Rolle erteilt. Sie können nicht direkt auf diesem "
+"Formular bearbeitet werden. Vererbte Berechtigungen müssen auf dem "
+"übergeordneten Objekt oder für die Rolle über das Einrichtungsmenü "
+"eingestellt werden."
+
+#: views.py:256
+msgid "There are no ACLs"
+msgstr "Keine Zugriffsberechtigungen vorhanden"
+
+#: views.py:265
+msgid "Global access control lists"
+msgstr ""
+
+#: workflow_actions.py:23
+msgid "Object type"
+msgstr "Objekttyp"
+
+#: workflow_actions.py:26
+msgid "Type of the object for which the access will be modified."
+msgstr "Objekttyp für den der Zugang bearbeitet wird."
+
+#: workflow_actions.py:32
+msgid "Object ID"
+msgstr "Objekt ID"
+
+#: workflow_actions.py:35
+msgid ""
+"Numeric identifier of the object for which the access will be modified."
+msgstr "Numerischer Identifikator des Objekts"
+
+#: workflow_actions.py:40 workflow_actions.py:155
+msgid "Roles"
+msgstr "Rollen"
+
+#: workflow_actions.py:42 workflow_actions.py:157
+msgid "Roles whose access will be modified."
+msgstr "Rollen deren Zugang bearbeitet wird."
+
+#: workflow_actions.py:49 workflow_actions.py:164
+msgid ""
+"Permissions to grant/revoke to/from the role for the object selected above."
+msgstr ""
+"Berechtigungen, die der Rolle für das ausgewählte Objekt erteilt oder "
+"entzogen werden."
+
+#: workflow_actions.py:57
+msgid "Grant object access"
+msgstr "Objektzugriff gewähren"
+
+#: workflow_actions.py:140
+msgid "Revoke object access"
+msgstr "Objektzugriff entziehen"
+
+#: workflow_actions.py:172
+msgid "Grant document access"
+msgstr "Dokumentenzugriff gewähren"
+
+#: workflow_actions.py:211
+msgid "Revoke document access"
+msgstr "Dokumentenzugriff entziehen"

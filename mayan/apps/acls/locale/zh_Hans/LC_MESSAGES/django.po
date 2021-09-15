@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Translators:
+# Roberto Rosario, 2021
+# yan songwei <yansw@vip.163.com>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-05 07:22+0000\n"
+"PO-Revision-Date: 2021-04-11 06:12+0000\n"
+"Last-Translator: yan songwei <yansw@vip.163.com>, 2021\n"
+"Language-Team: Chinese Simplified (https://www.transifex.com/rosarior/teams/13584/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: apps.py:24 classes.py:143 links.py:27
+msgid "ACLs"
+msgstr "访问控制列表"
+
+#: apps.py:60
+msgid ""
+"Object for which the access is granted. When sorting objects, only the type "
+"is used and not the actual label of the object."
+msgstr ""
+
+#: apps.py:63
+msgid "Object"
+msgstr "对象"
+
+#: events.py:6 permissions.py:5
+msgid "Access control lists"
+msgstr "访问控制列表"
+
+#: events.py:10
+msgid "ACL created"
+msgstr "ACL已创建"
+
+#: events.py:13
+msgid "ACL deleted"
+msgstr ""
+
+#: events.py:16
+msgid "ACL edited"
+msgstr "ACL已编辑"
+
+#: forms.py:13 models.py:51 views.py:67
+msgid "Role"
+msgstr "角色"
+
+#: links.py:16
+msgid "New ACL"
+msgstr "新的访问控制列表"
+
+#: links.py:21
+msgid "Delete"
+msgstr "删除"
+
+#: links.py:32 models.py:45 workflow_actions.py:46 workflow_actions.py:161
+msgid "Permissions"
+msgstr "权限"
+
+#: links.py:35
+msgid "Global ACLs"
+msgstr ""
+
+#: managers.py:243
+#, python-format
+msgid "Object \"%s\" is not a model and cannot be checked for access."
+msgstr "对象 \"%s\"不是模型并无法被检查可否访问"
+
+#: managers.py:263
+#, python-format
+msgid "Insufficient access for: %s"
+msgstr "访问权限不足：%s"
+
+#: models.py:49
+msgid "Role to which the access is granted for the specified object."
+msgstr ""
+
+#: models.py:59
+msgid "Access entry"
+msgstr "访问条目"
+
+#: models.py:60
+msgid "Access entries"
+msgstr "访问条目"
+
+#: models.py:64
+#, python-format
+msgid "Role \"%(role)s\" permission's for \"%(object)s\""
+msgstr "%(object)s的角色“%(role)s”的权限"
+
+#: permissions.py:8
+msgid "Edit ACLs"
+msgstr "编辑访问控制列表"
+
+#: permissions.py:11
+msgid "View ACLs"
+msgstr "查看访问控制列表"
+
+#: serializers.py:125
+msgid "Primary key of the permission to add to the ACL."
+msgstr ""
+
+#: serializers.py:132
+msgid "Primary key of the permission to remove from the ACL."
+msgstr ""
+
+#: views.py:40
+#, python-format
+msgid ""
+"An ACL for \"%(object)s\" using role \"%(role)s\" already exists. Edit that "
+"ACL entry instead."
+msgstr "已经存在使用角色“ %(role)s”的“ %(object)s”的ACL。请改为编辑该ACL条目。"
+
+#: views.py:53
+#, python-format
+msgid "New access control lists for: %s"
+msgstr "新的访问控制列表：%s"
+
+#: views.py:96
+#, python-format
+msgid "Delete ACL: %s"
+msgstr "删除访问控制列表：%s"
+
+#: views.py:139
+msgid "There are no ACLs for this object"
+msgstr "此对象没有访问控制列表"
+
+#: views.py:142 views.py:259
+msgid ""
+"ACL stands for Access Control List and is a precise method to control user "
+"access to objects in the system. ACLs allow granting a permission to a role "
+"but only for a specific object or set of objects."
+msgstr "ACL代表访问控制列表，是控制用户对系统中对象的访问的精确方法。 ACL允许授予角色权限，但只能授予特定对象或一组对象的权限。"
+
+#: views.py:149
+#, python-format
+msgid "Access control lists for: %s"
+msgstr "访问控制列表：%s"
+
+#: views.py:163
+msgid "Granted permissions"
+msgstr "授予的权限"
+
+#: views.py:164
+msgid "Available permissions"
+msgstr "可用权限"
+
+#: views.py:208
+#, python-format
+msgid "Role \"%(role)s\" permission's for \"%(object)s\"."
+msgstr "为\"%(object)s\"的角色 \"%(role)s\" 权限"
+
+#: views.py:217
+msgid ""
+"Disabled permissions are inherited from a parent object or directly granted "
+"to the role and can't be removed from this view. Inherited permissions need "
+"to be removed from the parent object's ACL or from them role via the Setup "
+"menu."
+msgstr "禁用的权限是从父对象继承或直接授予角色的，不能从此视图中删除。需要通过“设置”菜单从父对象的ACL或角色中删除继承的权限。"
+
+#: views.py:256
+msgid "There are no ACLs"
+msgstr ""
+
+#: views.py:265
+msgid "Global access control lists"
+msgstr ""
+
+#: workflow_actions.py:23
+msgid "Object type"
+msgstr "对象类型"
+
+#: workflow_actions.py:26
+msgid "Type of the object for which the access will be modified."
+msgstr "要为其修改访问权限的对象的类型。"
+
+#: workflow_actions.py:32
+msgid "Object ID"
+msgstr "对象ID"
+
+#: workflow_actions.py:35
+msgid ""
+"Numeric identifier of the object for which the access will be modified."
+msgstr "要为其修改访问权限的对象的数字标识符。"
+
+#: workflow_actions.py:40 workflow_actions.py:155
+msgid "Roles"
+msgstr "角色"
+
+#: workflow_actions.py:42 workflow_actions.py:157
+msgid "Roles whose access will be modified."
+msgstr "访问权限将被修改的角色。"
+
+#: workflow_actions.py:49 workflow_actions.py:164
+msgid ""
+"Permissions to grant/revoke to/from the role for the object selected above."
+msgstr "授予/撤销给上述选定对象角色的权限。"
+
+#: workflow_actions.py:57
+msgid "Grant object access"
+msgstr "授予对象访问权限"
+
+#: workflow_actions.py:140
+msgid "Revoke object access"
+msgstr "收回对象访问权限"
+
+#: workflow_actions.py:172
+msgid "Grant document access"
+msgstr "授予文档访问权限"
+
+#: workflow_actions.py:211
+msgid "Revoke document access"
+msgstr "收回文档访问权限"

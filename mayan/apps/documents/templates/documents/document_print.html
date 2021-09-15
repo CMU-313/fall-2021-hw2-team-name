@@ -1,0 +1,17 @@
+{% extends 'appearance/base_plain.html' %}
+
+{% load i18n %}
+
+{% load converter_tags %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content_plain %}
+    {% for page in pages %}
+        {% converter_get_object_image_data obj=page width=width height=height as object_image_data %}
+        <img
+            alt="{% trans 'Document page image preview' %}"
+            src="{{ object_image_data.url }}" style="width: 100%;"
+        />
+    {% endfor %}
+{% endblock %}
