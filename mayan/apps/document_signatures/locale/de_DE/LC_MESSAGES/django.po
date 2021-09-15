@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Berny <berny@bernhard-marx.de>, 2015
+# Bjoern Kowarsch <bjoern.kowarsch@gmail.com>, 2018
+# Mathias Behrle <mathiasb@m9s.biz>, 2018-2019
+# Mathias Behrle <mbehrle@m9s.biz>, 2014
+# Stefan Lodders <sl@suchreflex.de>, 2012
+# tetjarediske <tetja.rediske@googlemail.com>, 2012
+# Tobias Paepke <tobias.paepke@paepke.net>, 2014,2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-15 03:37-0400\n"
+"PO-Revision-Date: 2019-05-08 22:16+0000\n"
+"Last-Translator: Mathias Behrle <mathiasb@m9s.biz>\n"
+"Language-Team: German (Germany) (http://www.transifex.com/rosarior/mayan-edms/language/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:47 permissions.py:8 settings.py:10
+msgid "Document signatures"
+msgstr "Dokumentenunterschriften"
+
+#: apps.py:94
+msgid "Date"
+msgstr "Datum"
+
+#: apps.py:97 models.py:46
+msgid "Key ID"
+msgstr "Schlüssel-ID"
+
+#: apps.py:101 forms.py:64 models.py:50
+msgid "Signature ID"
+msgstr "Unterschrifts-ID"
+
+#: apps.py:102 forms.py:76
+msgid "None"
+msgstr "Nichts"
+
+#: apps.py:105
+msgid "Type"
+msgstr "Typ"
+
+#: forms.py:19 forms.py:33
+msgid "Key"
+msgstr "Schlüssel"
+
+#: forms.py:24
+msgid ""
+"The passphrase to unlock the key and allow it to be used to sign the "
+"document version."
+msgstr "Das Passwort zum Entsperren des Schlüssels um die Dokumentenversion zu unterschreiben."
+
+#: forms.py:26
+msgid "Passphrase"
+msgstr "Passwort"
+
+#: forms.py:35
+msgid "Private key that will be used to sign this document version."
+msgstr "Der private Schlüssel, der für die Unterschrift dieser Dokumentenversion benutzt wird."
+
+#: forms.py:46
+msgid "Signature is embedded?"
+msgstr "Eingebettete Unterschrift"
+
+#: forms.py:48
+msgid "Signature date"
+msgstr "Datum der Unterschrift"
+
+#: forms.py:51
+msgid "Signature key ID"
+msgstr "Unterschriftsschlüssel-ID"
+
+#: forms.py:53
+msgid "Signature key present?"
+msgstr "Unterschriftsschlüssel vorhanden"
+
+#: forms.py:66
+msgid "Key fingerprint"
+msgstr "Schlüssel-Fingerabdruck"
+
+#: forms.py:70
+msgid "Key creation date"
+msgstr "Erstellungsdatum des Schlüssels"
+
+#: forms.py:75
+msgid "Key expiration date"
+msgstr "Ablaufdatum des Schlüssels"
+
+#: forms.py:80
+msgid "Key length"
+msgstr "Schlüssellänge"
+
+#: forms.py:84
+msgid "Key algorithm"
+msgstr "Schlüsselverfahren"
+
+#: forms.py:88
+msgid "Key user ID"
+msgstr "Schlüssel-Benutzer-ID"
+
+#: forms.py:92
+msgid "Key type"
+msgstr "Schlüsseltyp"
+
+#: links.py:32
+msgid "Verify all documents"
+msgstr "Alle Dokumente überprüfen"
+
+#: links.py:39 links.py:58 queues.py:9
+msgid "Signatures"
+msgstr "Unterschriften"
+
+#: links.py:45
+msgid "Delete"
+msgstr "Löschen"
+
+#: links.py:52
+msgid "Details"
+msgstr "Details"
+
+#: links.py:63
+msgid "Download"
+msgstr "Herunterladen"
+
+#: links.py:69
+msgid "Upload signature"
+msgstr "Unterschrift hochladen"
+
+#: links.py:76
+msgid "Sign detached"
+msgstr "Unterschrift separat"
+
+#: links.py:83
+msgid "Sign embedded"
+msgstr "Unterschrift eingebettet"
+
+#: models.py:40
+msgid "Document version"
+msgstr "Dokumentenversion"
+
+#: models.py:44
+msgid "Date signed"
+msgstr "Datum der Signierung"
+
+#: models.py:54
+msgid "Public key fingerprint"
+msgstr "Fingerabdruck des öffentlichen Schlüssels"
+
+#: models.py:60
+msgid "Document version signature"
+msgstr "Dokumentenversion Unterschrift"
+
+#: models.py:61
+msgid "Document version signatures"
+msgstr "Dokumentenversionen Unterschriften"
+
+#: models.py:80
+msgid "Detached"
+msgstr "Separat"
+
+#: models.py:82
+msgid "Embedded"
+msgstr "Eingebettet"
+
+#: models.py:97
+msgid "Document version embedded signature"
+msgstr "Dokumentenversion der eingebetteten Unterschrift"
+
+#: models.py:98
+msgid "Document version embedded signatures"
+msgstr "Dokumentenversion der eingebetteten Unterschriften"
+
+#: models.py:131
+msgid "Signature file"
+msgstr "Unterschriftsdatei"
+
+#: models.py:138
+msgid "Document version detached signature"
+msgstr "Dokumentenversion der seperaten Unterschrift"
+
+#: models.py:139
+msgid "Document version detached signatures"
+msgstr "Dokumentenversion der seperaten Unterschriften"
+
+#: models.py:142
+msgid "signature"
+msgstr "Unterschrift"
+
+#: permissions.py:12
+msgid "Sign documents with detached signatures"
+msgstr "Dokument signieren mit seperaten Unterschriften"
+
+#: permissions.py:16
+msgid "Sign documents with embedded signatures"
+msgstr "Dokument signieren mit eingebetteten Unterschriften"
+
+#: permissions.py:20
+msgid "Delete detached signatures"
+msgstr "Separate Unterschriften löschen"
+
+#: permissions.py:24
+msgid "Download detached document signatures"
+msgstr "Separate Unterschriften der Dokumente herunterladen"
+
+#: permissions.py:28
+msgid "Upload detached document signatures"
+msgstr "Separate Unterschriften der Dokumente hochladen"
+
+#: permissions.py:32
+msgid "Verify document signatures"
+msgstr "Dokumentenunterschriften überprüfen"
+
+#: permissions.py:36
+msgid "View details of document signatures"
+msgstr "Details der Unterschriften des Dokuments"
+
+#: queues.py:12
+msgid "Verify key signatures"
+msgstr "Schlüsselsignaturen verifizieren"
+
+#: queues.py:16
+msgid "Unverify key signatures"
+msgstr "Verifizierung von Schlüsselsignaturen zurücknehmen"
+
+#: queues.py:20
+msgid "Verify document version"
+msgstr "Dokumentenversion verifizieren"
+
+#: queues.py:25
+msgid "Verify missing embedded signature"
+msgstr "Fehlende eingebettete Unterschrift überprüfen"
+
+#: settings.py:15
+msgid "Path to the Storage subclass to use when storing detached signatures."
+msgstr "Pfad zu der Speicherklasse (Storage subclass) für die Speicherung separater Unterschriften."
+
+#: settings.py:24
+msgid "Arguments to pass to the SIGNATURE_STORAGE_BACKEND. "
+msgstr "Argumente die an das SIGNATURE_STORAGE_BACKEND weitergereicht werden."
+
+#: views.py:68 views.py:159
+msgid "Passphrase is needed to unlock this key."
+msgstr "Passphrase wird benötigt um den Schlüssel zu entsperren"
+
+#: views.py:79 views.py:170
+msgid "Passphrase is incorrect."
+msgstr "Passphrase ist ungültig"
+
+#: views.py:101 views.py:191
+msgid "Document version signed successfully."
+msgstr "Dokumentenversion wurde erfolgreich signiert."
+
+#: views.py:127
+#, python-format
+msgid "Sign document version \"%s\" with a detached signature"
+msgstr "Dokumentenversion \"%s\" mit seperater Unterschrift signieren"
+
+#: views.py:224
+#, python-format
+msgid "Sign document version \"%s\" with a embedded signature"
+msgstr "Dokumentenversion \"%s\" mit eingebetteter Unterschrift signieren"
+
+#: views.py:240
+#, python-format
+msgid "Delete detached signature: %s"
+msgstr "Separate Unterschrift %s löschen"
+
+#: views.py:260
+#, python-format
+msgid "Details for signature: %s"
+msgstr "Details für Signatur %s"
+
+#: views.py:300
+msgid ""
+"Signatures help provide authorship evidence and tamper detection. They are "
+"very secure and hard to forge. A signature can be embedded as part of the "
+"document itself or uploaded as a separate file."
+msgstr "Unterschriften dienen der Ermittlung der Autorenschaft und der Entdeckung von Fälschungen. Sie sind sehr sicher und schwer zu fälschen. Eine Unterschrift kann als Teil des Dokuments in dieses eingebettet sein oder separat erstellt und hochgeladen werden."
+
+#: views.py:328
+msgid "There are no signatures for this document."
+msgstr "Keine Unterschriften für dieses Dokument vorhanden."
+
+#: views.py:331
+#, python-format
+msgid "Signatures for document version: %s"
+msgstr "Unterschriften für Dokumentenversion: %s"
+
+#: views.py:361
+#, python-format
+msgid "Upload detached signature for document version: %s"
+msgstr "Seperate Unterschrift für Dokumentenversion %s hochladen"
+
+#: views.py:378
+msgid "On large databases this operation may take some time to execute."
+msgstr "Bei großen Datenbanken kann dieser Vorgang einige Zeit in Anspruch nehmen."
+
+#: views.py:379
+msgid "Verify all document for signatures?"
+msgstr "Alle Dokumentenunterschriften überprüfen?"
+
+#: views.py:389
+msgid "Signature verification queued successfully."
+msgstr "Überprüfung der Unterschriften erfolgreich eingereiht."
