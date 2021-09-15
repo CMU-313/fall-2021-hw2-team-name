@@ -1,0 +1,17 @@
+{% load i18n %}
+
+{% load common_tags %}
+
+{% common_calculate_title as result %}
+
+{% if not non_html_title %}
+    <h3 title='{{ result.title_full }}'>
+{% endif %}
+    {{ result.title }}
+{% if not non_html_title %}
+    </h3>
+    {% if subtitle %}
+        <small>{{ subtitle }}</small>
+    {% endif %}
+    <hr/>
+{% endif %}

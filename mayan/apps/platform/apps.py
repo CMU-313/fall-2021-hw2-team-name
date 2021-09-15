@@ -1,0 +1,17 @@
+from __future__ import absolute_import, unicode_literals
+
+from django.utils.translation import ugettext_lazy as _
+
+from mayan.apps.common.apps import MayanAppConfig
+
+
+class PlatformApp(MayanAppConfig):
+    app_namespace = 'platform'
+    app_url = 'platform'
+    has_rest_api = False
+    has_tests = False
+    name = 'mayan.apps.platform'
+    verbose_name = _('Platform')
+
+    def ready(self):
+        super(PlatformApp, self).ready()
