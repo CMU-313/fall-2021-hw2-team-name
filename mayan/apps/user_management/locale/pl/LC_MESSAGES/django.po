@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Translators:
+# Annunnaky <doublemiu@gmail.com>, 2015
+# mic <winterfall24@gmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-27 14:16-0400\n"
+"PO-Revision-Date: 2016-03-21 21:12+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Polish (http://www.transifex.com/rosarior/mayan-edms/language/"
+"pl/)\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: apps.py:29 permissions.py:7
+msgid "User management"
+msgstr "Zarządzanie użytkownikami"
+
+#: apps.py:39
+msgid "All the groups."
+msgstr ""
+
+#: apps.py:43
+msgid "All the users."
+msgstr ""
+
+#: apps.py:48 links.py:30
+msgid "Members"
+msgstr "Członkowie"
+
+#: apps.py:52
+msgid "Full name"
+msgstr "Pełna nazwa"
+
+#: apps.py:55
+msgid "Email"
+msgstr "Email"
+
+#: apps.py:58
+msgid "Active"
+msgstr "Aktywny"
+
+#: apps.py:64
+msgid "Has usable password?"
+msgstr "Posiada hasło?"
+
+#: forms.py:16
+msgid "New password"
+msgstr "Nowe hasło"
+
+#: forms.py:19
+msgid "Confirm password"
+msgstr "Potwierdź hasło"
+
+#: links.py:14 views.py:29
+msgid "Create new group"
+msgstr "utwórz nową grupę"
+
+#: links.py:18 links.py:42 links.py:58
+msgid "Delete"
+msgstr "Usunąć"
+
+#: links.py:22 links.py:46
+msgid "Edit"
+msgstr "Edytuj"
+
+#: links.py:26 links.py:34 links.py:50 views.py:52
+msgid "Groups"
+msgstr "Grupy"
+
+#: links.py:38 views.py:197
+msgid "Create new user"
+msgstr "Tworzenie nowego użytkownika"
+
+#: links.py:54 links.py:70 views.py:169
+msgid "Users"
+msgstr "Użytkownicy"
+
+#: links.py:62 links.py:66
+msgid "Reset password"
+msgstr "Zresetować hasło"
+
+#: permissions.py:10
+msgid "Create new groups"
+msgstr "Tworzyć nowe grupy"
+
+#: permissions.py:13
+msgid "Delete existing groups"
+msgstr "Usunąć istniejące grupy"
+
+#: permissions.py:16
+msgid "Edit existing groups"
+msgstr "Edytować istniejące grupy"
+
+#: permissions.py:19
+msgid "View existing groups"
+msgstr "Zobacz istniejących grup"
+
+#: permissions.py:22
+msgid "Create new users"
+msgstr "Tworzenie nowych użytkowników"
+
+#: permissions.py:25
+msgid "Delete existing users"
+msgstr "Usuwanie istniejących użytkowników"
+
+#: permissions.py:28
+msgid "Edit existing users"
+msgstr "Edycja istniejących użytkowników"
+
+#: permissions.py:31
+msgid "View existing users"
+msgstr "Zobacz istniejących użytkowników"
+
+#: views.py:45
+#, python-format
+msgid "Edit group: %s"
+msgstr "Edycja grupy: %s"
+
+#: views.py:66
+#, python-format
+msgid "Delete the group: %s?"
+msgstr ""
+
+#: views.py:72
+msgid "Available users"
+msgstr ""
+
+#: views.py:73
+msgid "Members of groups"
+msgstr ""
+
+#: views.py:94
+#, python-format
+msgid "Members of group: %s"
+msgstr "Członkowie grupy: %s"
+
+#: views.py:127
+#, python-format
+msgid "Edit user: %s"
+msgstr "Edytuj użytkownika: %s"
+
+#: views.py:133
+msgid "Available groups"
+msgstr ""
+
+#: views.py:134
+msgid "Groups joined"
+msgstr ""
+
+#: views.py:143
+#, python-format
+msgid "Groups of user: %s"
+msgstr "Grupy użytkownika: %s"
+
+#: views.py:188
+#, python-format
+msgid "User \"%s\" created successfully."
+msgstr "Użytkownik \"%s\" został utworzony pomyślnie."
+
+#: views.py:213 views.py:284
+msgid "Must provide at least one user."
+msgstr "Musi podać co najmniej jednego użytkownika."
+
+#: views.py:230
+msgid ""
+"Super user and staff user deleting is not allowed, use the admin interface "
+"for these cases."
+msgstr ""
+"Super user oraz staff user usuwanie nie jest możliwa , należy użyć "
+"interfejsu administratora w takich przypadkach."
+
+#: views.py:237
+#, python-format
+msgid "User \"%s\" deleted successfully."
+msgstr "Użytkownik \"%s\" został usunięta."
+
+#: views.py:241
+#, python-format
+msgid "Error deleting user \"%(user)s\": %(error)s"
+msgstr "Błąd podczas usuwania użytkownika \" %(user)s \": %(error)s "
+
+#: views.py:255
+#, python-format
+msgid "Delete the user: %s?"
+msgstr ""
+
+#: views.py:257
+#, python-format
+msgid "Delete the users: %s?"
+msgstr ""
+
+#: views.py:300
+msgid "Passwords do not match, try again."
+msgstr "Hasła nie pasują, spróbuj ponownie."
+
+#: views.py:309
+msgid ""
+"Super user and staff user password reseting is not allowed, use the admin "
+"interface for these cases."
+msgstr ""
+"Super user oraz staff user reset nie jest możliwa , należy użyć interfejsu "
+"administratora w takich przypadkach."
+
+#: views.py:319
+#, python-format
+msgid "Successfull password reset for user: %s."
+msgstr "Pomyślne resetowania hasła użytkownika:%s."
+
+#: views.py:325
+#, python-format
+msgid "Error reseting password for user \"%(user)s\": %(error)s"
+msgstr "Błąd podczas resetowania hasło użytkownika \" %(user)s \": %(error)s "
+
+#: views.py:342
+#, python-format
+msgid "Reseting password for user: %s"
+msgstr "Resetowanie hasła użytkownika:%s"
+
+#: views.py:344
+#, python-format
+msgid "Reseting password for users: %s"
+msgstr "Resetowanie hasła dla użytkowników:%s"
+
+#~ msgid ""
+#~ "Super user and staff user editing is not allowed, use the admin interface "
+#~ "for these cases."
+#~ msgstr ""
+#~ "Super user and staff user editing is not allowed, use the admin interface "
+#~ "for these cases."
+
+#~ msgid "User \"%s\" updated successfully."
+#~ msgstr "User \"%s\" updated successfully."
+
+#~ msgid "Must provide at least one group."
+#~ msgstr "Must provide at least one group."
+
+#~ msgid "Group \"%s\" deleted successfully."
+#~ msgstr "Group \"%s\" deleted successfully."
+
+#~ msgid "Error deleting group \"%(group)s\": %(error)s"
+#~ msgstr "Error deleting group \"%(group)s\": %(error)s"
+
+#~ msgid "Delete the groups: %s?"
+#~ msgstr "Delete existing groups"
+
+#~ msgid "Are you sure you wish to delete the user: %s?"
+#~ msgstr "Are you sure you wish to delete the user: %s?"
+
+#~ msgid "Are you sure you wish to delete the users: %s?"
+#~ msgstr "Are you sure you wish to delete the users: %s?"
+
+#~ msgid "Non groups of user: %s"
+#~ msgstr "non groups of user: %s"
+
+#~ msgid "Group \"%s\" updated successfully."
+#~ msgstr "Group \"%s\" updated successfully."
+
+#~ msgid "Group \"%s\" created successfully."
+#~ msgstr "Group \"%s\" created successfully."
+
+#~ msgid "Are you sure you wish to delete the group: %s?"
+#~ msgstr "Are you sure you wish to delete the group: %s?"
+
+#~ msgid "Are you sure you wish to delete the groups: %s?"
+#~ msgstr "Are you sure you wish to delete the groups: %s?"
+
+#~ msgid "Non members of group: %s"
+#~ msgstr "non members of group: %s"
+
+#~ msgid "Group"
+#~ msgstr "group"
+
+#~ msgid "User list"
+#~ msgstr "user list"
+
+#~ msgid "Group list"
+#~ msgstr "group list"
+
+#~ msgid "edit"
+#~ msgstr "edit"
+
+#~ msgid "create new user"
+#~ msgstr "create new user"
+
+#~ msgid "create new group"
+#~ msgstr "create new group"
+
+#~ msgid "user"
+#~ msgstr "user"
