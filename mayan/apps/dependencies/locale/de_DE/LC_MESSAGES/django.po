@@ -1,0 +1,329 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Roberto Rosario, 2019
+# Berny <berny@bernhard-marx.de>, 2019
+# Felix <felix.com@gmx.com>, 2019
+# Mathias Behrle <mathiasb@m9s.biz>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-15 03:37-0400\n"
+"PO-Revision-Date: 2019-04-27 22:53+0000\n"
+"Last-Translator: Mathias Behrle <mathiasb@m9s.biz>, 2019\n"
+"Language-Team: German (Germany) (https://www.transifex.com/rosarior/teams/13584/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:27 links.py:43 permissions.py:7
+msgid "Dependencies"
+msgstr "Abhängigkeiten"
+
+#: apps.py:33 apps.py:68 apps.py:76
+msgid "Label"
+msgstr "Bezeichner"
+
+#: apps.py:36
+msgid "Internal name"
+msgstr "Interner Name"
+
+#: apps.py:39 apps.py:71 apps.py:80
+msgid "Description"
+msgstr "Beschreibung"
+
+#: apps.py:43 classes.py:172
+msgid "Type"
+msgstr "Typ"
+
+#: apps.py:47 classes.py:174
+msgid "Other data"
+msgstr "Andere Daten"
+
+#: apps.py:51
+msgid "Declared by"
+msgstr "Deklariert von"
+
+#: apps.py:55 classes.py:172
+msgid "Version"
+msgstr "Version"
+
+#: apps.py:59 classes.py:173 classes.py:809
+msgid "Environment"
+msgstr "Umgebung"
+
+#: apps.py:63 classes.py:174
+msgid "Check"
+msgstr "Überprüfen"
+
+#: classes.py:65
+msgid ""
+"Environment used for building distributable packages of the software. End "
+"users can ignore missing dependencies under this environment."
+msgstr ""
+
+#: classes.py:68
+msgid "Build"
+msgstr "Build"
+
+#: classes.py:72
+msgid ""
+"Environment used for developers to make code changes. End users can ignore "
+"missing dependencies under this environment."
+msgstr ""
+
+#: classes.py:74
+msgid "Development"
+msgstr "Entwicklung"
+
+#: classes.py:78
+msgid ""
+"Normal environment for end users. A missing dependency under this "
+"environment will result in issues and errors during normal use."
+msgstr ""
+
+#: classes.py:80
+msgid "Production"
+msgstr "Produktion"
+
+#: classes.py:84
+msgid ""
+"Environment used running the test suit to verify the functionality of the "
+"code. Dependencies in this environment are not needed for normal production "
+"usage."
+msgstr ""
+"Umgebung für Testläufe zur Verifizierung der Codefunktionalität. "
+"Abhängigkeiten dieser Umgebung werden nicht im normalen Produktivbetrieb "
+"benötigt."
+
+#: classes.py:87
+msgid "Testing"
+msgstr "Testing"
+
+#: classes.py:172
+msgid "Name"
+msgstr "Name"
+
+#: classes.py:173
+msgid "App"
+msgstr "App"
+
+#: classes.py:274
+msgid "Need to specify at least one: app_label or module."
+msgstr ""
+"Es muss wenigstens eines von beiden angegeben werden: app_label oder Modul."
+
+#: classes.py:279
+#, python-format
+msgid "Dependency \"%s\" already registered."
+msgstr "Abhängigkeit \"%s\" bereits registriert."
+
+#: classes.py:305
+#, python-format
+msgid "Installing package: %s... "
+msgstr "Installiere Paket: %s... "
+
+#: classes.py:310
+msgid "Already installed."
+msgstr "Bereits installiert."
+
+#: classes.py:313 classes.py:318 classes.py:322
+msgid "Complete."
+msgstr "Vollständig."
+
+#: classes.py:348
+msgid "Installed and correct version"
+msgstr "Installierte und korrekte Version"
+
+#: classes.py:350
+msgid "Missing or incorrect version"
+msgstr "Fehlende oder inkorrekte Version"
+
+#: classes.py:379
+msgid "None"
+msgstr "Keine"
+
+#: classes.py:388
+msgid "Not specified"
+msgstr "Nicht spezifiziert"
+
+#: classes.py:405
+msgid "Patching files... "
+msgstr ""
+
+#: classes.py:440
+msgid "Executables that are called directly by the code."
+msgstr "Programme, die direkt durch den Code aufgerufen werden."
+
+#: classes.py:442
+msgid "Binary"
+msgstr "Binärdatei"
+
+#: classes.py:459
+msgid ""
+"JavaScript libraries downloaded the from NPM registry and used for front-end"
+" functionality."
+msgstr ""
+
+#: classes.py:462
+msgid "JavaScript"
+msgstr ""
+
+#: classes.py:496 classes.py:729
+msgid "Downloading... "
+msgstr "Herunterladen..."
+
+#: classes.py:499
+msgid "Verifying... "
+msgstr "Verifizieren..."
+
+#: classes.py:502 classes.py:732
+msgid "Extracting... "
+msgstr "Entpacken..."
+
+#: classes.py:681
+msgid "Python packages downloaded from PyPI."
+msgstr "Pythonpakete, die von PyPI heruntergeladen werden."
+
+#: classes.py:683
+msgid "Python"
+msgstr "Python"
+
+#: classes.py:710
+msgid "Fonts downloaded from fonts.googleapis.com."
+msgstr ""
+
+#: classes.py:712
+msgid "Google font"
+msgstr ""
+
+#: classes.py:791
+msgid "Declared in app"
+msgstr "In App deklariert"
+
+#: classes.py:792
+msgid "Show dependencies by the app that declared them."
+msgstr ""
+
+#: classes.py:796
+msgid "Class"
+msgstr "Klasse"
+
+#: classes.py:797
+msgid ""
+"Show the different classes of dependencies. Classes are usually divided by "
+"language or the file types of the dependency."
+msgstr ""
+
+#: classes.py:802
+msgid "State"
+msgstr "Status"
+
+#: classes.py:803
+msgid ""
+"Show the different states of the dependencies. True means that the "
+"dependencies is installed and is of a correct version. False means the "
+"dependencies is missing or an incorrect version is present."
+msgstr ""
+
+#: classes.py:810
+msgid ""
+"Dependencies required for an environment might not be required for another. "
+"Example environments: Production, Development."
+msgstr ""
+
+#: links.py:11 views.py:35
+msgid "Check for updates"
+msgstr "Nach Updates suchen"
+
+#: links.py:17
+msgid "Groups"
+msgstr "Gruppen"
+
+#: links.py:25
+msgid "Entries"
+msgstr "Einträge"
+
+#: links.py:33
+msgid "Details"
+msgstr "Details"
+
+#: links.py:38
+msgid "Dependencies licenses"
+msgstr "Lizenzen von Abhängigkeiten"
+
+#: management/commands/generaterequirements.py:16
+msgid ""
+"Comma separated names of dependencies to exclude from the list generated."
+msgstr ""
+"Kommagetrennte Liste von Abhängigkeiten, die aus der generierten Liste "
+"ausgeschlossen werden."
+
+#: management/commands/generaterequirements.py:22
+msgid ""
+"Comma separated names of dependencies to show in the list while excluding "
+"every other one."
+msgstr ""
+"Kommagetrennte Liste von Abhängigkeiten, die in der generierten Liste  "
+"erscheinen sollen, während alle anderen ausgeschlossen werden."
+
+#: management/commands/installjavascript.py:15
+msgid "Process a specific app."
+msgstr "Eine bestimmte Applikation ausführen."
+
+#: management/commands/installjavascript.py:19
+msgid "Force installation even if already installed."
+msgstr "Installation erzwingen, obwohl bereits installiert."
+
+#: permissions.py:10
+msgid "View dependencies"
+msgstr "Abhängigkeiten ansehen"
+
+#: views.py:23
+#, python-format
+msgid "The version you are using is outdated. The latest version is %s"
+msgstr "Ihre Version ist veraltet. Die neueste Version ist %s"
+
+#: views.py:28
+msgid "It is not possible to determine the latest version available."
+msgstr "Ermittlung der aktuellsten verfügbaren Version nicht möglich."
+
+#: views.py:32
+msgid "Your version is up-to-date."
+msgstr "Ihre Version ist auf dem neuesten Stand."
+
+#: views.py:49
+#, python-format
+msgid "Entries for dependency group: %s"
+msgstr "Einträge für Abhängigkeitsgruppe %s"
+
+#: views.py:62 views.py:107
+#, python-format
+msgid "Group %s not found."
+msgstr "Gruppe %s nicht gefunden."
+
+#: views.py:75
+msgid "Dependency groups"
+msgstr "Abhängigkeitsgruppen"
+
+#: views.py:95
+#, python-format
+msgid "Dependency group and entry: %(group)s, %(entry)s"
+msgstr "Abhängigkeitsgruppe und Eintrag: %(group)s, %(entry)s"
+
+#: views.py:119
+#, python-format
+msgid "Entry %s not found."
+msgstr "Eintrag %s nicht gefunden."
+
+#: views.py:137
+msgid "Other packages licenses"
+msgstr "Andere Paket-Lizenzen"
