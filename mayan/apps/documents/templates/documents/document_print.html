@@ -1,0 +1,21 @@
+{% extends 'appearance/base_plain.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content_plain %}
+    {% if pages %}
+        {% for page in pages %}
+            <img
+                src="{{ page.get_api_image_url }}?width={{ width }}&height={{ height }}" style="width: 100%;"
+            />
+        {% endfor %}
+    {% else %}
+        {% for document in documents %}
+            {% for page in document.pages.all %}
+                <img
+                    src="{{ page.get_api_image_url }}?width={{ width }}&height={{ height }}" style="width: 100%;"
+                />
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
