@@ -1,0 +1,134 @@
+{% load i18n %}
+{% load static %}
+
+{% load common_tags %}
+{% load navigation_tags %}
+
+<div class="row">
+    <div class="col-xs-12">
+        {% if not object_list %}
+            <div class="well">
+                {% include 'appearance/no_results.html' %}
+            </div>
+        {% else %}
+            <h4>
+                {% if page_obj %}
+                    {% if page_obj.paginator.num_pages != 1 %}
+                        {% blocktrans with page_obj.start_index as start and page_obj.end_index as end and page_obj.paginator.object_list|length as total and page_obj.number as page_number and page_obj.paginator.num_pages as total_pages %}Total ({{ start }} - {{ end }} out of {{ total }}) (Page {{ page_number }} of {{ total_pages }}){% endblocktrans %}
+                    {% else %}
+                        {% blocktrans with page_obj.paginator.object_list|length as total %}Total: {{ total }}{% endblocktrans %}
+                    {% endif %}
+                {% else %}
+                    {% blocktrans with object_list|length as total %}Total: {{ total }}{% endblocktrans %}
+                {% endif %}
+            </h4>
+            <hr>
+
+            <div class="well center-block">
+                {% if object_list %}
+                    {% if not hide_multi_item_actions %}
+                        {% get_menu_links name='multi item' sort_results=True source=object_list.0 as links_multi_item %}
+                    {% endif %}
+                {% endif %}
+
+                <div class="clearfix">
+                    {% include 'appearance/list_toolbar.html' %}
+                </div>
+
+                <hr style="border-bottom: 1px solid lightgrey;">
+
+                <div class="row row-items">
+                    {% for object in object_list %}
+                        <div class="{{ column_class|default:'col-xs-12 col-sm-4 col-md-3 col-lg-2' }}">
+                            <div class="panel panel-primary panel-item">
+                                <div class="panel-heading">
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label for="id_indexes_0">
+                                                {% if links_multi_item %}
+                                                    <input class="form-multi-object-action-checkbox check-all-slave checkbox" name="pk_{{ object.pk }}" type="checkbox" />
+                                                {% endif %}
+
+                                                <span style="color: white; word-break: break-all; overflow-wrap: break-word;">
+                                                    {% if not hide_object %}
+                                                        {% if not hide_link %}
+                                                            <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+                                                        {% else %}
+                                                            {{ object }}
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% get_source_columns source=object only_identifier=True as source_column %}
+                                                        {% source_column_resolve column=source_column as column_value %}
+                                                        {% if source_column.is_absolute_url %}
+                                                            <a href="{{ column_value.get_absolute_url|default:object.get_absolute_url }}">{{ column_value }}</a>
+                                                        {% else %}
+                                                            {{ column_value }}
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="panel-body">
+                                    {% if not hide_columns %}
+                                        {% get_source_columns source=object exclude_identifier=True as source_columns %}
+                                        {% for column in source_columns %}
+                                            <div class="text-center" style="">{% source_column_resolve column=column as column_value %}{% if column_value != '' %}{% if column.include_label %}{{ column.label }}: {% endif %}{{ column_value }}{% endif %}</div>
+                                        {% endfor %}
+                                    {% endif %}
+
+                                    {% for column in extra_columns %}
+                                        <div class="text-center"><span class="list-extra-column-label">{{ column.name }}</span>: {{ object|object_property:column.attribute }}</div>
+                                    {% endfor %}
+
+                                    {% if not hide_links %}
+                                        {% get_menus_links names='list facet,object' source=object as links %}
+
+                                        {% if links %}
+                                            <div class="dropdown text-center">
+                                                <button aria-expanded="false" aria-haspopup="true" class="btn btn-default btn-danger btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    {% trans 'Actions' %}
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only">{% trans 'Toggle Dropdown' %}</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    {% for object_navigation_links in links %}
+                                                        {% with 'true' as as_li %}
+                                                        {% with 'true' as hide_active_anchor %}
+                                                        {% with 'btn-sm' as link_classes %}
+                                                            {% include 'navigation/generic_navigation.html' %}
+                                                        {% endwith %}
+                                                        {% endwith %}
+                                                        {% endwith %}
+
+                                                        {% if not forloop.last and object_navigation_links %}
+                                                            <li class="divider"></li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% include 'pagination/pagination.html' %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    'use strict';
+
+    $(function() {
+        $('.row-items > [class*="col"] .panel-item .panel-heading').matchHeight();
+        $('.row-items > [class*="col"] .panel-item .panel-body').matchHeight();
+        $('.row-items > [class*="col"] .panel-item').matchHeight();
+    });
+</script>

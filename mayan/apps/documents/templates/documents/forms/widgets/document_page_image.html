@@ -1,0 +1,19 @@
+{% load appearance_tags %}
+{% load documents_tags %}
+
+<span class="instance-image-widget {{ container_class }}">
+    <span class="spinner-container text-primary"
+        style="height: {% if display_full_height %}100%{% else %}{{ display_height|default:150 }}px{% endif %}; display: block;"
+    >
+        {% get_icon 'mayan.apps.documents.icons.icon_document_image_loading'  %}
+    </span>
+    {# Used with the default filter to typecast Python's None to the data attribute's empty string  #}
+    {% get_api_image_url instance width=image_width height=image_height zoom=image_zoom rotation=image_rotation as image_url %}
+    <img
+        class="thin_border {{ image_classes }}"
+        data-url="{{ image_url|default:'' }}"
+        src="#"
+        style="{% if image_style_height %}height: {{ image_style_height }};{% endif %} {% if image_style_max_height %}max-height: {{ image_style_max_height }};{% endif %}"
+     />
+</span>
+

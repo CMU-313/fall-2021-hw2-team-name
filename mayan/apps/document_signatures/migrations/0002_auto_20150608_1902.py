@@ -1,0 +1,34 @@
+from __future__ import unicode_literals
+
+from django.core.files.storage import FileSystemStorage
+from django.db import migrations, models
+
+import mayan.apps.document_signatures.models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('document_signatures', '0001_initial'),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='documentversionsignature',
+            name='has_embedded_signature',
+            field=models.BooleanField(
+                default=False, verbose_name='Has embedded signature'
+            ),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='documentversionsignature',
+            name='signature_file',
+            field=models.FileField(
+                blank=True, null=True, storage=FileSystemStorage(),
+                upload_to=mayan.apps.document_signatures.models.upload_to,
+                verbose_name='Signature file',
+            ),
+            preserve_default=True,
+        ),
+    ]
