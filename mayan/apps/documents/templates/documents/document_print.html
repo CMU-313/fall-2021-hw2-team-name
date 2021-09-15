@@ -1,0 +1,9 @@
+{% extends 'appearance/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content_plain %}
+    {% for page in pages %}
+        <img src="{% url 'rest_api:documentpage-image' page.id %}?size={{ size }}" />
+    {% endfor %}
+{% endblock %}
