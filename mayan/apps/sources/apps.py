@@ -14,7 +14,7 @@ from mayan.apps.logging.classes import ErrorLog
 from mayan.apps.navigation.classes import SourceColumn
 from mayan.apps.views.html_widgets import TwoStateWidget
 from mayan.apps.common.menus import (
-    menu_list_facet, menu_object, menu_secondary, menu_setup
+    menu_list_facet, menu_object, menu_secondary, menu_setup, menu_main
 )
 
 from .classes import DocumentCreateWizardStep, StagingFile
@@ -31,7 +31,7 @@ from .links import (
     link_setup_source_create_watch_folder, link_setup_source_create_webform,
     link_setup_source_create_staging_folder, link_setup_source_delete,
     link_setup_source_edit, link_staging_file_delete,
-    link_document_file_upload
+    link_document_file_upload, link_form_create_multiple
 )
 from .widgets import StagingFileThumbnailWidget
 
@@ -112,6 +112,7 @@ class SourcesApp(MayanAppConfig):
         )
 
         menu_documents.bind_links(links=(link_document_create_multiple,))
+        menu_main.bind_links(links=(link_form_create_multiple,))
 
         menu_list_facet.bind_links(
             links=(
