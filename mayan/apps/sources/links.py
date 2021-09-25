@@ -73,6 +73,12 @@ link_document_create_multiple = Link(
     icon=icon_document_create_multiple, text=_('New document'),
     view='sources:document_create_multiple'
 )
+
+link_form_create_multiple = Link(
+    condition=condition_document_creation_access,
+    icon=icon_document_create_multiple, text=_('New form'),
+    view='sources:form_create_multiple'
+)
 link_setup_sources = Link(
     icon=icon_setup_sources,
     permissions=(permission_sources_setup_view,), text=_('Sources'),
