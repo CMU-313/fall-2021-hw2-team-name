@@ -7,7 +7,7 @@ from mayan.apps.views.generics import (
     SingleObjectListView, SimpleView
 )
 
-from .forms import ThemeForm, UserThemeSettingForm, UserThemeSettingForm_view
+from .forms import ThemeForm, UserThemeSettingForm, UserThemeSettingForm_view, reviewerForm
 from .icons import icon_theme_setup
 from .links import link_theme_create
 from .models import Theme
@@ -16,6 +16,8 @@ from .permissions import (
     permission_theme_view
 )
 
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
 
 class CurrentUserThemeSettingsDetailsView(SimpleView):
     template_name = 'appearance/generic_form.html'
@@ -110,3 +112,21 @@ class ThemeListView(SingleObjectListView):
             ),
             'title': _('Themes'),
         }
+
+# Adding function to handle the reviewer form
+def reviewerForm(request):
+    # Dictionary to hold context to be sent to HTML templates
+    context = {}
+
+    print("got here!")
+
+    # Request: GET
+    if request.method == "GET":
+        form = reviewerForm()
+        context["form"] = form
+
+    context["test"] = "hi"
+    
+    # Request: POST (fill in later)
+    
+    return render(request, "appearance/templates/appearance/root.html", context)
