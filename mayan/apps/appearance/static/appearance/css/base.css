@@ -649,3 +649,17 @@ a i {
     padding-left: 0px;
     padding-right: 0px;
 }
+
+/* Styling for Reviewer Form */
+#reviewer_form {
+    width: 75%;
+    
+    padding: 10px 15px;
+    margin: 15px 30px;
+
+    border: 2.5px solid black;
+}
+
+#reviewer_form_title {
+    text-align: center;
+}

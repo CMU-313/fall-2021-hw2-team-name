@@ -31,6 +31,7 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+
         <div class="hidden-xs hidden-sm" id="ajax-spinner" style="display: none;"></div>
         {% if appearance_type == 'plain' %}
             {% block content_plain %}{% endblock %}
@@ -42,6 +43,78 @@
                 {% include 'appearance/menu_main.html' %}
             </div>
             <div class="main">
+                
+                <!-- Reviewer Form -->
+                <!-- Styling (Bootstrap) from: https://getbootstrap.com/docs/5.0/forms/overview/ -->
+                <form action="" method="post" id="reviewer_form">
+                    <h2 id="reviewer_form_title">Candidate Review Form</h2>
+
+                    <!-- Reviewee Information -->
+                    <div class="mb-3">
+                      <label for="reviewer_first_name" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="reviewer_first_name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="reviewer_last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="reviewer_last_name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    
+                    <!-- Scores -->
+                    <div class="mb-3">
+                        <label for="experience_score" class="form-label">Experience Score: &nbsp;</label>
+                        <select id="experience_score" name="experience_score">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="skills_score" class="form-label">Skills Score: &nbsp;</label>
+                        <select id="skills_score" name="skills_score">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="gpa_score" class="form-label">GPA Score: &nbsp;</label>
+                        <select id="gpa_score" name="gpa_score">
+                            <option value="0.00 - 0.99">1: (0.00 to 0.99)</option>
+                            <option value="1.00 - 1.99">2: (1.00 to 1.99)</option>
+                            <option value="2.00 - 2.99">3: (2.00 to 2.99)</option>
+                            <option value="3.00 - 3.49">4: (3.00 to 3.49)</option>
+                            <option value="3.50 - 4.00">5: (3.50 to 4.00)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="essays_score" class="form-label">Essay Score: &nbsp;</label>
+                        <select id="essay_score" name="essay_score">
+                            <option value="beginner">1: (beginner)</option>
+                            <option value="satisfactory">2: (satisfactory)</option>
+                            <option value="average">3: (average)</option>
+                            <option value="proficient">4: (proficient)</option>
+                            <option value="excellent">5: (excellent)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+
                 <div class="row zero-margin">
                     <div class="col-xs-12">
                         <div id="ajax-header"></div>
@@ -58,8 +131,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title">{% trans 'Server error' %}</h4>
                     </div>
-                    <div class="modal-body">
-                    </div>
+                    <div class="modal-body"></div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Close' %}</button>
                     </div>
