@@ -1,12 +1,16 @@
 from django.conf.urls import url
+from django.urls import path
 
 from mayan.apps.views.generics import SimpleView
 
 from .views import (
     CurrentUserThemeSettingsDetailsView, CurrentUserThemeSettingsEditView,
-    ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView
+    ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView, reviewerForm
 )
 
+from . import views
+
+urlpatterns = [path('home/', views.reviewerForm),]
 
 urlpatterns_error_pages = [
     url(
@@ -56,7 +60,8 @@ urlpatterns_user_theme_settings = [
     )
 ]
 
-urlpatterns = []
+print("urls page!")
+
 urlpatterns.extend(urlpatterns_error_pages)
 urlpatterns.extend(urlpatterns_themes)
 urlpatterns.extend(urlpatterns_user_theme_settings)

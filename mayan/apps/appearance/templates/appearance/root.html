@@ -43,10 +43,20 @@
                 {% include 'appearance/menu_main.html' %}
             </div>
             <div class="main">
+
+                <div>
+                    {{ test }}
+                </div>
+
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                </form>
                 
                 <!-- Reviewer Form -->
                 <!-- Styling (Bootstrap) from: https://getbootstrap.com/docs/5.0/forms/overview/ -->
                 <form action="" method="post" id="reviewer_form">
+                    {% csrf_token %}
                     <h2 id="reviewer_form_title">Candidate Review Form</h2>
 
                     <!-- Reviewee Information -->
