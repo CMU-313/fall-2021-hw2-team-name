@@ -37,25 +37,9 @@ class ReviewerForm(ExtraDataModelMixin, models.Model):
         verbose_name_plural = _('ReviewerForms')
 
     def __str__(self):
-        return self.get_full_path()
+        return self.label
 
-    @method_event(
-        action_object='self',
-        event=event_cabinet_document_added,
-        event_manager_class=EventManagerMethodAfter,
-    )
-    def document_add(self, document):
-        self._event_target = document
-        self.documents.add(document)
 
-    @method_event(
-        action_object='self',
-        event=event_cabinet_document_removed,
-        event_manager_class=EventManagerMethodAfter,
-    )
-    def document_remove(self, document):
-        self._event_target = document
-        self.documents.remove(document)
 
     def get_absolute_url(self):
         return reverse(
@@ -64,89 +48,19 @@ class ReviewerForm(ExtraDataModelMixin, models.Model):
             }
         )
 
-    def get_document_count(self, user):
-        """
-        Return numeric count of the total documents in a cabinet. The count
-        is filtered by access.
-        """
-        return self.get_documents_queryset(
-            permission=permission_document_view, user=user
-        ).count()
-
-    def get_documents_queryset(self, permission=None, user=None):
-        """
-        Provide a queryset of the documents in a cabinet. The queryset is
-        filtered by access.
-        """
-        queryset = self.documents.all()
-
-        if permission and user:
-            queryset = AccessControlList.objects.restrict_queryset(
-                permission=permission_document_view, queryset=queryset,
-                user=user
-            )
-
-        return Document.valid.filter(pk__in=queryset.values('pk'))
-
-    def get_full_path(self):
-        """
-        Returns a string that represents the path to the cabinet. The
-        path string starts from the root cabinet.
-        """
-        result = []
-        for node in self.get_ancestors(include_self=True):
-            result.append(node.label)
-
-        return ' / '.join(result)
-    get_full_path.help_text = _(
-        'The path to the cabinet including all ancestors.'
-    )
-    get_full_path.short_description = _('Full path')
-
     @method_event(
         event_manager_class=EventManagerSave,
         created={
-            'event': event_cabinet_created,
+            'event': event_reviewer_form_created,
             'target': 'self',
         },
         edited={
-            'event': event_cabinet_edited,
+            'event': event_reviewer_form_edited,
             'target': 'self',
         }
     )
     def save(self, *args, **kwargs):
         return super().save(*args, **kwargs)
-
-    def validate_unique(self, exclude=None):
-        """
-        Explicit validation of uniqueness of parent+label as the provided
-        unique_together check in Meta is not working for all 100% cases
-        when there is a FK in the unique_together tuple
-        https://code.djangoproject.com/ticket/1751
-        """
-        with transaction.atomic():
-            if connection.vendor == 'oracle':
-                queryset = Cabinet.objects.filter(parent=self.parent, label=self.label)
-            else:
-                queryset = Cabinet.objects.select_for_update().filter(parent=self.parent, label=self.label)
-
-            if queryset.exists():
-                params = {
-                    'model_name': _('Cabinet'),
-                    'field_labels': _('Parent and Label')
-                }
-                raise ValidationError(
-                    {
-                        NON_FIELD_ERRORS: [
-                            ValidationError(
-                                message=_(
-                                    '%(model_name)s with this %(field_labels)s already '
-                                    'exists.'
-                                ), code='unique_together', params=params,
-                            )
-                        ],
-                    },
-                )
 
 
 class CabinetSearchResult(Cabinet):
