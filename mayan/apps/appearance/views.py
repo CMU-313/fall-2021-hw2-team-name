@@ -16,6 +16,8 @@ from .permissions import (
     permission_theme_view
 )
 
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
 
 class CurrentUserThemeSettingsDetailsView(SimpleView):
     template_name = 'appearance/generic_form.html'

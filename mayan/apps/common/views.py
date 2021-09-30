@@ -11,12 +11,13 @@ from mayan.apps.views.mixins import (
 )
 
 from .classes import ModelCopy
-from .forms import LicenseForm
+from .forms import LicenseForm, ReviewerForm
 from .icons import icon_setup
 from .menus import menu_tools, menu_setup
 from .permissions import permission_object_copy
 from .settings import setting_home_view
 
+from django.shortcuts import render
 
 class AboutView(SimpleView):
     extra_context = {'title': _('About')}
@@ -37,6 +38,7 @@ class FaviconRedirectView(RedirectView):
 class HomeView(SimpleView):
     extra_context = {
         'title': _('Dashboard'),
+        'form': ReviewerForm(),
     }
     template_name = 'appearance/home.html'
 

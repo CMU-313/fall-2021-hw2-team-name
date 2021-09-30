@@ -652,7 +652,8 @@ a i {
 
 /* Styling for Reviewer Form */
 #reviewer_form {
-    width: 75%;
+    width: 40%;
+    max-height: 75%;
     
     padding: 10px 15px;
     margin: 15px 30px;
@@ -662,4 +663,43 @@ a i {
 
 #reviewer_form_title {
     text-align: center;
+}
+
+.button_container {
+    text-align: center;
+}
+
+/* Styling for dynamic form */
+#reviewer-form {
+    width: 50%;
+    max-height: 75%;
+    
+    padding: 10px 15px;
+    margin: 15px 0px;
+
+    border: 2.5px solid black;
+}
+
+#reviewer-form-title {
+    text-align: center;
+}
+
+#candidate-first-name {
+    display: block;
+    width: 100%;
+}
+
+#candidate-last-name {
+    display: block;
+    width: 100%;
+}
+
+#candidate-email {
+    display: block;
+    width: 100%;
+}
+
+#candidate-experience-score {
+    display: block;
+    width: 100%;
 }

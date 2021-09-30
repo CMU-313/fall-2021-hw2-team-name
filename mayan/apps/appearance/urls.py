@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.urls import path
 
 from mayan.apps.views.generics import SimpleView
 
@@ -7,6 +8,7 @@ from .views import (
     ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView
 )
 
+from . import views
 
 urlpatterns_error_pages = [
     url(

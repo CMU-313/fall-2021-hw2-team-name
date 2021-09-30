@@ -18,6 +18,16 @@
 {% endblock javascript %}
 
 {% block content %}
+    <!-- Dynamic Reviewer Form -->
+    <div id="reviewer-form">
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <h2 id="reviewer-form-title">Candidate Review Form</h2>
+            {{ form.as_p }}
+        </form>
+    </div>
+
     <div class="row">
         <div class="col-xs-12">
             {% if missing_list %}
