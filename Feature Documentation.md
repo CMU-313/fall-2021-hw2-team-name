@@ -1,5 +1,7 @@
 Our feature is a form for reviewers to enter and score candidates along various catergories/fields. We did not have time to implement the backend to save and collect the form data from multiple reviewers due to time constraints.
 
+We chose the form feature since django has builtin support for forms.
+
 + The fields we chose were
     * First Name
     * Last Name
