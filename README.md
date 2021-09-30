@@ -27,7 +27,7 @@
 [support]: https://img.shields.io/badge/Get_support-brightgreen
 [support-url]: https://www.mayan-edms.com/support/
 
-<h2 align="center">Manual Testing document is called forms_manual_testing.md</h2>
+<h2 align="center">Manual Testing document is the top level file called forms_manual_testing.md</h2>
 
 <div align="center">
   <a href="http://www.mayan-edms.com">
