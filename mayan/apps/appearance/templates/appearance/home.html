@@ -24,7 +24,12 @@
             {% csrf_token %}
 
             <h2 id="reviewer-form-title">Candidate Review Form</h2>
+            
             {{ form.as_p }}
+
+            <div id="submit-review-form-container">
+                <button type="submit" id="submit-review-form-button">Submit Review</button>
+            </div>
         </form>
     </div>
 

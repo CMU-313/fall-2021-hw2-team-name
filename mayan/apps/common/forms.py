@@ -2,12 +2,33 @@ from mayan.apps.views.forms import FileDisplayForm
 from django import forms
 
 # Dropdown choices
-experience_score_choices = (
+experience_score_choices = skills_score_choices = (
     ("1", "One"),
     ("2", "Two"),
     ("3", "Three"),
     ("4", "Four"),
     ("5", "Five"),
+)
+
+gpa_score_choices = (
+    ("1", "1: (0.00 to 0.99)"),
+    ("2", "2: (1.00 to 1.99)"),
+    ("3", "3: (2.00 to 2.99)"),
+    ("4", "4: (3.00 to 3.49)"),
+    ("5", "5: (3.50 to 4.00)"),
+)
+
+essay_score_choices = (
+    ("1", "1: (beginner)"),
+    ("2", "2: (satisfactory)"),
+    ("3", "3: (average)"),
+    ("4", "4: (proficient)"),
+    ("5", "5: (excellent)"),
+)
+
+final_decision_choices = (
+    ("1", "Yes"),
+    ("2", "No"),
 )
 
 class LicenseForm(FileDisplayForm):
@@ -27,11 +48,19 @@ class ReviewerForm(forms.Form):
     #### Fields
     ################################################################
     
-    first_name = forms.CharField(max_length=25, label='First Name')
-    last_name = forms.CharField(max_length=25)
-    email = forms.EmailField(max_length=50, required=True)
+    first_name = forms.CharField(max_length=25, required=True)
+    last_name = forms.CharField(max_length=25, required=True)
+    email = forms.EmailField(max_length=50, label="Email Address", required=True)
     
-    experience_score = forms.ChoiceField(choices=experience_score_choices)
+    experience_score = forms.ChoiceField(choices=experience_score_choices, label="Experience Score:", required=True)
+    skills_score = forms.ChoiceField(choices=skills_score_choices, label="Skill Score:", required=True)
+    gpa_score = forms.ChoiceField(choices=gpa_score_choices, label="GPA Score:", required=True)
+    essay_score = forms.ChoiceField(choices=essay_score_choices, label="Essay Score:", required=True)
+
+    additional_comments = forms.CharField(widget=forms.Textarea, label="Additional Comments:", required=True)
+    reviewer_name = forms.CharField(max_length=50, label="Reviewer Name", required=True)
+
+    final_decision = forms.ChoiceField(choices=final_decision_choices, label="Final Decision:", required=True)
 
     ################################################################ 
     #### Widgets
@@ -48,3 +77,21 @@ class ReviewerForm(forms.Form):
 
     # Candidate's experience score
     experience_score.widget.attrs.update({'id': 'candidate-experience-score'})
+
+    # Candidate's experience score
+    skills_score.widget.attrs.update({'id': 'candidate-skills-score'})
+
+    # Candidate's GPA score
+    gpa_score.widget.attrs.update({'id': 'candidate-gpa-score'})
+
+    # Candidate's essay score
+    essay_score.widget.attrs.update({'id': 'candidate-essay-score'})
+
+    # Reviewer's additional comments
+    additional_comments.widget.attrs.update({'id': 'reviewer-additional-comments'})
+
+    # Name of reviewer
+    reviewer_name.widget.attrs.update({'id': 'reviewer-name'})
+
+    # Final decision for acceptance or denial for the candidate
+    final_decision.widget.attrs.update({'id': 'reviewer-final-decision'})
