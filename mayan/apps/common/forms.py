@@ -95,3 +95,53 @@ class ReviewerForm(forms.Form):
 
     # Final decision for acceptance or denial for the candidate
     final_decision.widget.attrs.update({'id': 'reviewer-final-decision'})
+
+    ################################################################ 
+    #### Form Validation
+    ################################################################
+
+    # Each function below validates a given form input
+
+    def clean_experience_score(self):
+        data = self.cleaned_data.get['experience_score']
+        possible_scores = ["One", "Two", "Three", "Four", "Five"]
+
+        if data not in possible_scores:
+            raise forms.ValidationError("ERROR: Invalid Experience Score.")
+
+    def clean_skills_score(self):
+        data = self.cleaned_data.get['experience_score']
+        possible_scores = ["One", "Two", "Three", "Four", "Five"]
+
+        if data not in possible_scores:
+            raise forms.ValidationError("ERROR: Invalid Skills Score.")
+
+    def clean_gpa_score(self):
+        data = self.cleaned_data.get['experience_score']
+        possible_scores = ["1: (0.00 to 0.99)", "2: (1.00 to 1.99)", "3: (2.00 to 2.99)",
+                           "4: (3.00 to 3.49)", "5: (3.50 to 4.00)"]
+
+        if data not in possible_scores:
+            raise forms.ValidationError("ERROR: Invalid GPA Score.")
+
+    def clean_essay_score(self):
+        data = self.cleaned_data.get['experience_score']
+        possible_scores = ["1: (beginner)", "2: (satisfactory)", "3: (average)",
+                           "4: (proficient)", "5: (excellent)"]
+
+        if data not in possible_scores:
+            raise forms.ValidationError("ERROR: Invalid Essay Score.")
+
+    def clean_final_decision(self):
+        data = self.cleaned_data.get['experience_score']
+        possible_scores = ["1", "Yes", "2", "No"]
+
+        if data not in possible_scores:
+            raise forms.ValidationError("ERROR: Invalid Final Decision.")
+
+    # Clean function that calls on the super class clean function and has additional
+    # validation checks added by the developer.
+    def clean(self):
+        cleaned_data = super().clean()
+
+        # Add additional validation checks here        
