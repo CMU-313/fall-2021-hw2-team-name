@@ -18,8 +18,8 @@ from .events import (
 )
 
 
-class ReviewerForm(ExtraDataModelMixin, models.Model):
-
+class ReviewerForm(models.Model):
+    #TODO need to fill in more fields.
     label = models.CharField(
         help_text= 'text for reviewer form',
         max_length=128, verbose_name=_('Label')
@@ -62,26 +62,3 @@ class ReviewerForm(ExtraDataModelMixin, models.Model):
     def save(self, *args, **kwargs):
         return super().save(*args, **kwargs)
 
-
-class CabinetSearchResult(Cabinet):
-    """
-    Represent a cabinet's search result. This model is a proxy model from
-    Cabinet and is used as an alias to map columns to it without having to
-    map them to the base Cabinet model.
-    """
-    class Meta:
-        proxy = True
-        verbose_name = _('Cabinet')
-        verbose_name_plural = _('Cabinets')
-
-
-class DocumentCabinet(Cabinet):
-    """
-    Represent a document's cabinet. This Model is a proxy model from Cabinet
-    and is used as an alias to map columns to it without having to map them
-    to the base Cabinet model.
-    """
-    class Meta:
-        proxy = True
-        verbose_name = _('Document cabinet')
-        verbose_name_plural = _('Document cabinets')
