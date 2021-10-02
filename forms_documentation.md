@@ -7,7 +7,7 @@ Reviewers can fill out forms to evaluate candidates along various admissions gui
 Log in and navigate to the home page. <!-- If we get it done, "Navigate to 'New Form' page" -->
 
 <!-- Insert image of blank form on home page -->
-![alt text](https://github.com/dsduenas/fall-2021-hw2-team-name/blob/update/AddImagesToTestingDoc/image.jpg?raw=true)
+![alt text](https://github.com/dsduenas/fall-2021-hw2-team-name/blob/update/AddImagesToFormsDocumentation/Reviewer Form.jpg?raw=true)
 
 Fill out the candidate's information and final evaluations in the specified fields.
 
