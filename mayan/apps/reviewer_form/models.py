@@ -20,33 +20,33 @@ from .events import (
 
 class ReviewerForm(models.Model):
     #TODO need to fill in more fields.
-    label = models.CharField(
-        help_text= 'text for reviewer form',
-        max_length=128, verbose_name=_('Label')
-    )
-    documents = models.ManyToManyField(
-        related_name='reviewer_forms', to=Document,
-        verbose_name=_('Documents')
-    )
+
+        
+    first_name = forms.CharField(max_length=25, required=True)
+    last_name = forms.CharField(max_length=25, required=True)
+    email = forms.EmailField(max_length=50, label="Email Address", required=True)
+    
+    experience_score = forms.ChoiceField(choices=experience_score_choices, label="Experience Score:", required=True)
+    skills_score = forms.ChoiceField(choices=skills_score_choices, label="Skill Score:", required=True)
+    gpa_score = forms.ChoiceField(choices=gpa_score_choices, label="GPA Score:", required=True)
+    essay_score = forms.ChoiceField(choices=essay_score_choices, label="Essay Score:", required=True)
+
+    additional_comments = forms.CharField(widget=forms.Textarea, label="Additional Comments:", required=True)
+    reviewer_name = forms.CharField(max_length=50, label="Reviewer Name", required=True)
+
+    final_decision = forms.ChoiceField(choices=final_decision_choices, label="Final Decision:", required=True)
+
 
     class Meta:
         # unique_together doesn't work if there is a FK
         # https://code.djangoproject.com/ticket/1751
-        ordering = ('label')
+        ordering = ('first_name')
         verbose_name = _('ReviewerForm')
         verbose_name_plural = _('ReviewerForms')
 
     def __str__(self):
         return self.label
 
-
-
-    def get_absolute_url(self):
-        return reverse(
-            viewname='cabinets:cabinet_view', kwargs={
-                'cabinet_id': self.pk
-            }
-        )
 
     @method_event(
         event_manager_class=EventManagerSave,
