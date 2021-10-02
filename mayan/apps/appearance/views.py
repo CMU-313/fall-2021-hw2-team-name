@@ -7,7 +7,7 @@ from mayan.apps.views.generics import (
     SingleObjectListView, SimpleView
 )
 
-from .forms import ThemeForm, UserThemeSettingForm, UserThemeSettingForm_view, reviewerForm
+from .forms import ThemeForm, UserThemeSettingForm, UserThemeSettingForm_view
 from .icons import icon_theme_setup
 from .links import link_theme_create
 from .models import Theme
