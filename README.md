@@ -27,6 +27,8 @@
 [support]: https://img.shields.io/badge/Get_support-brightgreen
 [support-url]: https://www.mayan-edms.com/support/
 
+<h2 align="center">Forms feature documentation is the top level file called forms_documentation.md. Link: https://github.com/CMU-313/fall-2021-hw2-team-name/blob/master/forms_documentation.md</h2>
+
 <h2 align="center">Manual Testing document is the top level file called forms_manual_testing.md. Link: https://github.com/CMU-313/fall-2021-hw2-team-name/blob/master/forms_manual_testing.md</h2>
 
 <div align="center">
