@@ -34,5 +34,5 @@ Press the submit button to save the form.
 
 <!-- as of 9/30  -->
 - Form fields that are ratings from 1 to 5 mean that 1 represents a poor candidate and 5 represents an exemplary candidate in regards to that field.
-- As of now, the backend is not set up for the feature. Therefore, forms will not be saved upon submission. This is planned to be implemented in a later sprint.
+- As of now, the backend is not set up for the feature. Therefore, forms will not be saved upon submission. This is planned to be implemented in a later sprint along with the rest of the validation since to run validation tests, the backend must be set up to receive the data from the user to confirm if the data is valid or not.
 - This form is meant to be concise yet holistic evaluation of the candidate, which is why most fields are numbered from 1 to 5. If a reviewer has additional comments or wants to make note of a special case, they may use the "Additional comments" field to do so.
