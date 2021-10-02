@@ -36,6 +36,9 @@ After performing the steps, if all of the items below were fulfilled then the fe
     * Skills Score
     * GPA Score
     * Essay Score
+    * Additional Comments
+    * Reviewer Name
+    * Final Decision
 <!--TODO: add new form fields here after they are added-->
 - User was able to fill in fields and see review reflected in form before pressing Submit
 
