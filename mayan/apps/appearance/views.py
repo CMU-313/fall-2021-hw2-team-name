@@ -113,20 +113,3 @@ class ThemeListView(SingleObjectListView):
             'title': _('Themes'),
         }
 
-# Adding function to handle the reviewer form
-def reviewerForm(request):
-    # Dictionary to hold context to be sent to HTML templates
-    context = {}
-
-    print("got here!")
-
-    # Request: GET
-    if request.method == "GET":
-        form = reviewerForm()
-        context["form"] = form
-
-    context["test"] = "hi"
-    
-    # Request: POST (fill in later)
-    
-    return render(request, "appearance/templates/appearance/root.html", context)

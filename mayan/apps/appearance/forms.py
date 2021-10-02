@@ -28,7 +28,3 @@ class UserThemeSettingForm_view(DetailForm):
     class Meta:
         fields = ('theme',)
         model = UserThemeSetting
-
-# Form for reviewer
-class reviewerForm(forms.Form):
-    first_name = forms.CharField(label="First Name", max_length=25)
