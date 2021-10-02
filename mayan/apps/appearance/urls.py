@@ -5,7 +5,7 @@ from mayan.apps.views.generics import SimpleView
 
 from .views import (
     CurrentUserThemeSettingsDetailsView, CurrentUserThemeSettingsEditView,
-    ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView, reviewerForm
+    ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView
 )
 
 from . import views
