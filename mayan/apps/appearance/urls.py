@@ -5,7 +5,7 @@ from mayan.apps.views.generics import SimpleView
 
 from .views import (
     CurrentUserThemeSettingsDetailsView, CurrentUserThemeSettingsEditView,
-    ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView
+    ThemeCreateView, ThemeDeleteView, ThemeEditView, ThemeListView, reviewerForm
 )
 
 from . import views
@@ -57,6 +57,8 @@ urlpatterns_user_theme_settings = [
         view=CurrentUserThemeSettingsEditView.as_view()
     )
 ]
+
+print("urls page!")
 
 urlpatterns = []
 urlpatterns.extend(urlpatterns_error_pages)
