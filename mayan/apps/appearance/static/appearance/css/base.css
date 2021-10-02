@@ -652,7 +652,8 @@ a i {
 
 /* Styling for Reviewer Form */
 #reviewer_form {
-    width: 75%;
+    width: 40%;
+    max-height: 75%;
     
     padding: 10px 15px;
     margin: 15px 30px;
@@ -661,5 +662,100 @@ a i {
 }
 
 #reviewer_form_title {
+    text-align: center;
+}
+
+.button_container {
+    text-align: center;
+}
+
+/* Styling for dynamic form */
+#reviewer-form {
+    width: 50%;
+    height: 50%;
+
+    max-height: 75%;
+    
+    padding: 10px 15px;
+    margin: 15px 0px;
+
+    border: 2.5px solid black;
+}
+
+#reviewer-form-title {
+    text-align: center;
+}
+
+#candidate-first-name {
+    display: block;
+    width: 100%;
+}
+
+#candidate-last-name {
+    display: block;
+    width: 100%;
+}
+
+#candidate-email {
+    display: block;
+    width: 100%;
+}
+
+#candidate-experience-score {
+    width: 30%;
+    margin-left: 5px;
+
+    text-align: center;
+}
+
+#candidate-skills-score {
+    width: 30%;
+    margin-left: 5px;
+
+    text-align: center;
+}
+
+#candidate-gpa-score {
+    width: 30%;
+    margin-left: 5px;
+
+    text-align: center;
+}
+
+#candidate-essay-score {
+    width: 30%;
+    margin-left: 5px;
+
+    text-align: center;
+}
+
+#reviewer-additional-comments {
+    display: block;
+    width: 100%;
+}
+
+#reviewer-name {
+    display: block;
+    width: 100%;
+}
+
+#reviewer-final-decision {
+    width: 30%;
+    margin-left: 5px;
+
+    text-align: center;
+}
+
+#submit-review-form-container {
+    text-align: center;
+}
+
+#submit-review-form-button {
+    color: white;
+    background-color: #2c3e50;
+
+    width: 30%;
+    height: 30%;
+
     text-align: center;
 }

@@ -10,8 +10,6 @@ from .views import (
 
 from . import views
 
-urlpatterns = [path('home/', views.reviewerForm),]
-
 urlpatterns_error_pages = [
     url(
         regex=r'^errors/403/$', name='error_403', view=SimpleView.as_view(
@@ -62,6 +60,7 @@ urlpatterns_user_theme_settings = [
 
 print("urls page!")
 
+urlpatterns = []
 urlpatterns.extend(urlpatterns_error_pages)
 urlpatterns.extend(urlpatterns_themes)
 urlpatterns.extend(urlpatterns_user_theme_settings)
